@@ -1,0 +1,1374 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours 420-SN1-RE Programmation en sciences qui vise l'acquisition de bases en programmation scientifique">
+      
+      
+        <meta name="author" content="Alexandre Ouellet">
+      
+      
+        <link rel="canonical" href="https://programmation-en-sciences.github.io/bases-de-programmation/manipulations-types-simples/">
+      
+      
+        <link rel="prev" href="../entrees-sorties/">
+      
+      
+        <link rel="next" href="../type-booleens-instructions-conditionnelles/">
+      
+      
+      <link rel="icon" href="../../images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+    
+    
+      
+        <title>Manipulations des types de données simples - Programmation en sciences</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/hint.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/override.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manipulations-des-types-de-donnees-simples" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Programmation en sciences" class="md-header__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+      
+  <img src="../../images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programmation en sciences
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Manipulations des types de données simples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../introduction-outils/introduction/" class="md-tabs__link">
+          
+  
+  Introduction et outils
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../types-numeriques-variables-constantes/" class="md-tabs__link">
+          
+  
+  Les bases de la programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programmation en sciences" class="md-nav__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+      
+  <img src="../../images/favicon.svg" alt="logo">
+
+    </a>
+    Programmation en sciences
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction et outils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction et outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-outils/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-outils/installation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-outils/algorithmes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les algorithmes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Outils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-outils/conventions-langage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conventions du langage python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction-outils/personnel-enseignant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personnel enseignant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Les bases de la programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Les bases de la programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types-numeriques-variables-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types numériques, variables et constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entrees-sorties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entrées et sorties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Manipulations des types de données simples
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Manipulations des types de données simples
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#concatenation-de-chaines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concaténation de chaînes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convertir-un-nombre-en-une-chaine-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Convertir un nombre en une chaîne de caractères
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Convertir un nombre en une chaîne de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrondir-les-valeurs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrondir les valeurs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arrondir les valeurs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-round" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction round
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction format
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La fonction format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-f-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les f-strings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-fonctions-sur-les-chaines-de-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les fonctions sur les chaînes de caractères
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les fonctions sur les chaînes de caractères">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#les-fonctions-upper-et-lower" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les fonctions upper et lower
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-fonction-count-pour-compter-les-caracteres" class="md-nav__link">
+    <span class="md-ellipsis">
+      La fonction count pour compter les caractères
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compter-la-longueur-totale-dune-chaine-avec-len" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compter la longueur totale d'une chaîne avec len
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trouver-une-sous-chaine-dans-une-chaine-avec-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trouver une sous-chaîne dans une chaîne avec find
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remplace-une-sous-chaine-par-une-autre-avec-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remplace une sous-chaîne par une autre avec replace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-premier-programme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Un premier programme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../type-booleens-instructions-conditionnelles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Type booléen et instructions conditionnelles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conversions-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les conversions de types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonctions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les fonctions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="manipulations-des-types-de-donnees-simples">Manipulations des types de données simples</h1>
+<div class="competences">
+<div style="flex: 0 0 70%">
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Contenus de la section</span></p>
+<p>2-1 Variables, constantes et types</p>
+<p style="text-indent:20px;">c. Chaînes de caractères</p>
+<p>2-2 Traitements de données</p>
+<p style="text-indent:20px;">c. Manipulation de chaînes de caractères (formatage, extraction de sous-chaînes et concaténation)</p>
+</div>
+<div>
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
+<p>25 minutes</p>
+</div>
+</div>
+<h2 id="concatenation-de-chaines">Concaténation de chaînes</h2>
+<p>L'opération de concaténation permet de combiner des chaînes de caractères. On utilise l'opérateur d'addition ( + ) pour exprimer dans le langage <em>Python</em> l'idée de la concaténation. <strong>Attention</strong>, cela ne fonctionne qu'entre deux variables qui contiennent des chaînes de caractères. </p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Concaténation de deux chaînes</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">texte_accueil</span> <span class="o">=</span> <span class="s2">"Bonjour"</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">nom_personne_1</span> <span class="o">=</span> <span class="s2">"Alice"</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">bonjour_alice</span> <span class="o">=</span> <span class="n">texte_accueil</span> <span class="o">+</span> <span class="n">nom_personne_1</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">bonjour_alice</span><span class="p">)</span>        <span class="c1"># Affiche BonjourAlice</span>
+</span></code></pre></div></td></tr></table></div>
+<p>On voit que le résultat <code>BonjourAlice</code> n'est pas exactement conforme à nos attentes. Tous les caractères (espaces, retour à la ligne, tabulations) doivent être ajoutés manuellement à la chaîne de caractères pour s'afficher (et tous les caractères ajoutés s'affichent...).</p>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Caractère d'espacement</th>
+<th style="text-align: left;">Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Espace</td>
+<td style="text-align: left;">" "</td>
+</tr>
+<tr>
+<td style="text-align: left;">Tabulation</td>
+<td style="text-align: left;">"\t"</td>
+</tr>
+<tr>
+<td style="text-align: left;">Retour à la ligne</td>
+<td style="text-align: left;">"\n"</td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<h2 id="convertir-un-nombre-en-une-chaine-de-caracteres">Convertir un nombre en une chaîne de caractères</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 1.2</p>
+<p>Comme mentionné ci-dessus, on ne peut pas directement concaténer une chaîne et une valeur numérique. Par exemple, la ligne de code suivante provoque une erreur lors de son exécution.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Valeur : "</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>          <span class="c1"># N'affiche pas "Valeur : 5" </span>
+</span></code></pre></div>
+<div class="admonition failure">
+<p class="admonition-title">Erreur</p>
+<p>TypeError: can only concatenate str (not "int") to str</p>
+</div>
+<p>Pour régler cette erreur, il faut convertir la donnée numérique en une donnée de chaîne de caractères avec la fonction <code class="language-py highlight"><span class="nb">str</span></code> (la version raccourcie du terme anglais <em>string</em>, chaîne de caractères).</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Valeur : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>          <span class="c1"># Fonctionne à merveille 👍</span>
+</span></code></pre></div>
+<h3 id="arrondir-les-valeurs">Arrondir les valeurs</h3>
+<p>Pour présenter une valeur décimale, il peut être intéressant d'arrondir à un certain nombre. La fonction <code>str</code> fera afficher toutes les décimales. Deux autres fonctions existent pour gérer les arrondissements soit la fonction <code>round</code> et la fonction <code>format</code>.</p>
+<h4 id="la-fonction-round">La fonction <code>round</code></h4>
+<p>La fonction <code>round</code> permet d'arrondir une valeur à un certain nombre de décimales.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Entier ou nombre à virgule</td>
+<td style="text-align: left;">La valeur à arrondir</td>
+</tr>
+<tr>
+<td style="text-align: left;">digits</td>
+<td style="text-align: left;">Entier</td>
+<td style="text-align: left;">Nombre de décimales à conserver après la virgule</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Entier ou nombre à virgule</td>
+<td style="text-align: left;">Le nombre après l'arrondi</td>
+</tr>
+</tbody>
+</table>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Utilisation de l'arrondi</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">somme</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">+</span> <span class="mf">0.1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>       
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1"># Affiche 0.30000000000000004</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">somme</span><span class="p">,</span> <span class="mi">1</span><span class="p">)))</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="c1"># Affiche 0.3</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">somme</span><span class="p">,</span> <span class="mi">3</span><span class="p">)))</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># Affiche 0.3</span>
+</span></code></pre></div></td></tr></table></div>
+<p>De l'exemple on remarque que les 0 à droite ne sont pas conservés. L'avantage de la fonction <code>round</code> est que la valeur reste numérique, donc on peut utiliser le résultat dans une autre expression arithmétique. Le désavantage est qu'il faut la convertir en chaîne de caractères pour l'afficher.</p>
+<h4 id="la-fonction-format">La fonction <code>format</code></h4>
+<p>La fonction <code>format</code> permet de formater une valeur en une chaîne de caractères, et ce, dans plusieurs contextes. L'un de ces contextes est les nombres à virgule. Dans ce cas d'utilisation, on appelle la fonction <code>format</code> avec les deux paramètres décrits ci-dessous.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">Entier ou nombre à virgule</td>
+<td style="text-align: left;">La valeur à arrondir</td>
+</tr>
+<tr>
+<td style="text-align: left;">format</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">Chaîne indiquant le format à respecter</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">Le nombre après le formatage</td>
+</tr>
+</tbody>
+</table>
+<p>Les formats prennent la forme suivante ".#A" où « # » représente le nombre de chiffres significatifs à conserver et « A » est le type formatage à utiliser. Attention, cette fonction effectue une troncature. Les types de formatage sont :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Lettre</th>
+<th style="text-align: left;">Type de formatage</th>
+<th style="text-align: left;">Exemple d'appel</th>
+<th style="text-align: left;">Résultat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">Notation scientifique avec un « e » minuscule</td>
+<td style="text-align: left;"><code class="language-py highlight"><span class="nb">format</span><span class="p">(</span><span class="mf">10.125</span><span class="p">,</span> <span class="s2">".2e"</span><span class="p">)</span></code></td>
+<td style="text-align: left;">1.01e+01</td>
+</tr>
+<tr>
+<td style="text-align: left;">e</td>
+<td style="text-align: left;">Notation scientifique avec un « E » majuscule</td>
+<td style="text-align: left;"><code class="language-py highlight"><span class="nb">format</span><span class="p">(</span><span class="mf">10.125</span><span class="p">,</span> <span class="s2">".1E"</span><span class="p">)</span></code></td>
+<td style="text-align: left;">1.0E+01</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">Nombre de décimales fixes</td>
+<td style="text-align: left;"><code class="language-py highlight"><span class="nb">format</span><span class="p">(</span><span class="mf">1.125</span><span class="p">,</span> <span class="s2">".2f"</span><span class="p">)</span></code></td>
+<td style="text-align: left;">1.12</td>
+</tr>
+<tr>
+<td style="text-align: left;">g</td>
+<td style="text-align: left;">Format général avec un nombre de chiffres significatifs</td>
+<td style="text-align: left;"><code class="language-py highlight"><span class="nb">format</span><span class="p">(</span><span class="mf">1.125</span><span class="p">,</span> <span class="s2">".2g"</span><span class="p">)</span></code></td>
+<td style="text-align: left;">1.1</td>
+</tr>
+</tbody>
+</table>
+<h5 id="les-f-strings">Les <em>f-strings</em></h5>
+<p>Les <em>f-string</em> sont une façon alternative de formater des données. Au lieu d'utiliser la fonction <code>format</code>, on va indiquer directement dans la chaîne comment formater et intégrer les données. On différentie une f-string en ajoutant la lettre <code>f</code> devant le guillemet ouvrant.</p>
+<p>Dans un <em>f-string</em>, on inscrit les variables à afficher avec des accolades et, si un formatage est nécessaire, on indique le format après un deux-points « : ».</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Utilisation de f-string</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">operande1</span> <span class="o">=</span> <span class="mf">4.12</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">operande2</span> <span class="o">=</span> <span class="mf">6.17</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="n">produit</span> <span class="o">=</span> <span class="n">operande1</span> <span class="o">*</span> <span class="n">operande2</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="c1"># Avec la fonction format</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="nb">print</span><span class="p">(</span><span class="n">operande1</span><span class="p">,</span> <span class="s2">"x"</span> <span class="n">operande2</span><span class="p">,</span> <span class="s2">"="</span><span class="p">,</span> <span class="nb">format</span><span class="p">(</span><span class="n">produit</span><span class="p">,</span> <span class="s2">".2f"</span><span class="p">))</span>    
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="c1"># Avec une f-string</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">operande1</span><span class="si">}</span><span class="s2"> x </span><span class="si">{</span><span class="n">operande2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">produit</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="les-fonctions-sur-les-chaines-de-caracteres">Les fonctions sur les chaînes de caractères</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 12.3</p>
+<p>Les chaînes de caractères sont par définition immuables, donc on ne peut pas changer ses éléments directement après sa création. Pour modifier une chaîne existante, il faut appeler des fonctions sur les chaînes de caractères.</p>
+<div class="admonition important">
+<p class="admonition-title">Fonctions sur les chaînes</p>
+<p>La syntaxe pour appeler une fonction sur une chaîne diffère légèrement de celle d'une fonction standard. On prend la chaîne sur laquelle l'on souhaite appeler la fonction (ou la variable qui contient la chaîne) et on lui appose un point, puis on fait l'appel à la fonction.</p>
+<p>La fonction s'exécute alors pour la chaîne sur laquelle elle est appelée.</p>
+<div class="admonition extra">
+<p class="admonition-title">Programmation objet</p>
+<p>Cette syntaxe différente provient de la programmation-objet que nous aborderons plus tard au cours de la session. Elle n'est pas là simplement pour mélanger les programmeuses et programmeurs :P</p>
+</div>
+</div>
+<h3 id="les-fonctions-upper-et-lower">Les fonctions <code>upper</code> et <code>lower</code></h3>
+<div class="language-text highlight"><pre><span></span><code>Ces deux fonctions convertissent une chaîne en lettres majuscules (pour `upper`) et en lettres minuscules (pour `lower`). Elles n'acceptent aucun argument et retournent la chaîne modifiée. L'opération est sans effet pour les chiffres et les symboles dans les chaînes.
+</code></pre></div>
+<div class="language-python highlight"><span class="filename">Transformation de la casse d'une chaîne</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">texte</span> <span class="o">=</span> <span class="s2">"Bonjour le monde!"</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>    <span class="c1"># Affiche «BONJOUR LE MONDE!»</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">texte</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>    <span class="c1"># Affiche «bonjour le monde!»</span>
+</span></code></pre></div>
+<h3 id="la-fonction-count-pour-compter-les-caracteres">La fonction <code>count</code> pour compter les caractères</h3>
+<p>Cette fonction compte le nombre de sous-chaînes dans une chaîne. Elle accepte un paramètre, la sous-chaîne retournée. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sous-chaîne</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">Chaîne recherchée</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Entier</td>
+<td style="text-align: left;">Le nombre de fois que la sous-chaîne a été trouvée</td>
+</tr>
+</tbody>
+</table>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'utilisation de la fonction count</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">"Bonjour le monde!"</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">"o"</span><span class="p">))</span>        <span class="c1"># Affiche 3</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">"on"</span><span class="p">))</span>       <span class="c1"># Affiche 2</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">"z"</span><span class="p">))</span>        <span class="c1"># Affiche 0</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="compter-la-longueur-totale-dune-chaine-avec-len">Compter la longueur totale d'une chaîne avec <code>len</code></h3>
+<p>Si l'on cherche à connaître la longueur totale, il faut utiliser la fonction <code>len</code>. Elle calcule le nombre de caractères dans la chaîne, incluant les espaces et autres caractères blancs. Attention, il s'agit d'une fonction standard !</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">chaîne</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">La chaîne pour laquelle calculer la longueur</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Entier</td>
+<td style="text-align: left;">Le nombre de caractères dans la chaîne</td>
+</tr>
+</tbody>
+</table>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'utilisation de la fonction len</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">"Bonjour le monde!"</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">chaine</span><span class="p">))</span>  <span class="c1"># Affiche 17</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="trouver-une-sous-chaine-dans-une-chaine-avec-find">Trouver une sous-chaîne dans une chaîne avec <code>find</code></h3>
+<p>La fonction <code>find</code> détermine si une sous-chaîne est contenue dans une chaîne et retourne la position de la première occurrence.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">sous-chaîne</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">La sous-chaîne recherchée</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Entier</td>
+<td style="text-align: left;">La position de la première occurrence ou -1 si la sous-chaîne n'est pas contenue dans la chaîne.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'utilisation de la fonction find</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">"Bonjour le monde!"</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"o"</span><span class="p">))</span>     <span class="c1"># Affiche 1</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"our"</span><span class="p">))</span>   <span class="c1"># Affiche 4</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">"??"</span><span class="p">))</span>     <span class="c1"># Affiche -1 </span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="remplace-une-sous-chaine-par-une-autre-avec-replace">Remplace une sous-chaîne par une autre avec <code>replace</code></h3>
+<p>La fonction <code>replace</code> permet de remplacer des valeurs par d'autres dans une chaîne de caractères.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">recherche</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">La sous-chaîne recherchée.</td>
+</tr>
+<tr>
+<td style="text-align: left;">remplacement</td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">La sous-chaîne à utiliser pour remplacer les valeurs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Retour</strong></td>
+<td style="text-align: left;">Chaîne de caractères</td>
+<td style="text-align: left;">La chaîne de caractère après avoir effectué le remplacement.</td>
+</tr>
+</tbody>
+</table>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple d'utilisation de la fonction replace</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">chaine</span> <span class="o">=</span> <span class="s2">"Bonjour le monde!"</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"o"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">))</span>     <span class="c1"># Affiche «Bynjyur le mynde!»</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"our"</span><span class="p">,</span> <span class="s2">"eu"</span><span class="p">))</span>  <span class="c1"># Affiche «Bonjeu le monde!»</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"our"</span><span class="p">,</span> <span class="s2">""</span><span class="p">))</span>    <span class="c1"># Affiche «Bonj le monde!»</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">chaine</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"ks"</span><span class="p">))</span>    <span class="c1"># Affiche « Bonjour le monde!»</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="un-premier-programme">Un premier programme</h2>
+<p>Demandez à une personne utilisatrice de saisir deux nombres entiers ou décimaux dans la console, multipliez ces nombres et affichez le produit obtenu, avec au plus deux décimales.</p>
+<details class="abstract">
+<summary>Solution</summary>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Calculatrice</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1"># Saisie des informations</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Entrez le premier nombre a multiplier :"</span><span class="p">)</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">operande_gauche</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Entrez le second nombre a multiplier :"</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="n">operande_droite</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="c1"># Calcul et affichage</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="n">produit</span> <span class="o">=</span> <span class="n">operande_gauche</span> <span class="o">*</span> <span class="n">operande_droite</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Le produit est : "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">produit</span><span class="p">,</span> <span class="mi">2</span><span class="p">)))</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="exercices">Exercices</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 27 et suivantes</p>
+<p>Recommandés : 1.7, 1.8, 1.11, 1.12, 1.17
+Supplémentaires : 1.18, 1.21, 1.22</p></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-20</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../entrees-sorties/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Entrées et sorties">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Entrées et sorties
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../type-booleens-instructions-conditionnelles/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Type booléen et instructions conditionnelles">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Type booléen et instructions conditionnelles
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-NC-SA Cirine Chaieb, François Mercier et Alexandre Ouellet
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.stikcy", "navigation.path", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>

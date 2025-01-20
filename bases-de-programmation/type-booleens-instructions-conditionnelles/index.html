@@ -12,22 +12,28 @@
         <meta name="author" content="Alexandre Ouellet">
       
       
+        <link rel="canonical" href="https://programmation-en-sciences.github.io/bases-de-programmation/type-booleens-instructions-conditionnelles/">
       
       
+        <link rel="prev" href="../manipulations-types-simples/">
       
-      <link rel="icon" href="/images/favicon.svg">
+      
+        <link rel="next" href="../conversions-types/">
+      
+      
+      <link rel="icon" href="../../images/favicon.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
     
     
       
-        <title>Programmation en sciences</title>
+        <title>Type booléen et instructions conditionnelles - Programmation en sciences</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,18 +52,27 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/hint.min.css">
+      <link rel="stylesheet" href="../../stylesheets/hint.min.css">
     
-      <link rel="stylesheet" href="/stylesheets/override.css">
+      <link rel="stylesheet" href="../../stylesheets/override.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -73,6 +88,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#les-instructions-conditionnelles" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,9 +103,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="/." title="Programmation en sciences" class="md-header__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+    <a href="../.." title="Programmation en sciences" class="md-header__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
       
-  <img src="/images/favicon.svg" alt="logo">
+  <img src="../../images/favicon.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -102,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Type booléen et instructions conditionnelles
             
           </span>
         </div>
@@ -171,7 +191,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -190,7 +210,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="/introduction-outils/introduction/" class="md-tabs__link">
+        <a href="../../introduction-outils/introduction/" class="md-tabs__link">
           
   
   Introduction et outils
@@ -204,11 +224,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/bases-de-programmation/types-numeriques-variables-constantes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../types-numeriques-variables-constantes/" class="md-tabs__link">
           
   
   Les bases de la programmation
@@ -243,9 +265,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Programmation en sciences" class="md-nav__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+    <a href="../.." title="Programmation en sciences" class="md-nav__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
       
-  <img src="/images/favicon.svg" alt="logo">
+  <img src="../../images/favicon.svg" alt="logo">
 
     </a>
     Programmation en sciences
@@ -260,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -320,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-outils/introduction/" class="md-nav__link">
+      <a href="../../introduction-outils/introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -341,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-outils/installation/" class="md-nav__link">
+      <a href="../../introduction-outils/installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-outils/algorithmes/" class="md-nav__link">
+      <a href="../../introduction-outils/algorithmes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-outils/conventions-langage/" class="md-nav__link">
+      <a href="../../introduction-outils/conventions-langage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/introduction-outils/personnel-enseignant/" class="md-nav__link">
+      <a href="../../introduction-outils/personnel-enseignant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,25 +499,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -506,7 +533,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Les bases de la programmation
@@ -520,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bases-de-programmation/types-numeriques-variables-constantes/" class="md-nav__link">
+      <a href="../types-numeriques-variables-constantes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -541,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bases-de-programmation/entrees-sorties/" class="md-nav__link">
+      <a href="../entrees-sorties/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -562,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bases-de-programmation/manipulations-types-simples/" class="md-nav__link">
+      <a href="../manipulations-types-simples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,10 +607,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/bases-de-programmation/type-booleens-instructions-conditionnelles/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -592,6 +628,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -604,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bases-de-programmation/conversions-types/" class="md-nav__link">
+      <a href="../conversions-types/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -625,7 +662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bases-de-programmation/fonctions/" class="md-nav__link">
+      <a href="../fonctions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -658,8 +695,61 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+<div><h1 id="les-instructions-conditionnelles">Les instructions conditionnelles</h1>
+<div class="competences">
+<div style="flex: 0 0 70%">
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Objectifs de la section</span></p>
+<p>2-1 Variables, constantes et types</p>
+<p style="text-indent:20px;">c. Chaînes de caractères</p>
+<p>2-2 Traitements de données</p>
+<p style="text-indent:20px;">b. Algèbre booléenne</p>
+<p>2-4 Traitements conditionnels<br>
+2-6 Conventions du langage de programmation utilisé</p>
+</div>
+<div>
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
+<p>50 minutes</p>
+</div>
+</div>
+<hr>
+<p>À venir</p></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-20</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -671,6 +761,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../manipulations-types-simples/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Manipulations des types de données simples">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Manipulations des types de données simples
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../conversions-types/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les conversions de types">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Les conversions de types
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -699,15 +827,15 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.stikcy", "navigation.path", "toc.integrate"], "search": "/assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.stikcy", "navigation.path", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

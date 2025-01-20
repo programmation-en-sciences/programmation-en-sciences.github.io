@@ -1,0 +1,979 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Cours 420-SN1-RE Programmation en sciences qui vise l'acquisition de bases en programmation scientifique">
+      
+      
+        <meta name="author" content="Alexandre Ouellet">
+      
+      
+        <link rel="canonical" href="https://programmation-en-sciences.github.io/introduction-outils/installation/">
+      
+      
+        <link rel="prev" href="../introduction/">
+      
+      
+        <link rel="next" href="../algorithmes/">
+      
+      
+      <link rel="icon" href="../../images/favicon.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+    
+    
+      
+        <title>Installation - Programmation en sciences</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/hint.min.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/override.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installer-python-et-lenvironnement-thonny" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../.." title="Programmation en sciences" class="md-header__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+      
+  <img src="../../images/favicon.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programmation en sciences
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introduction/" class="md-tabs__link">
+          
+  
+  Introduction et outils
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bases-de-programmation/types-numeriques-variables-constantes/" class="md-tabs__link">
+          
+  
+  Les bases de la programmation
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programmation en sciences" class="md-nav__button md-logo" aria-label="Programmation en sciences" data-md-component="logo">
+      
+  <img src="../../images/favicon.svg" alt="logo">
+
+    </a>
+    Programmation en sciences
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Introduction et outils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction et outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-langages-de-programmation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les langages de programmation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-principales-couches-logicielles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les principales couches logicielles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realiser-linstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Réaliser l'installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-cles-de-la-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts clés de la section
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithmes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les algorithmes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Outils
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Outils
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conventions-langage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Conventions du langage python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personnel-enseignant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Personnel enseignant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Les bases de la programmation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Les bases de la programmation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/types-numeriques-variables-constantes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Types numériques, variables et constantes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/entrees-sorties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Entrées et sorties
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/manipulations-types-simples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manipulations des types de données simples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/type-booleens-instructions-conditionnelles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Type booléen et instructions conditionnelles
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/conversions-types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les conversions de types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bases-de-programmation/fonctions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Les fonctions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<div><h1 id="installer-python-et-lenvironnement-thonny">Installer Python et l'environnement Thonny</h1>
+<div class="competences">
+<div style="flex: 0 0 70%">
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Objectifs de la section</span></p>
+<p>Reconnaître les principales couches logicielles<br>
+Expliquer l'utilisation et de l'interprétation des langages de programmation<br>
+Installer les outils pour développer dans le langage Python</p>
+</div>
+<div>
+<p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
+<p>20 minutes</p>
+</div>
+</div>
+<hr>
+<h2 id="les-langages-de-programmation">Les langages de programmation</h2>
+<p>Bien que les machines fonctionnent à l'aide de signaux électriques représentés par les structures binaires (0 pour l'absence de courant électrique et 1 pour un courant électrique), il est rarissime qu'il faille interagir à ce niveau pour réaliser une tâche. Bien souvent, on utilise un <strong>langage de programmation</strong> qui permet d'exprimer des concepts à l'aide d'un langage lisible et interprétable par les êtres humains. Les « textes » écrits avec ce langage sont appelés <strong>code source</strong> et le résultat de leur transformation en code utilisable par la machine est appelé <strong>programme</strong> ou <strong>logiciel</strong>. </p>
+<div class="language-py highlight"><span class="filename">Exemple de programme simple avec Python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Saisissez un nombre entier, puis appuyez sur </span><span class="se">\"</span><span class="s2">Entrée</span><span class="se">\"</span><span class="s2">: "</span><span class="p">))</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre entré est positif."</span><span class="p">)</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="k">elif</span> <span class="n">nombre</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre entré est négatif."</span><span class="p">)</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre entré est 0."</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous n'avez pas entré un nombre entier."</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">main</span><span class="p">()</span>
+</span></code></pre></div>
+<p>On trouve plusieurs dizaines de langages de programmation standard, certains plus généraux et d'autres spécialisés pour remplir une fonction ou manipuler un type d'information particulier. Tous les langages ont en commun qu'ils définissent une <strong>syntaxe</strong> (règles d'écriture des « phrases » la langue), une sémantique (sens donné aux termes et aux structures) et un lexique (« mots » qui existent dans la langue). Le choix d'un langage plutôt qu'un autre repose souvent sur le lexique natif du langage ou des outils développés avec le langage qui vient étendre le lexique natif du langage.  Les langages offrent, pour la plupart, des façons de lire des données, de transmettre des données, de traiter des données et de stocker des données. Ces quatre fonctionnalités correspondent aux quatre caractéristiques des ordinateurs.</p>
+<p>L'une des plus grandes difficultés dans l'apprentissage d'un langage de programmation est l'apprentissage de la sémantique qui repose elle-même sur un concept clé l'<strong>abstraction</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Abstraction</p>
+<p>Une <strong>abstraction</strong> est une représentation d'un concept tangible ou non avec une construction logicielle. Par exemple, un fichier est une abstraction d'une feuille de papier. Le fichier ne partage aucune caractéristique commune avec la feuille de papier autre que les deux servent à rassembler des informations à un même endroit. Pourtant, le fichier exerce exactement la même fonction dans un ordinateur qu'une feuille de papier.</p>
+<p>Nous verrons quand nous utiliserons un langage de programmation que chaque représentation d'un objet ou d'un concept du monde réel nécessitera l'utilisation d'une abstraction donnée par le langage.</p>
+</div>
+<h2 id="les-principales-couches-logicielles">Les principales couches logicielles</h2>
+<p>Comme mentionné précédemment, peu de personnes codent des programmes qui interagissent directement avec des composantes matérielles. On s'appuie plutôt sur des programmes existants pour faciliter l'écriture des programmes. La figure ci-dessous illustre 4 des couches pertinentes dans le développement d'un programme Python.</p>
+<figure>
+<pre class="mermaid"><code>graph TD
+    A[Programme Python] --&gt; E[Interpréteur Python] --&gt; B[Système d'exploitation] --&gt; D[Couche matérielle]</code></pre>
+<figcaption>Les différentes couches logicielles</figcaption>
+</figure>
+<p>La couche la plus élevée, <em>Programme Python</em>, correspond au programme écrit et que l'on souhaite utiliser. On dit alors que Python est un <strong>langage de haut niveau</strong>. Le <span class="tooltip hint--top" aria-label=" Ensemble des instructions écrites qui définissent un programme. ">code source</span> de ce fichier est transmis à l'interpréteur Python qui transforme le code source lisible par les humains en une série d'instructions destinées au système d'exploitation (couche suivante). L'interpréteur est le programme « python 3.12.exe » dont nous verrons l'installation dans de la prochaine section. Sans ce programme, les codes écrits en Python ne peuvent être traités par la machine. </p>
+<p>Le système d'exploitation est le logiciel responsable de l'organisation et de la gestion des ressources d'un ordinateur. Ils sont principalement issus de l'une des trois grandes familles : <em>Windows</em>, <em>Mac</em> ou <em>Linux</em>. Chacun des systèmes d'exploitation définit un jeu d'instructions différent (mais qui fait sensiblement la même chose). Sans notre interpréteur il faudrait écrire un programme différent pour chaque système d'exploitation. Il peut quand même exister des différences légères et rares entre un programme développé pour deux systèmes d'exploitation différents (principalement entre Windows et les autres), mais elles se gèrent facilement et elles entraînent rarement des problèmes bloquants.</p>
+<details class="info" open="open">
+<summary>Système d'exploitation</summary>
+<p>En anglais, le terme <em>Operating System</em> est employé pour désigner le système d'exploitation. Même en français nous avons tendance à faire référence au système d'exploitation en utilisant l'acronyme <strong>OS</strong>.  </p>
+</details>
+<p>Finalement, le système d'exploitation transmet les instructions aux composantes matérielles qui les exécutent. Dans les faits, il peut y avoir plusieurs couches intermédiaires entre le système d'exploitation et les composantes matérielles. Chaque couche utilise un jeu d'instructions de plus en plus élémentaire. Ce n'est toutefois pas nécessaire de s'y intéresser pour comprendre le fonctionnement d'un langage de haut niveau comme Python.</p>
+<h2 id="realiser-linstallation">Réaliser l'installation</h2>
+<p><em>Thonny</em> est un <strong>environnement de développement intégré (IDE)</strong> propose une interface simplifiée pour apprendre la programmation dans le langage Python. C'est cet environnement qui sera utilisé dans le cours <em>420-SN1-RE Programmation en sciences</em>. Pour les personnes habiles avec un autre environnement de développement en Python (<em>VSCode</em>, <em>PyCharm</em> ou la ligne de commande), il est tout à fait possible de suivre le cours avec ces environnements, mais les captures d'écrans et les procédures seront expliquées que pour l'environnement <em>Thonny</em>.</p>
+<p>Pour télécharger <em>Thonny</em>, il faut se rendre sur <a href="https://thonny.org/">la page officielle de <em>Thonny</em></a>. En passant la souris au-dessus du nom du système d'exploitation de votre ordinateur en haut à gauche, vous verrez une fenêtre s'ouvrir. Il faut cliquer sur le premier lien (<em>Installer with 64-bit Python 3.10</em>). Ce lien permet d'installer Python en même temps que <em>Thonny</em> sans devoir faire plus de manipulation</p>
+<figure>
+  <a class="glightbox" href="../images/telecharger_thonny.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Site web de *Thonny*" src="../images/telecharger_thonny.png" width="600"></a>
+  <figcaption>Télécharger <em>Thonny</em> à partir du site officiel</figcaption>
+</figure>
+<p>Une fois le téléchargement complété, on lance l'assistant d'installation qui affiche une fenêtre qui demande pour qui réaliser l'installation. Si vous avez les droits d'administrateur sur la machine ou que vous êtes la seule personne qui l'utilise je suggère l'option <strong><em>Install for all users</em></strong>, sinon l'option <strong><em>Install for me only</em></strong> fonctionne aussi très bien. Votre système d'exploitation vous affichera une notification de sécurité si vous avez sélectionné <em>Install for all users</em>, il faut appuyer sur <strong>Oui</strong> pour permettre à <em>Thonny</em> de s'installer. </p>
+<figure>
+  <a class="glightbox" href="../images/mode_installation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Modes d'installation" src="../images/mode_installation.png"></a>
+  <figcaption>Sélection des modes d'installation de <em>Thonny</em></figcaption>
+</figure>
+<p>Ensuite, il faut suivre les étape en appuyant sur <strong>*Next</strong> dans le bas de la fenêtre jusqu'à ce que vous ayez la fenêtre suivante qui confirme l'installation correcte.</p>
+<figure>
+  <a class="glightbox" href="../images/confirmation_thonny.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Confirmation d'installation" src="../images/confirmation_thonny.png"></a>
+  <figcaption>Confirmation d'installation avec succès de <em>Thonny</em></figcaption>
+</figure>
+<p>Si vous lancez <em>Thonny</em> après son installation, vous devriez voir s'afficher la fenêtre suivante. </p>
+<figure>
+  <a class="glightbox" href="../images/interface_thonny.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Interface de Thonny" src="../images/interface_thonny.png"></a>
+  <figcaption>Interface au démarrage de <em>Thonny</em></figcaption>
+</figure>
+<h2 id="concepts-cles-de-la-section"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4H12.6Z"></path></svg></span> Concepts clés de la section</h2>
+<dl>
+<dt><code>Langage de programmation</code></dt>
+<dd>Langage compréhensible par des humains qui sert à exprimer la structure d'un programme exécutable par un ordinateur. </dd>
+<dt><code>Abstraction</code></dt>
+<dd>Représentation d'un concept tangible ou tiré du monde réel par une construction logicielle.</dd>
+<dt><code>Système d'exploitation</code></dt>
+<dd>Programme qui gère l'accès aux ressources de la machine.</dd>
+<dt><code>Interprétation d'un code source</code></dt>
+<dd>Opération dans laquelle un code source est transformé en instructions qui peuvent être traitées par la machine (en particulier son système d'exploitation).</dd>
+</dl></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Dernière mise à jour">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-10</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../introduction/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Précédent
+              </span>
+              <div class="md-ellipsis">
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../algorithmes/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les algorithmes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Suivant
+              </span>
+              <div class="md-ellipsis">
+                Les algorithmes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      CC BY-NC-SA Cirine Chaieb, François Mercier et Alexandre Ouellet
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.code.select", "content.tooltips", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.tabs.stikcy", "navigation.path", "toc.integrate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
