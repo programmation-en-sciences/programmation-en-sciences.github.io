@@ -619,6 +619,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Type booléen et instructions conditionnelles
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -628,6 +639,112 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-variables-booleennes-et-leurs-operateurs-booleens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les variables booléennes et leurs opérateurs booléens
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les variables booléennes et leurs opérateurs booléens">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tables-de-verite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables de vérité
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateur-de-conjonction-et" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateur de conjonction (ET)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateur-de-disjonction-ou" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateur de disjonction (OU)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateur-de-negation-non" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateur de négation (NON)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#la-priorite-des-informations" class="md-nav__link">
+    <span class="md-ellipsis">
+      La priorité des informations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operateurs-de-comparaison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs de comparaison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-priorite-des-operations-globale-en-informatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      La priorité des opérations globale en informatique
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traitement-conditionnel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traitement conditionnel
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -715,7 +832,162 @@
 </div>
 </div>
 <hr>
-<p>À venir</p></div>
+<h2 id="les-variables-booleennes-et-leurs-operateurs-booleens">Les variables booléennes et leurs opérateurs booléens</h2>
+<p>Une variable booléenne est une variable qui peut prendre deux états : vrai (<code>True</code> | <strong>V</strong>) ou faux (<code>False</code> | <strong>F</strong>). On utilise très régulièrement ces variables afin de, par exemple, déterminer si une opération doit être exécutée, une certain paramètre a été demandé ... (réponse oui ou non).</p>
+<div class="admonition important">
+<p class="admonition-title">Syntaxe</p>
+<p>Notez la majuscule au début de <code>True</code> et <code>False</code> : elle est importante, car Python est sensible à la casse.</p>
+</div>
+<p>Les opérateurs arithmétiques ne s'appliquent pas aux variables booléennes, ils définissent plutôt leur propres opérateurs. De la même manière qu'un opérateur arithmétique binaire accepte deux nombres et retourne une autre nombre, une opérateur booléen binaire accepte deux booléens et retourne un booléen. </p>
+<h3 id="tables-de-verite">Tables de vérité</h3>
+<p>On utilise une <strong>table de vérité</strong> pour représenter le résultat de l'évaluation d'une expression logique. Dans un table de vérité on présente toutes les combinaisons possibles de valeurs booléennes (vrai ou faux pour chaque variable) et l'on indique ensuite le résultat de l'évaluation. </p>
+<p></p><center>
+<p>Exemple - Table de vérité</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">A opérateur B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">?</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">?</td>
+</tr>
+</tbody>
+</table>
+<p></p></center> 
+<h3 id="operateur-de-conjonction-et">Opérateur de conjonction (ET)</h3>
+<p>L'opérateur de conjonction retourne vrai seulement si les deux opérandes sont vraies et faux dans tous les autres cas. On le note en Python par le mot clé <code>and</code>.</p>
+<p></p><center>
+<p>Table de vérité de l'opérateur de conjonction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">A <code>and</code> B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p></p></center> 
+<h3 id="operateur-de-disjonction-ou">Opérateur de disjonction (OU)</h3>
+<p>L'opérateur de disjonction  retourne vrai dès que l'une ou l'autre des opérandes est vraie et faux seulement si les deux opérandes sont fausses. On le note en Python par le mot clé <code>or</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Le « ou » dans le langage courant</p>
+<p>En français, le mot « ou » implique de faire un choix entre deux options, mais souvent on ne peut pas prendre les deux en même temps. En mathématiques et en informatique, cela correspond au « ou-exclusif », le « ou » logique qu'on utilise le plus souvent, admet la possibilité que les deux options sont choisies. </p>
+</div>
+<p></p><center>
+<p>Table de vérité de l'opérateur de disjonction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">A <code>or</code> B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<p></p></center> 
+<h3 id="operateur-de-negation-non">Opérateur de négation (NON)</h3>
+<p>L'opérateur de négation est un opérateur unaire (avec une seule opérande) qui inverse la valeur du booléen. Il retourne vrai seulement si l'opérande et fausse, et faux seulement si l'opérande est vrai. On le note en Python par le mot clé <code>not</code>.</p>
+<p></p><center>
+<p>Table de vérité de l'opérateur de conjonction</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;"><code>not</code> A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+</tr>
+</tbody>
+</table>
+<p></p></center> 
+<h3 id="la-priorite-des-informations">La priorité des informations</h3>
+<p>Comme les opérateurs arithmétiques, les opérateurs booléens n'ont pas tous la même priorité. Dans l'ordre : </p>
+<ol>
+<li>Opérateur de négation (<code>not</code>)</li>
+<li>Opérateur de conjonction (<code>and</code>)</li>
+<li>Opérateur de disjonction (<code>or</code>)</li>
+</ol>
+<p>Comme pour l'arithmétique, on peut ajouter des parenthèses pour modifier l'ordre des opérations.</p>
+<div class="admonition extra">
+<p class="admonition-title">En mathématiques</p>
+</div>
+<h2 id="operateurs-de-comparaison">Opérateurs de comparaison</h2>
+<h2 id="la-priorite-des-operations-globale-en-informatique">La priorité des opérations globale en informatique</h2>
+<h2 id="traitement-conditionnel">Traitement conditionnel</h2></div>
 
 
 
