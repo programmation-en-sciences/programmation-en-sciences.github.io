@@ -18,7 +18,7 @@
         <link rel="prev" href="../manipulations-types-simples/">
       
       
-        <link rel="next" href="../conversions-types/">
+        <link rel="next" href="../fonctions-mathematiques/">
       
       
       <link rel="icon" href="../../favicon.svg">
@@ -740,12 +740,99 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Traitement conditionnel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clause-de-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clause de base
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sinon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sinon...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sinon...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#et-sinon-encore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Et sinon encore...
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilisation-des-operateurs-booleens" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilisation des opérateurs booléens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-cles-de-la-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts clés de la section
+    </span>
+  </a>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fonctions-mathematiques/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fonctions mathématiques
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -833,22 +920,23 @@
 </div>
 <hr>
 <h2 id="les-variables-booleennes-et-leurs-operateurs-booleens">Les variables booléennes et leurs opérateurs booléens</h2>
-<p>Une variable booléenne est une variable qui peut prendre deux états : vrai (<code>True</code> | <strong>V</strong>) ou faux (<code>False</code> | <strong>F</strong>). On utilise très régulièrement ces variables afin de, par exemple, déterminer si une opération doit être exécutée, une certain paramètre a été demandé ... (réponse oui ou non).</p>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 4.1</p>
+<p>Une variable booléenne est une variable qui peut prendre deux états : vrai (<code>True</code> | <strong>V</strong>) ou faux (<code>False</code> | <strong>F</strong>). On utilise très régulièrement ces variables afin de, par exemple, déterminer si une opération doit être exécutée, un certain paramètre a été demandé ... (la réponse est oui ou non).</p>
 <div class="admonition important">
 <p class="admonition-title">Syntaxe</p>
 <p>Notez la majuscule au début de <code>True</code> et <code>False</code> : elle est importante, car Python est sensible à la casse.</p>
 </div>
-<p>Les opérateurs arithmétiques ne s'appliquent pas aux variables booléennes, ils définissent plutôt leur propres opérateurs. De la même manière qu'un opérateur arithmétique binaire accepte deux nombres et retourne une autre nombre, une opérateur booléen binaire accepte deux booléens et retourne un booléen. </p>
+<p>Les opérateurs arithmétiques ne s'appliquent pas aux variables booléennes, ils définissent plutôt leurs propres opérateurs. De la même manière qu'un opérateur arithmétique binaire accepte deux nombres et retourne un autre nombre, un opérateur booléen binaire accepte deux booléens et retourne un booléen. </p>
 <h3 id="tables-de-verite">Tables de vérité</h3>
-<p>On utilise une <strong>table de vérité</strong> pour représenter le résultat de l'évaluation d'une expression logique. Dans un table de vérité on présente toutes les combinaisons possibles de valeurs booléennes (vrai ou faux pour chaque variable) et l'on indique ensuite le résultat de l'évaluation. </p>
+<p>On utilise une <strong>table de vérité</strong> pour représenter le résultat de l'évaluation d'une expression logique. Dans une table de vérité, on présente toutes les combinaisons possibles de valeurs booléennes (vrai ou faux pour chaque variable) et l'on indique ensuite le résultat de l'évaluation. </p>
 <p></p><center>
 <p>Exemple - Table de vérité</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">A opérateur B</th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">a opérateur b</th>
 </tr>
 </thead>
 <tbody>
@@ -876,15 +964,15 @@
 </table>
 <p></p></center> 
 <h3 id="operateur-de-conjonction-et">Opérateur de conjonction (ET)</h3>
-<p>L'opérateur de conjonction retourne vrai seulement si les deux opérandes sont vraies et faux dans tous les autres cas. On le note en Python par le mot clé <code>and</code>.</p>
+<p>L'opérateur de conjonction retourne vrai seulement si les deux opérandes sont vrais et faux dans tous les autres cas. On le note en Python par le mot clé <code>and</code>.</p>
 <p></p><center>
 <p>Table de vérité de l'opérateur de conjonction</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">A <code>and</code> B</th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">a <code>and</code> b</th>
 </tr>
 </thead>
 <tbody>
@@ -912,19 +1000,19 @@
 </table>
 <p></p></center> 
 <h3 id="operateur-de-disjonction-ou">Opérateur de disjonction (OU)</h3>
-<p>L'opérateur de disjonction  retourne vrai dès que l'une ou l'autre des opérandes est vraie et faux seulement si les deux opérandes sont fausses. On le note en Python par le mot clé <code>or</code>.</p>
+<p>L'opérateur de disjonction  retourne vrai dès que l'un ou l'autre des opérandes est vrai et faux seulement si les deux opérandes sont faux. On le note en Python par le mot clé <code>or</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Le « ou » dans le langage courant</p>
-<p>En français, le mot « ou » implique de faire un choix entre deux options, mais souvent on ne peut pas prendre les deux en même temps. En mathématiques et en informatique, cela correspond au « ou-exclusif », le « ou » logique qu'on utilise le plus souvent, admet la possibilité que les deux options sont choisies. </p>
+<p>En français, le mot « ou » implique de faire un choix entre deux options, mais souvent on ne peut pas prendre les deux en même temps. En mathématiques et en informatique, cela correspond au « ou exclusif », le « ou » logique qu'on utilise le plus souvent, admet la possibilité que les deux options soient choisies. </p>
 </div>
 <p></p><center>
 <p>Table de vérité de l'opérateur de disjonction</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;">B</th>
-<th style="text-align: center;">A <code>or</code> B</th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;">b</th>
+<th style="text-align: center;">a <code>or</code> b</th>
 </tr>
 </thead>
 <tbody>
@@ -952,14 +1040,14 @@
 </table>
 <p></p></center> 
 <h3 id="operateur-de-negation-non">Opérateur de négation (NON)</h3>
-<p>L'opérateur de négation est un opérateur unaire (avec une seule opérande) qui inverse la valeur du booléen. Il retourne vrai seulement si l'opérande et fausse, et faux seulement si l'opérande est vrai. On le note en Python par le mot clé <code>not</code>.</p>
+<p>L'opérateur de négation est un opérateur unaire (avec une seule opérande) qui inverse la valeur du booléen. Il retourne vrai seulement si l'opérande et faux, et faux seulement si l'opérande est vrai. On le note en Python par le mot clé <code>not</code>.</p>
 <p></p><center>
 <p>Table de vérité de l'opérateur de conjonction</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: center;">A</th>
-<th style="text-align: center;"><code>not</code> A</th>
+<th style="text-align: center;">a</th>
+<th style="text-align: center;"><code>not</code> a</th>
 </tr>
 </thead>
 <tbody>
@@ -984,10 +1072,227 @@
 <p>Comme pour l'arithmétique, on peut ajouter des parenthèses pour modifier l'ordre des opérations.</p>
 <div class="admonition extra">
 <p class="admonition-title">En mathématiques</p>
+<p>Il existe une notation mathématique pour exprimer la logique formelle. Voici l'équivalent en termes de notation.</p>
+<ul>
+<li>conjonction : <span class="arithmatex">\(\wedge\)</span></li>
+<li>disjonction : <span class="arithmatex">\(\vee\)</span></li>
+<li>negation : <span class="arithmatex">\(\neg\)</span> ou <span class="arithmatex">\(\bar{a}\)</span></li>
+</ul>
 </div>
 <h2 id="operateurs-de-comparaison">Opérateurs de comparaison</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 4.1</p>
+<p>On doit souvent comparer des valeurs entre elles dans un programme afin de permettre d'automatiser des traitements. On utilise les opérateurs de comparaison (aussi appelés relationnels), dont le comportement dépend du type de données. La comparaison de deux nombres ou deux chaînes de caractères ne se fait pas de la même façon. Voici les 6 opérateurs de comparaison en Python.</p>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opérateur</th>
+<th style="text-align: left;">Symbole</th>
+<th style="text-align: left;">Entre nombres</th>
+<th style="text-align: left;">Entre chaînes</th>
+<th style="text-align: left;">Entre booléens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Égal</td>
+<td style="text-align: left;">==</td>
+<td style="text-align: left;">Si les nombres sont pareils (attention aux <em>float</em>)</td>
+<td style="text-align: left;">Si le contenu des chaînes est pareil (sensible à la casse)</td>
+<td style="text-align: left;">Si les deux valeurs sont les mêmes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Différent de</td>
+<td style="text-align: left;">!=</td>
+<td style="text-align: left;">Si les nombres sont différents (attention aux <em>float</em>)</td>
+<td style="text-align: left;">Si le contenu des chaînes est différent (sensible à la casse)</td>
+<td style="text-align: left;">Si les deux valeurs sont différentes</td>
+</tr>
+<tr>
+<td style="text-align: left;">Plus petit que</td>
+<td style="text-align: left;">&lt;</td>
+<td style="text-align: left;">Un nombre est plus petit qu'un autre</td>
+<td style="text-align: left;">Compare l'ordre des codes ASCII des caractères de la chaîne</td>
+<td style="text-align: left;"><code>False</code> est plus petit que <code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Plus petit ou égale que</td>
+<td style="text-align: left;">&lt;=</td>
+<td style="text-align: left;">Un nombre est plus petit ou égal à un autre</td>
+<td style="text-align: left;">Compare l'ordre des codes ASCII des caractères de la chaîne</td>
+<td style="text-align: left;"><code>False</code> est plus petit que <code>True</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Plus grand que</td>
+<td style="text-align: left;">&gt;</td>
+<td style="text-align: left;">Un nombre est plus grand qu'un autre</td>
+<td style="text-align: left;">Compare l'ordre des codes ASCII des caractères de la chaîne</td>
+<td style="text-align: left;"><code>True</code> est plus grand que <code>False</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Plus grand ou égal que</td>
+<td style="text-align: left;">&gt;=</td>
+<td style="text-align: left;">Un nombre est plus grand ou égal à un autre</td>
+<td style="text-align: left;">Compare l'ordre des codes ASCII des caractères de la chaîne</td>
+<td style="text-align: left;"><code>True</code> est plus grand que <code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<div class="admonition warning">
+<p class="admonition-title">Comparer des types différents</p>
+<p>Certaines données peuvent être comparées même si elles ne sont pas dans le même type, d'autres non. La meilleure pratique consiste à <a href="../conversions-types/">convertir</a> d'abord l'une des deux données afin de comparer des données de même type.</p>
+</div>
 <h2 id="la-priorite-des-operations-globale-en-informatique">La priorité des opérations globale en informatique</h2>
-<h2 id="traitement-conditionnel">Traitement conditionnel</h2></div>
+<p>On a vu quelques groupes d'opérations qui ont elles aussi une priorité entre eux. Voici donc la priorité globale des opérations en Python.</p>
+<ol>
+<li>Appel de fonction</li>
+<li>Parenthèses <code>()</code>  </li>
+<li>Exposant <code>**</code></li>
+<li>Multiplication et division <code>* / // %</code></li>
+<li>Addition et soustraction <code>+ -</code></li>
+<li>Comparaison <code>== != &lt; &lt;= &gt; &gt;=</code></li>
+<li>Négation <code>not</code></li>
+<li>Conjonction <code>and</code></li>
+<li>Disjonction <code>or</code></li>
+<li>Affectation <code>=</code></li>
+</ol>
+<p>En cas de priorité égale</p>
+<h2 id="traitement-conditionnel">Traitement conditionnel</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 4.2</p>
+<p>L'une des caractéristiques les plus importantes des programmes est de réagir de façon différenciée aux différentes entrées. Comme présenté au cours précédent, l'une des caractéristiques des ordinateurs est d'<strong>accepter des données</strong>, donc il faut pouvoir les considérer dans les traitements effectués.</p>
+<p>L'idée de la clause conditionnelle est d'effectuer une vérification sur un booléen et d'effectuer un traitement différent selon la valeur.</p>
+<pre class="mermaid"><code>graph LR
+  A[Code...] --&gt; B{Test logique};
+  B --&gt;|Faux| D[Code...];
+  B --&gt;|Vrai| C[Traitement conditionnel];
+  C --&gt; D;</code></pre>
+<h3 id="clause-de-base">Clause de base</h3>
+<p>Dans le code python, cela prend la forme d'une condition <code>!#py if</code>.</p>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Code</span><span class="o">...</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">if</span> <span class="n">test_logique</span> <span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="c1"># Traitement conditionnel</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">Code</span><span class="o">...</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">L'indentation</p>
+<p>Remarquez l'indentation (retrait de la marge de gauche) supplémentaire sous le <code>!#py if</code> pour la section <em>traitement conditionnel</em>. C'est ce qui permet à Python de savoir quelles instructions sont dans le bloc d'instructions conditionnelles (il peut y avoir plusieurs lignes) et quand celui-ci se termine.</p>
+</div>
+<p>Il y a trois façons de construire des tests logiques pour des expressions conditionnelles :</p>
+<ul>
+<li>Utiliser une variable booléenne;</li>
+<li>Utiliser une expression de comparaison;</li>
+<li>Utiliser une fonction qui retourne un booléen (couvert dans une prochaine section);</li>
+</ul>
+<h3 id="sinon">Sinon...</h3>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 4.3</p>
+<p>Il arrive que l'on veuille forcer le programme entre deux branches d'exécution possibles. </p>
+<pre class="mermaid"><code>graph LR
+  A[Code...] --&gt; B{Test logique};
+  B --&gt; |Vrai| C[Traitement conditionnel];
+  B --&gt; |Faux| E[Traitement alternatif];
+  E --&gt; D[Code...];
+  C --&gt; D;</code></pre>
+<p>Dans ce cas, on utilise la clause <code class="language-py highlight"><span class="k">else</span></code> pour signifier l'autre traitement qui est exécuté lorsque la condition est fausse.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Nombre positif ou non</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Saisissez un nombre."</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est positif."</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre n'est pas positif."</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Fin du programme"</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h4 id="et-sinon-encore">Et sinon encore...</h4>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 4.4</p>
+<p>Il arrive qu'on puisse avoir plusieurs scénarios d'exécution possibles qui sont exclusifs entre eux.</p>
+<pre class="mermaid"><code>graph LR
+  A[Code...] --&gt; B{Test logique};
+  B --&gt; C[Traitement conditionnel];
+  E --&gt; D[Code...];
+  B --&gt; E[Traitement alternatif 1];
+  B --&gt; F[Traitement alternatif 2] --&gt; D;
+  B --&gt; G[Traitement alternatif ...] --&gt; D;
+  C --&gt; D;</code></pre>
+<p>On utilise dans ce cas les clauses <code class="language-py highlight"><span class="k">elif</span></code> (contraction de <em>else if</em>) qui acceptent aussi une condition. Il peut y avoir plusieurs clauses <code class="language-py highlight"><span class="k">elif</span></code> qui s'enchaîne. La première clause dont la condition est évaluée à <strong>vraie</strong> est exécutée, puis le programme continu. La clause <code class="language-py highlight"><span class="k">if</span></code> est toujours la première et la clause <code class="language-py highlight"><span class="k">else</span></code>, lorsqu'elle est nécessaire, est toujours la dernière.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Nombre positif, négatif ou nul</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Saisissez un nombre."</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">nombre</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="k">if</span> <span class="n">nombre</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est positif."</span><span class="p">)</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="k">elif</span> <span class="n">nombre</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Le nombre est négatif."</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="k">else</span> <span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"Vous avez saisi 0."</span><span class="p">);</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Fin du programme"</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="utilisation-des-operateurs-booleens">Utilisation des opérateurs booléens</h3>
+<p>Prenons un exemple un peu plus complexe afin d'utiliser les opérateurs booléens dans les conditions et de combiner celles-ci.</p>
+<p>On écrit une intelligence artificielle toute simple qui sert à caractériser des animaux à partir de quelques-unes de leurs caractéristiques. Les animaux à identifier sont : </p>
+<ul>
+<li>Le poisson,</li>
+<li>Le serpent,</li>
+<li>Le chat,</li>
+<li>Le poulet,</li>
+<li>La chauve-souris,</li>
+<li>La fourmi,</li>
+<li>Le papillon ou</li>
+<li>L'araignée </li>
+</ul>
+<p>Il faut aussi indiquer si l'animal est impossible à déterminer. La base du programme est la suivante.</p>
+<div class="language-python highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme de base - IA animaux</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1"># Saisie des caractéristiques</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Combien de pattes possède votre animal ?"</span><span class="p">)</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">nombre_patte</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">())</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Quel est son mode de transport : marche, nage ou vol ?"</span><span class="p">)</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="n">mode_transport</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1"># Afficher s'il s'agit d'un poisson, d'un serpent, d'un chat, d'un poulet,</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1"># d'une chauve-souris, d'une fourmi, d'un papillon,  d'une araignée ou s'il est impossible de le déterminer</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="exercices">Exercices</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 70 et suivantes</p>
+<p>Recommandés : 4.1, 4.2, 4.3, 4.8, 4.9, 4.11
+Supplémentaires : 4.6, 4.10</p>
+<h2 id="concepts-cles-de-la-section"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4H12.6Z"></path></svg></span> Concepts clés de la section</h2>
+<dl>
+<dt><code>booléen et opérateurs logiques</code></dt>
+<dd>les booléens représentent une information qui peut prendre deux états <strong>vrai</strong> ou <strong>faux</strong>. On peut combiner plusieurs expressions booléennes par les opérateurs <strong>et</strong> et <strong>ou</strong>. On peut aussi inverser un état avec l'opérateur de <strong>négation</strong>.</dd>
+<dt><code>comparateur</code></dt>
+<dd>vérifie une relation entre deux expressions et retourne une valeur booléenne selon si la relation est vérifiée au non.</dd>
+<dt><code>instruction conditionnelle</code></dt>
+<dd>permet d'exécuter une partie du code seulement lorsqu'une condition est vérifiée. On peut préciser des traitements alternatifs si la situation le requiert.</dd>
+</dl></div>
 
 
 
@@ -1008,7 +1313,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-24</span>
   </span>
 
     
@@ -1055,13 +1360,13 @@
         
         
           
-          <a href="../conversions-types/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Les conversions de types">
+          <a href="../fonctions-mathematiques/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Fonctions mathématiques">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Suivant
               </span>
               <div class="md-ellipsis">
-                Les conversions de types
+                Fonctions mathématiques
               </div>
             </div>
             <div class="md-footer__button md-icon">
