@@ -855,9 +855,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#syntaxes-avancees" class="md-nav__link">
+  <a href="#exercices" class="md-nav__link">
     <span class="md-ellipsis">
-      Syntaxes avancées
+      Exercices
     </span>
   </a>
   
@@ -914,6 +914,7 @@
 <li><strong>Encapsuler</strong> des traitements pour qu'ils n'aient pas d'effet sur le reste du programme, ce qui <strong>réduit les erreurs</strong> et augmente la <strong>flexibilité</strong> et la <strong>modularité</strong> du code (le code ressemble à des blocs lego que l'on assemble). </li>
 </ul>
 <h2 id="definir-une-fonction">Définir une fonction</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 3.3 / 3.4</p>
 <p>Pour définir une fonction, on utilise la syntaxe suivante (noter que ce qui est entre &lt; &gt; est remplacé par un identificateur).</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Syntaxe d'une fonction</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -990,6 +991,7 @@
 <h2 id="travailler-avec-des-fonctions">Travailler avec des fonctions</h2>
 <p>Maintenant que nous avons vu la syntaxe de base des fonctions, nous verrons deux considérations importantes avec les fonctions, soit la portée de variables et la documentation.</p>
 <h3 id="la-portee-des-variables">La portée des variables</h3>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 3.5</p>
 <p>Chaque variable est visible (accessible) à l'endroit où elle est déclarée. C'est ce que l'on appelle l'espace de visibilité d'une variable. De plus, la règle qui stipule que chaque identificateur doit être unique s'applique uniquement dans un même espace : deux variables peuvent porter le même nom tant qu'elles ne sont pas dans le même espace. On déclare un nouvel espace de visibilité chaque fois que l'on déclare une fonction. Prenons l'exemple du code suivant, la variable <code>valeur</code> de la <code>fonction</code> n'est pas la même que celle de l'espace global.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Portée des variables</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
@@ -1219,7 +1221,11 @@ la même ligne que les guillemets ouvrants, sinon on commence à la ligne suivan
 </span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13"></a>    <span class="c1"># ...</span>
 </span></code></pre></div></td></tr></table></div>
 <p>En commentant le bon appel de fonction, cela vous permet de tester un exercice à la fois. De plus, l'encapsulation des fonctions assure que vos variables ne soient pas partagées entre plusieurs exercices, tant que vous utilisez toujours des variables locales.</p>
-<h2 id="syntaxes-avancees">Syntaxes avancées</h2></div>
+<h2 id="exercices">Exercices</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 56 et suivantes</p>
+<p>Recommandés : 3.1, 3.2, 3.7, 3.14, 3.1, 3.16, 3.17, 3.18, 3.19, 3.21</p>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 70 et suivantes</p>
+<p>Recommandés : 4.12, 4.15, 4.17</p></div>
 
 
 
@@ -1240,7 +1246,7 @@ la même ligne que les guillemets ouvrants, sinon on commence à la ligne suivan
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-31</span>
   </span>
 
     
