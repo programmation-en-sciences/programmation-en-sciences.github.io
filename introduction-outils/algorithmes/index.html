@@ -398,6 +398,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les algorithmes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -407,6 +418,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#division-de-lalgorithme-avec-le-produit-scalaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Division de l'algorithme avec le produit scalaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#division-de-lalgorithme-avec-la-loi-des-cosinus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Division de l'algorithme avec la loi des cosinus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gabarits-de-travail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gabarits de travail
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -726,13 +783,357 @@
 <div class="competences">
 <div style="flex: 0 0 70%">
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Objectifs de la section</span></p>
+<p>1-1 Notion de traitement automatique et d’algorithme<br>
+1-2 Identification des données disponibles et du résultat attendu<br>
+1-3 Techniques de décomposition d’un problème complexe en plusieurs sous-problèmes plus simples<br>
+1-6 Méthodes et séquence de développement d’un programme</p>
 </div>
 <div>
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
+<p>30 minutes</p>
 </div>
 </div>
 <hr>
-<p>Contenu à venir ...</p></div>
+<p>Un algorithme est une séquence d'opérations pour effectuer un calcul ou produire un résultat. On peut exprimer un algorithme par le langage naturel, des langages visuels ou par langage de programmation. </p>
+<p>On peut voir l'algorithme comme la <strong>structure</strong> d'un programme informatique. Vous avez vu plusieurs petits algorithmes depuis le début de la session, et même, dans d'autres sphères de votre vie. Un exemple d'algorithme dans la vie courante est une recette de cuisine : il s'agit d'une procédure à appliquer de façon méthodique.</p>
+<p>Prenons l'exemple du problème suivant : on souhaite à partir de 3 points déterminer les angles intérieurs d'un triangle. Sur l'image ci-dessous, on connait l'information en bleu et l'on cherche l'information en vert.</p>
+<figure>
+    <a class="glightbox" href="../images/triangles.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/triangles.png"></a>
+    <figcaption>Exemple du triangle pour lequel on cherche les angles</figcaption>
+</figure>
+<p>Si vous deviez résoudre ce problème sur une feuille de papier, vous pourriez par exemple calculer les vecteurs <span class="arithmatex">\(\overrightarrow{AB}\)</span> et <span class="arithmatex">\(\overrightarrow{AC}\)</span> puis utiliser les propriétés du produit scalaire pour calculer l'angle <span class="arithmatex">\(&lt;\overrightarrow{AB}, \overrightarrow{AC}&gt; = ||\overrightarrow{AB}|| \cdot ||\overrightarrow{AC}|| \cdot \cos(\alpha)\)</span>. On peut ensuite répéter cette méthode pour trouver <span class="arithmatex">\(\beta\)</span> et <span class="arithmatex">\(\gamma\)</span>.</p>
+<details class="info">
+<summary>La démarche mathématique</summary>
+<p>Voici un exemple de démarche mathématique telle qu'elle serait réalisée à la mitaine pour calculer l'angle <span class="arithmatex">\(alpha\)</span>.</p>
+<p>Calcul des vecteurs</p>
+<div class="arithmatex">\[
+\begin{align}
+\overrightarrow{AB} &amp;= (1, 1) - (5, 5) = (-4, -4)\\
+\overrightarrow{AC} &amp;= (6, 1) - (5, 5) = (1, -4)
+\end{align}
+\]</div>
+<p>Calcul des normes</p>
+<div class="arithmatex">\[
+\begin{align}
+||\overrightarrow{AB}|| &amp;= \sqrt{(-4)^2 + (-4)^2} = \sqrt{32} \approx 5.66\\
+||\overrightarrow{AC}|| &amp;= \sqrt{1^2 + (-4)^2} = \sqrt{17} \approx 4.12
+\end{align}
+\]</div>
+<p>Calcul de l'angle</p>
+<div class="arithmatex">\[
+\begin{align}
+&lt;\overrightarrow{AB}, \overrightarrow{AC}&gt; &amp;= ||\overrightarrow{AB}|| \cdot ||\overrightarrow{AC}|| \cdot \cos(\alpha)\\
+\Rightarrow -4 \cdot 1 + -4 \cdot -4 &amp;= 5.66 \cdot 4.14 \cdot \cos(\alpha)\\
+\Rightarrow 12 &amp;= 23.43 \cdot \cos(\alpha)\\
+\Rightarrow \arccos(0.51) &amp;= \alpha\\
+\Rightarrow \alpha &amp;= 59.34 \text{ degrés } \approx 59.04 \text { degrés }
+\end{align}
+\]</div>
+</details>
+<p>Une autre personne, toujours pour  calculer les longueurs <span class="arithmatex">\(a\)</span>, <span class="arithmatex">\(b\)</span> et <span class="arithmatex">\(c\)</span> (qui sont respectivement les normes des vecteurs <span class="arithmatex">\(\overrightarrow{CB}\)</span>, <span class="arithmatex">\(\overrightarrow{AC}\)</span> et <span class="arithmatex">\(\overrightarrow{AB}\)</span>), ourrait plutôt choisir d'utiliser la loi des cosinus (<span class="arithmatex">\(a=\sqrt{b^2+c^2-2bc\cdot\cos(\alpha)}\)</span>) pour trouver les angles. </p>
+<details class="info">
+<summary>La démarche mathématique</summary>
+<p>Voici un exemple de démarche mathématique telle qu'elle serait réalisée à la mitaine pour calculer l'angle <span class="arithmatex">\(alpha\)</span>.</p>
+<p>Calcul des vecteurs</p>
+<div class="arithmatex">\[
+\begin{align}
+\overrightarrow{AB} &amp;= (1, 1) - (5, 5) = (-4, -4)\\
+\overrightarrow{AC} &amp;= (6, 1) - (5, 5) = (1, -4)\\
+\overrightarrow{BC} &amp;= (6, 1) - (1, 1) = (5, 0)\\
+\end{align}
+\]</div>
+<p>Calcul des normes</p>
+<div class="arithmatex">\[
+\begin{align}
+c = ||\overrightarrow{AB}|| &amp;= \sqrt{(-4)^2 + (-4)^2} = \sqrt{32} \approx 5.66\\
+b = ||\overrightarrow{AC}|| &amp;= \sqrt{1^2 + (-4)^2} = \sqrt{17} \approx 4.12\\
+a = ||\overrightarrow{BC}|| &amp;= \sqrt{5^2 + 0^2} = \sqrt{25} = 5
+\end{align}
+\]</div>
+<p>Calcul de l'angle</p>
+<div class="arithmatex">\[
+\begin{align}
+a=\sqrt{b^2+c^2-2bc\cdot\cos(\alpha)}
+\Rightarrow 5 &amp;= \sqrt{\sqrt{17}^2 + \sqrt{32}^2 - 2 \cdot 5.66 \cdot 4.12 \cdot \cos(\alpha)}\\
+\Rightarrow 25 &amp;= 17 + 32 - 46.64 \cdot \cos(\alpha)\\
+\Rightarrow \cos(\alpha) &amp;= 0.51\\
+\Rightarrow \alpha &amp;= \arccos(0.51)\\
+\Rightarrow \alpha &amp;= 59.34 \text{ degrés } \approx 59.04 \text { degrés }
+\end{align}
+\]</div>
+</details>
+<p>Ce sont deux algorithmes différents qui permettent d'obtenir le même résultat. Exprimons ces algorithmes avec le langage clair.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Algorithme 1 - Produit scalaire</label><label for="__tabbed_1_2">Algorithme 2 - Loi des cosinus</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les 2 coordonnées des 3 points (6 nombres à virgules)<br>
+<strong>Sortie</strong> : affichage des trois angles</p>
+<ol>
+<li>Calculer le vecteur <span class="arithmatex">\(\overrightarrow{AB}\)</span> et <span class="arithmatex">\(\overrightarrow{CB}\)</span>;</li>
+<li>Calculer la norme de <span class="arithmatex">\(\overrightarrow{AB}\)</span> et de <span class="arithmatex">\(\overrightarrow{CB}\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\beta\)</span> avec la formule du produit scalaire;</li>
+<li>Calculer le vecteur <span class="arithmatex">\(\overrightarrow{BA}\)</span> et <span class="arithmatex">\(\overrightarrow{CA}\)</span>;</li>
+<li>Calculer la norme de <span class="arithmatex">\(\overrightarrow{BA}\)</span> et de <span class="arithmatex">\(\overrightarrow{CA}\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\alpha\)</span> avec la formule du produit scalaire;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\gamma\)</span> avec la formule <span class="arithmatex">\(\gamma = 180 - \alpha - \beta\)</span>;</li>
+<li>Afficher les 3 angles.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les 2 coordonnées des 3 points (6 nombres à virgules)<br>
+<strong>Sortie</strong> : affichage des trois angles</p>
+<ol>
+<li>Calculer les vecteurs <span class="arithmatex">\(\overrightarrow{CB}\)</span>, <span class="arithmatex">\(\overrightarrow{AC}\)</span> et <span class="arithmatex">\(\overrightarrow{AB}\)</span>;</li>
+<li>Calculer la norme de chaque vecteur pour obtenir les valeurs de <span class="arithmatex">\(a, b \text{ et } c\)</span>;</li>
+<li>Utiliser la loi des cosinus pour calculer <span class="arithmatex">\(\alpha\)</span> et <span class="arithmatex">\(\beta\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\gamma\)</span> avec la formule <span class="arithmatex">\(\gamma = 180 - \alpha - \beta\)</span>;</li>
+<li>Afficher les 3 angles.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>On peut coder ces algorithmes avec Python maintenant, MAIS on peut aussi continuer de réfléchir avant de continuer et appliquer la règle d'or des programmeurs et programmeuses</p>
+<div class="admonition tip">
+<p class="admonition-title">Règle d'or de la programmation</p>
+<p><span style="color:#8c6412">Un bon programmeur, une bonne programmeuse agit de la façon la plus paresseuse possible !</span></p>
+<p>Cette maxime de sagesse populaire (qu'il faut prendre avec un grain de sel) résume bien des règles importantes dans l'élaboration d'un bon code, soit qu'<strong>on évite de répéter du code</strong>. En effet, répéter le même code, en plus de nous prendre plus de temps à créer, peut amener les erreurs à se répéter.</p>
+</div>
+<h2 id="division-de-lalgorithme-avec-le-produit-scalaire">Division de l'algorithme avec le produit scalaire</h2>
+<p>Concentrons-nous pour l'instant dans l'algorithme avec le produit scalaire et cherchons les opérations répétées : </p>
+<ol>
+<li>Calculer deux vecteurs à partir de quatre points;</li>
+<li>Calculer la norme d'un vecteur;</li>
+<li>Appliquer la formule du produit scalaire.</li>
+</ol>
+<p>On va donc créer un algorithme spécifiquement pour trouver un angle à partir de quatre points que l'on va pouvoir appeler 2 fois. Dans le livre du cours, c'est ce qui est appelé <strong>sous-programme</strong>, mais nous utiliserons plutôt le terme <strong>fonction</strong>. À la page sur les <a href="../../bases-de-programmation/fonctions/">fonctions,</a> vous avez toutes les informations sur la syntaxe des fonctions.</p>
+<p>Voici donc les algorithmes de ce programme.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><input id="__tabbed_2_3" name="__tabbed_2" type="radio"><input id="__tabbed_2_4" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Algorithme - calculer norme</label><label for="__tabbed_2_2">Algorithme - calculer produit scalaire</label><label for="__tabbed_2_3">Algorithme - calculer angle</label><label for="__tabbed_2_4">Algorithme - Afficher les angles du triangle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des extrémités des vecteurs.<br>
+<strong>Sortie</strong> : retourne la norme du vecteur sous forme d'un nombre à virugle.</p>
+<ol>
+<li>Calculer la coordonnée en X du vecteur;</li>
+<li>Calculer la coordonnée en Y du vecteur;</li>
+<li>Appliquer la formule de la norme;</li>
+<li>Retourner le résultat.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des extrémités des deux vecteurs pour lesquels calculer le produit scalaire. <br>
+<strong>Sortie</strong> : retourne le produit scalaire des vecteurs sous forme d'un nombre à virugle.</p>
+<ol>
+<li>Calculer le produit scalaire;</li>
+<li>Retourner le produit scalaire.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des trois points qui crée l'angle. L'angle calculé est celui du premier point.<br>
+<strong>Sortie</strong> : l'angle en degrée entre les deux vecteurs.</p>
+<ol>
+<li>Calculer la norme des deux vecteurs;</li>
+<li>Calculer le produit scalaire des deux vecteurs;</li>
+<li>Calculer l'angle avec la relation du produit scalaire;</li>
+<li>Retourner le résultat.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des trois points qui forment le triangle.
+<strong>Sortie</strong> : affichage des trois angles.</p>
+<ol>
+<li>Calculer l'angle <span class="arithmatex">\(\alpha\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\beta\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\gamma\)</span> avec la formule <span class="arithmatex">\(\gamma = 180 - \alpha - \beta\)</span>;</li>
+<li>Afficher les 3 angles.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme avec l'algorithme du produit scalaire</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">arccos</span><span class="p">,</span> <span class="n">rad2deg</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculer_norme</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a>    <span class="n">norme</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>    <span class="k">return</span> <span class="n">norme</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculer_produit_scalaire</span><span class="p">(</span><span class="n">xu1</span><span class="p">,</span> <span class="n">yu1</span><span class="p">,</span> <span class="n">xu2</span><span class="p">,</span> <span class="n">yu2</span><span class="p">,</span> <span class="n">xv1</span><span class="p">,</span> <span class="n">yv1</span><span class="p">,</span> <span class="n">xv2</span><span class="p">,</span> <span class="n">yv2</span><span class="p">):</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="n">xu</span> <span class="o">=</span> <span class="n">xu2</span> <span class="o">-</span> <span class="n">xu1</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">yu</span> <span class="o">=</span> <span class="n">yu2</span> <span class="o">-</span> <span class="n">yu1</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>    <span class="n">xv</span> <span class="o">=</span> <span class="n">xv2</span> <span class="o">-</span> <span class="n">xv1</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="n">yv</span> <span class="o">=</span> <span class="n">yv2</span> <span class="o">-</span> <span class="n">yv1</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">produit_scalaire</span> <span class="o">=</span> <span class="n">xu</span> <span class="o">*</span> <span class="n">xv</span> <span class="o">+</span> <span class="n">yu</span> <span class="o">*</span> <span class="n">yv</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="k">return</span> <span class="n">produit_scalaire</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculer_angle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">):</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="n">norme_ab</span> <span class="o">=</span> <span class="n">calculer_norme</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">)</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="n">norme_ac</span> <span class="o">=</span> <span class="n">calculer_norme</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>    <span class="n">produit_scalaire</span> <span class="o">=</span> <span class="n">calculer_produit_scalaire</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a>    <span class="c1"># Calcul de l'angle avec la relation entre le produit scalaire et les normes</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a>    <span class="n">cos_angle</span> <span class="o">=</span> <span class="n">produit_scalaire</span> <span class="o">/</span> <span class="p">(</span><span class="n">norme_ab</span> <span class="o">*</span> <span class="n">norme_ac</span><span class="p">)</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a>    <span class="n">angle</span> <span class="o">=</span> <span class="n">rad2deg</span><span class="p">(</span><span class="n">arccos</span><span class="p">(</span><span class="n">cos_angle</span><span class="p">))</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>    <span class="k">return</span> <span class="n">angle</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="k">def</span><span class="w"> </span><span class="nf">afficher_angles_triangle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">):</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a>    <span class="n">angle_alpha</span> <span class="o">=</span> <span class="n">calculer_angle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>    <span class="n">angle_beta</span> <span class="o">=</span> <span class="n">calculer_angle</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a>    <span class="n">angle_gamma</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">-</span> <span class="n">angle_alpha</span> <span class="o">-</span> <span class="n">angle_beta</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Les angles sont alpha=</span><span class="si">{</span><span class="n">angle_alpha</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, beta=</span><span class="si">{</span><span class="n">angle_beta</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> et gamma=</span><span class="si">{</span><span class="n">angle_gamma</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a>    <span class="n">afficher_angles_triangle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p><a href="../code/algorithme_exemple_produit_scalaire.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5 3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74Z"></path></svg></span> Télécharger le code complet avec la documentation</a></p>
+<h2 id="division-de-lalgorithme-avec-la-loi-des-cosinus">Division de l'algorithme avec la loi des cosinus</h2>
+<p>Reportons-nous maintenant à l'algorithme avec la loi des cosinus et cherchons les opérations répétées : </p>
+<ol>
+<li>Calculer la norme de chaque vecteur à partir de ces coordonnées;</li>
+<li>Appliquer la formule de la loi des cosinus.</li>
+</ol>
+<p>Nous allons pouvoir <strong>réutiliser</strong> la fonction <code>calculer_norme</code> de la précédente démonstration, car elle répond toujours à nos besoins.</p>
+<p>Voici donc les algorithmes de ce programme.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><input id="__tabbed_3_3" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Algorithme - calculer norme</label><label for="__tabbed_3_2">Algorithme - calculer angle</label><label for="__tabbed_3_3">Algorithme - Afficher les angles du triangle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des extrémités des vecteurs.<br>
+<strong>Sortie</strong> : retourne la norme du vecteur sous forme d'un nombre à virugle.</p>
+<ol>
+<li>Calculer la coordonnée en X du vecteur;</li>
+<li>Calculer la coordonnée en Y du vecteur;</li>
+<li>Appliquer la formule de la norme;</li>
+<li>Retourner le résultat.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des trois côté du triangle. L'angle calculé est celui opposé au premier point.<br>
+<strong>Sortie</strong> : l'angle opposé au premier côté en degrées.</p>
+<ol>
+<li>Appliquer la formule de la lois des cosinus pour calculer l'angle;</li>
+<li>Retourner le résultat.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p><strong>Entrée</strong> : les coordonnées des trois points qui forment le triangle.<br>
+<strong>Sortie</strong> : affichage des trois angles.</p>
+<ol>
+<li>Calculer l'angle <span class="arithmatex">\(\alpha\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\beta\)</span>;</li>
+<li>Calculer l'angle <span class="arithmatex">\(\gamma\)</span> avec la formule <span class="arithmatex">\(\gamma = 180 - \alpha - \beta\)</span>;</li>
+<li>Afficher les 3 angles.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Programme avec l'algorithme de la loi des cosinus</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span>
+<span class="normal"><a href="#__codelineno-1-21">21</a></span>
+<span class="normal"><a href="#__codelineno-1-22">22</a></span>
+<span class="normal"><a href="#__codelineno-1-23">23</a></span>
+<span class="normal"><a href="#__codelineno-1-24">24</a></span>
+<span class="normal"><a href="#__codelineno-1-25">25</a></span>
+<span class="normal"><a href="#__codelineno-1-26">26</a></span>
+<span class="normal"><a href="#__codelineno-1-27">27</a></span>
+<span class="normal"><a href="#__codelineno-1-28">28</a></span>
+<span class="normal"><a href="#__codelineno-1-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">arccos</span><span class="p">,</span> <span class="n">rad2deg</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculer_norme</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">):</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>    <span class="n">norme</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">((</span><span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>    <span class="k">return</span> <span class="n">norme</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">calculer_angle</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a>    <span class="n">cosinus_angle</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">c</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>    <span class="n">angle</span> <span class="o">=</span> <span class="n">rad2deg</span><span class="p">(</span><span class="n">arccos</span><span class="p">(</span><span class="n">cosinus_angle</span><span class="p">))</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a>    <span class="k">return</span> <span class="n">angle</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="k">def</span><span class="w"> </span><span class="nf">afficher_angles_triangle</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">):</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="c1"># Longueur des côtés</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="n">cote_a</span> <span class="o">=</span> <span class="n">calculer_norme</span><span class="p">(</span><span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a>    <span class="n">cote_b</span> <span class="o">=</span> <span class="n">calculer_norme</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">)</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>    <span class="n">cote_c</span> <span class="o">=</span> <span class="n">calculer_norme</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">by</span><span class="p">)</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a>    <span class="n">angle_alpha</span> <span class="o">=</span> <span class="n">calculer_angle</span><span class="p">(</span><span class="n">cote_a</span><span class="p">,</span> <span class="n">cote_b</span><span class="p">,</span> <span class="n">cote_c</span><span class="p">)</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>    <span class="n">angle_beta</span> <span class="o">=</span> <span class="n">calculer_angle</span><span class="p">(</span><span class="n">cote_b</span><span class="p">,</span> <span class="n">cote_c</span><span class="p">,</span> <span class="n">cote_a</span><span class="p">)</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a>    <span class="n">angle_gamma</span> <span class="o">=</span> <span class="mi">180</span> <span class="o">-</span> <span class="n">angle_alpha</span> <span class="o">-</span> <span class="n">angle_beta</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Les angles sont alpha=</span><span class="si">{</span><span class="n">angle_alpha</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, beta=</span><span class="si">{</span><span class="n">angle_beta</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> et gamma=</span><span class="si">{</span><span class="n">angle_gamma</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a>    <span class="n">afficher_angles_triangle</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p><a href="../code/algorithme_exemple_loi_cosinus.py"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m.12 13.5 3.74 3.74 1.42-1.41-2.33-2.33 2.33-2.33-1.42-1.41-3.74 3.74m11.16 0-3.74-3.74-1.42 1.41 2.33 2.33-2.33 2.33 1.42 1.41 3.74-3.74Z"></path></svg></span> Télécharger le code complet avec la documentation</a></p>
+<h2 id="gabarits-de-travail">Gabarits de travail</h2>
+<p>Les gabarits suivants sont utilisés pour aider à structurer les algorithmes.</p>
+<p><a href="../../documents/Gabarit%20-%20planification.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM111 257.1l26.8 89.2 31.6-90.3c3.4-9.6 12.5-16.1 22.7-16.1s19.3 6.4 22.7 16.1l31.6 90.3 26.6-89.2c3.8-12.7 17.2-19.9 29.9-16.1s19.9 17.2 16.1 29.9l-48 160c-3 10-12 16.9-22.4 17.1s-19.8-6.2-23.2-16.1L192 336.6l-33.3 95.3c-3.4 9.8-12.8 16.3-23.2 16.1s-19.5-7.1-22.4-17.1l-48-160c-3.8-12.7 3.4-26.1 16.1-29.9s26.1 3.4 29.9 16.1z"></path></svg></span> Gabarit de planification</a><br>
+<a href="../../documents/Gabarit%20-%20planification%20-%20consignes.docx"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M64 0C28.7 0 0 28.7 0 64v384c0 35.3 28.7 64 64 64h256c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zm192 0v128h128L256 0zM111 257.1l26.8 89.2 31.6-90.3c3.4-9.6 12.5-16.1 22.7-16.1s19.3 6.4 22.7 16.1l31.6 90.3 26.6-89.2c3.8-12.7 17.2-19.9 29.9-16.1s19.9 17.2 16.1 29.9l-48 160c-3 10-12 16.9-22.4 17.1s-19.8-6.2-23.2-16.1L192 336.6l-33.3 95.3c-3.4 9.8-12.8 16.3-23.2 16.1s-19.5-7.1-22.4-17.1l-48-160c-3.8-12.7 3.4-26.1 16.1-29.9s26.1 3.4 29.9 16.1z"></path></svg></span> Gabarit de planification (avec consigne)</a><br>
+<a href="../../documents/Planification%20algorithme%20des%203%20angles.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0h160v128c0 17.7 14.3 32 32 32h128v144H176c-35.3 0-64 28.7-64 64v144H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0l128 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56h-16v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24h-16v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48h-32c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16v-64c0-8.8-7.2-16-16-16h-16v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16h-32v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V368z"></path></svg></span> Exemple du gabarit de planification avec le problème des trois angles</a></p></div>
 
 
 
@@ -753,7 +1154,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-29</span>
   </span>
 
     
