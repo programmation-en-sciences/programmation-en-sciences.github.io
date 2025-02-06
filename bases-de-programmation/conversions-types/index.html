@@ -661,6 +661,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les conversions de types
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -670,6 +681,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connaitre-le-type-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connaître le type de données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#matrice-des-conversions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrice des conversions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conversion-implicite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conversion implicite
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -723,13 +780,76 @@
 <div class="competences">
 <div style="flex: 0 0 70%">
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Objectifs de la section</span></p>
+<p>2-2 Traitements de données</p>
 </div>
 <div>
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
+<p>10 minutes</p>
 </div>
 </div>
 <hr>
-<p>Contenu à venir ...</p></div>
+<p>Il arrive souvent que l'on souhaite convertir d'un type de données vers un autre. Dans cette section, les conversions entre types natifs (entier, nombre à virgule, booléen et chaîne de caractères) sont abordées. </p>
+<h2 id="connaitre-le-type-de-donnees">Connaître le type de données</h2>
+<p>Pour afficher le type d'une variable, on peut utiliser la fonction <code>type</code> qui accepte un paramètre, la variable ou la donnée à tester puis affiche le résultat dans la console.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Utilisation de la fonction type</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>          <span class="c1"># Affiche &lt;class 'int'&gt; =&gt; Nombre entier</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.5</span><span class="p">))</span>        <span class="c1"># Affiche &lt;class 'float'&gt; =&gt; Nombre à virgule</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="s2">"Chaine"</span><span class="p">))</span>   <span class="c1"># Affiche &lt;class 'str'&gt; =&gt; Chaîne de caractères</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>       <span class="c1"># Affiche &lt;class 'bool'&gt; =&gt; Booléen</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="matrice-des-conversions">Matrice des conversions</h2>
+<p>Voici un tableau qui présente le résultat d'une conversion d'un type vers un autre. Pour rappel voici les fonctions de conversion :</p>
+<ul>
+<li><code>int</code> : converti en nombre entier</li>
+<li><code>float</code> : converti en nombre à virgule</li>
+<li><code>str</code> : converti en chaîne de caractères</li>
+<li><code>bool</code> : converti en booléen</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Conversion <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M21 3v4h-7.5C11.57 7 10 8.57 10 10.5V13h4l-6 7-6-7h4v-2.5C6 6.36 9.36 3 13.5 3H21Z"></path></svg></span></th>
+<th style="text-align: left;">Entier</th>
+<th style="text-align: left;">Nombre à virgule</th>
+<th style="text-align: left;">Chaîne de caractères</th>
+<th style="text-align: left;">Booléen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Entier</strong></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Fonctionne toujours de façon explicite, mais il y a une troncature de la partie décimale.</td>
+<td style="text-align: left;">Fonctionne seulement si la chaîne ne contient qu'un nombre entier.</td>
+<td style="text-align: left;"><code>True</code> vaut 1, <code>False</code> vaut 0.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nombre à virgule</strong></td>
+<td style="text-align: left;">Fonctionne toujours, mais peut entraîner une perte de données pour les grands nombres.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Fonctionne seulement si la chaîne contient un nombre entier ou à virgule avec un « . » comme séparateur de décimales.</td>
+<td style="text-align: left;"><code>True</code> vaut 1.0, <code>False</code> vaut 0.0.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Chaîne de caractères</strong></td>
+<td style="text-align: left;">Fonctionne toujours.</td>
+<td style="text-align: left;">Fonctionne toujours.</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>True</code> vaut <code class="language-py highlight"><span class="s2">"True"</span></code>, <code>False</code> vaut <code class="language-py highlight"><span class="s2">"False"</span></code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Booléen</strong></td>
+<td style="text-align: left;">0 se converti en <code>False</code>, tous les autres nombres en <code>True</code>.</td>
+<td style="text-align: left;">0.000... se converti en <code>False</code>, tous les autres nombres en <code>True</code>.</td>
+<td style="text-align: left;">La chaîne vide est <code>False</code>, toute chaîne non vide est <code>True</code>.</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conversion-implicite">Conversion implicite</h2>
+<p>Certaines conversions se font automatiquement par Python, comme lorsqu'on utilise un nombre entier dans la même expression arithmétique que des nombres à virgule ou les <code>frstring</code> qui appellent la fonction <code>str</code> automatiquement. Certaines fois, ces conversions peuvent être responsables d'erreurs : il faut donc se méfier du mélange de types de données dans une même expression.</p></div>
 
 
 
@@ -750,7 +870,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-01-17</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-03</span>
   </span>
 
     
