@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://programmation-en-sciences.github.io/bases-de-programmation/boucles/</loc>
+         <lastmod>2025-02-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://programmation-en-sciences.github.io/bases-de-programmation/conversions-types/</loc>
          <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
@@ -27,6 +32,11 @@
     </url>
     <url>
          <loc>https://programmation-en-sciences.github.io/bases-de-programmation/manipulations-types-simples/</loc>
+         <lastmod>2025-02-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://programmation-en-sciences.github.io/bases-de-programmation/traces-execution-debogage/</loc>
          <lastmod>2025-02-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
