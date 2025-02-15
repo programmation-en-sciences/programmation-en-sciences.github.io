@@ -90,4 +90,4 @@ def afficher_angles_triangle(ax, ay, bx, by, cx, cy):
 
 
 if __name__ == "__main__":
-    afficher_angles_triangle(5, 5, 1, 1, 6, 1)
+    afficher_angles_triangle(4, 5, 1, 1, 6, 1)
