@@ -831,6 +831,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Les tuples et les ensembles
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -840,6 +851,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#les-tuples-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les tuples de données
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#les-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les ensembles
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Les ensembles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#egalite-des-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Égalité des ensembles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parcourir-les-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parcourir les éléments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operateur-dappartenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateur d'appartenance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#les-fonctions-sur-les-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Les fonctions sur les ensembles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -920,7 +1019,267 @@
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
 <p>40 minutes</p>
 </div>
-</div></div>
+</div>
+<p>Les listes proposent une structure de donnée flexible et simple que l'on peut utiliser dans toutes les circonstances ou presque. Après tout, les premiers langages de programmation ne proposaient que la structure de liste. Il arrive cependant que les besoins en stockage de données soient différents et que l'on puisse utiliser une collection de données spécialisée. Dans cette section, deux collections de données sont présentées : les tuples et les ensembles.</p>
+<h2 id="les-tuples-de-donnees">Les tuples de données</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 9.1</p>
+<p>Les tuples de données sont une structure de donnée immuable : on ne peut pas en modifier les éléments après la déclaration. Cependant, chaque élément est accessible avec le système d'indice. Un cas d'utilisation très fréquent des tuples est la représentation de vecteurs mathématiques.</p>
+<p>Pour définir un tuple, on place entre parenthèses <code>( )</code> les valeurs que l'on sépare par des virgules. </p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Définition d'un tuple</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">vecteur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<p>On peut ensuite accéder aux éléments avec le système d'indices. L'utilisation d'indice négatif et le parcours du tuple sont similaires à celui de la liste. </p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Manipulation d'un tuple</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">vecteur</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">vecteur</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>       <span class="c1"># Affiche 2</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">vecteur</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>      <span class="c1"># Affiche 5</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="c1"># Affiche chaque valeur du tuple</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">vecteur</span><span class="p">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="n">vecteur</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>          <span class="c1"># TypeError: 'tuple' object does not support item assignment</span>
+</span></code></pre></div></td></tr></table></div>
+<p>L'égalité entre deux tuples est la même que celle entre deux listes : tous les éléments aux mêmes positions sont égaux.</p>
+<div class="admonition note">
+<p class="admonition-title">Comparaison entre structures</p>
+<p>Si deux structures différents (comme une liste et un tuple) contiennent les mêmes éléments aux mêmes positions, elles seront quand même identifiées comme différente </p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Comparaison d'une liste et d'un tule</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">liste</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="c1"># tuple est un mot réservé.</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">tuple_donnees</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">liste</span> <span class="o">==</span> <span class="n">tuple_donnees</span><span class="p">)</span>   <span class="c1"># Affiche False</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<h2 id="les-ensembles">Les ensembles</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 9.6</p>
+<p>Un ensemble est une collection de données qui ne supporte pas les valeurs répétées. On se sert des ensembles dans deux cas : </p>
+<ul>
+<li>Représentation d'un ensemble mathématique (théorie des ensembles ou des probabilités);</li>
+<li>Liste de variable ou d'identifiants uniques.</li>
+</ul>
+<p>Pour définir un ensemble, on place entre accolades <code>{ }</code> les valeurs que l'on sépare par des virgules. Sur plusieurs claviers, elles sont accessibles avec les touches <strong>Alt Car</strong> et celles à côté du point-virgule.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Définition d'un ensemble</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">ensemble</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">}</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">ensemble</span><span class="p">)</span>     <span class="c1"># Affiche {'A', 'C', 'B'}</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">ensemble2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">}</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">ensemble2</span><span class="p">)</span>    <span class="c1"># Affiche  {'A', 'C', 'B'}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>On remarque de ce premier exemple que les éléments répétés à l'initialisation sont éliminés de l'ensemble et que l'ordre des éléments n'est pas préservé. Pour les ensembles, <strong>il n'y a pas de système d'indice</strong>, donc on ne peut pas parcourir les éléments dans un ordre séquentiel.</p>
+<h3 id="egalite-des-ensembles">Égalité des ensembles</h3>
+<p>Deux ensembles qui contiennent les mêmes éléments sont égaux entre eux. On utilise l'opérateur d'égalité <code>==</code> pour faire cette vérification.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Égalité d'ensemble</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">ensemble</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">}</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">ensemble2</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">}</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">ensemble</span> <span class="o">==</span> <span class="n">ensemble2</span><span class="p">)</span>        <span class="c1"># Affiche True</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="parcourir-les-elements">Parcourir les éléments</h3>
+<p>Pour parcourir les éléments d'un ensemble, on utilise la boucle <code>for</code> avec le parcours par valeur. Il n'y a pas de garantie que les éléments sont toujours parcourus dans le même ordre. Si vous exécutez le code ci-dessous plusieurs fois, l'affichage ne sera pas toujours le même. Évidemment, le parcours par indice ne fonctionne pas. </p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Parcours d'un ensemble</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">ensemble</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">}</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">ensemble</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="operateur-dappartenance">Opérateur d'appartenance</h3>
+<p>L'opérateur d'appartenance <code>in</code> peut être utilisé comme pour les listes afin de vérifier si un élément est dans un ensemble.</p>
+<h3 id="les-fonctions-sur-les-ensembles">Les fonctions sur les ensembles</h3>
+<p>Plusieurs fonctions permettent de manipuler les ensembles. Certains sont similaires à celles des collections de données et d'autres proviennent des opérations mathématiques sur les ensembles.</p>
+<h4 id="ajouter-des-elements">Ajouter des éléments</h4>
+<p>On peut ajouter un élément à un ensemble avec la fonction <code>add</code>. Si l'élément est déjà dans l'ensemble, la fonction n'a pas d'effet.</p>
+<h4 id="retirer-des-elements">Retirer des éléments</h4>
+<p>Dans un ensemble, il y a deux façons de retirer les éléments d'un ensemble :</p>
+<ul>
+<li>Retirer un élément au hasard avec la fonction <code>pop</code>;</li>
+<li>Retirer un élément spécifique avec la fonction <code>remove</code>. La fonction accepte un élément : l'élément à retirer. Attention, si l'élément n'existe pas dans l'ensemble, une erreur est lancée.</li>
+<li>Retirer un élément spécifique avec la fonction <code>discard</code>. Elle a le même effet et fonctionnement que <code>remove</code>, mais ne lance pas d'erreur si l'élément à retirer n'est pas dans l'ensemble.</li>
+</ul>
+<div class="admonition tips">
+<p class="admonition-title">Pourquoi retirer un élément au hasard</p>
+<p>Le problème vient du parcours des éléments. Quand on retire un élément dans un ensemble, cela peut changer l'ordre des éléments de l'ensemble. Donc le parcours avec la boucle <code>for</code> n'est pas possible. En fait, le code suivant pose problème :</p>
+<div class="language-py highlight"><span class="filename">Erreur de modification durant une itération</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">ensemble</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">}</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">ensemble</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="n">ensemble</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="c1"># Message d'erreur : RuntimeError: Set changed size during iteration</span>
+</span></code></pre></div>
+<p>Par contre, le code suivant permet de faire le même traitement, mais sans frapper l'erreur.
+</p><div class="language-py highlight"><span class="filename">Modification valide d'un ensemble durant une itération</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">ensemble</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"A"</span><span class="p">,</span> <span class="s2">"B"</span><span class="p">,</span> <span class="s2">"C"</span><span class="p">}</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">ensemble</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">ensemble</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<h4 id="exemple-de-probleme-avec-lajout-et-le-retrait-delement">Exemple de problème avec l'ajout et le retrait d'élément</h4>
+<p>On a une liste de participants à un projet de recherche. Les noms des personnes inscrites se retrouvent dans un ensemble nommé <code>groupe1</code>. Suite au gain de popularité du projet, on doit séparer les participants en deux groupes. Tant que les deux groupes ne sont pas égaux, on déplace des participants du groupe 1 vers le groupe 2.</p>
+<div class="language-py highlight"><span class="filename">Filtrer des ensembles</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="n">groupe1</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Alice"</span><span class="p">,</span> <span class="s2">"Bob"</span><span class="p">,</span> <span class="s2">"Clara"</span><span class="p">,</span> <span class="s2">"Damien"</span><span class="p">,</span> <span class="s2">"Erika"</span><span class="p">,</span> <span class="s2">"Félix"</span><span class="p">,</span> <span class="s2">"Ginette"</span><span class="p">,</span> <span class="s2">"Hughes"</span><span class="p">,</span> <span class="s2">"Isabelle"</span><span class="p">,</span> <span class="s2">"Luke"</span><span class="p">}</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="n">groupe2</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>     <span class="c1"># Crée un ensemble vide, juste {} ne fonctionne pas pour les ensembles.</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="c1"># On n'utilise pas l'égalité en cas de nombre impairs de participants</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">groupe1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">groupe2</span><span class="p">)</span> <span class="p">:</span>   
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="n">deplace</span> <span class="o">=</span> <span class="n">groupe1</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="n">groupe2</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">deplace</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Le groupe 1 est composé de </span><span class="si">{</span><span class="n">groupe1</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Le groupe 2 est composé de </span><span class="si">{</span><span class="n">groupe2</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span></code></pre></div>
+<h4 id="operation-sur-les-ensembles">Opération sur les ensembles</h4>
+<p>Les opérations mathématiques d'ensembles sont toutes définies dans Python au moyen de fonctions sur les ensembles. Toutes les fonctions s'appellent sur un ensemble et acceptent en paramètre un autre ensemble. Elles retournent le résultat de l'opération. </p>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opérateur d'ensemble</th>
+<th style="text-align: left;">Symbole mathématique</th>
+<th style="text-align: left;">Fonction python</th>
+<th style="text-align: left;">Exemple d'utilisation</th>
+<th style="text-align: left;">Effet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Union</td>
+<td style="text-align: left;"><span class="arithmatex">\(A \cup B\)</span></td>
+<td style="text-align: left;"><code>union</code></td>
+<td style="text-align: left;"><code>a.union(b)</code></td>
+<td style="text-align: left;">Combine les éléments de l'ensemble A et B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intersection</td>
+<td style="text-align: left;"><span class="arithmatex">\(A \cap B\)</span></td>
+<td style="text-align: left;"><code>intersction</code></td>
+<td style="text-align: left;"><code>a.intersection(b)</code></td>
+<td style="text-align: left;">Sélectionne les éléments dans A et B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Différence</td>
+<td style="text-align: left;"><span class="arithmatex">\(A - B\)</span></td>
+<td style="text-align: left;"><code>difference</code></td>
+<td style="text-align: left;"><code>a.difference(b)</code></td>
+<td style="text-align: left;">Retourne les éléments qui sont dans A et qui ne sont pas dans B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Différence symétrique</td>
+<td style="text-align: left;"><span class="arithmatex">\(A \Delta B\)</span></td>
+<td style="text-align: left;"><code>symmetric_difference</code></td>
+<td style="text-align: left;"><code>a.symmetric_difference(b)</code></td>
+<td style="text-align: left;">Retourne les éléments qui sont dans A ou B, mais pas ceux qui sont dans A et B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sous-ensemble</td>
+<td style="text-align: left;"><span class="arithmatex">\(A \subset B\)</span></td>
+<td style="text-align: left;"><code>issubset</code></td>
+<td style="text-align: left;"><code>a.issubset(b)</code></td>
+<td style="text-align: left;">Retourne vrai si tous les éléments de A sont dans B.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Super-ensemble</td>
+<td style="text-align: left;"><span class="arithmatex">\(B \subset A\)</span></td>
+<td style="text-align: left;"><code>issuperset</code></td>
+<td style="text-align: left;"><code>a.issuperset(b)</code></td>
+<td style="text-align: left;">Retourne vrai si tous les éléments de B sont dans A.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Disjoint</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><code>isdisjoint</code></td>
+<td style="text-align: left;"><code>a.isdisjoint(b)</code></td>
+<td style="text-align: left;">Retourne vrai si A et B n'ont pas d'éléments communs.</td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<div class="language-py highlight"><span class="filename">Utilisation des opérations d'ensemble</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">pairs</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">20</span><span class="p">}</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="n">carres</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">}</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1"># Les nombres pairs ou carres</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1"># Affiche {1, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18, 20}</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="c1"># Les nombres pairs et carres</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1"># Affiche {16, 4}</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="c1"># Les nombres pairs, sauf ceux qui sont des carrés</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="c1"># Affiche {2, 6, 8, 10, 12, 14, 18, 20}</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="c1"># Les nombres carrés, sauf ceux qui sont pairs</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="nb">print</span><span class="p">(</span><span class="n">carres</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">pairs</span><span class="p">))</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="c1"># Affiche {1, 9}</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="c1"># Les nombres pairs ou carres, sauf les nombres pairs et carrées</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="c1"># Affiche {1, 2, 6, 8, 9, 10, 12, 14, 18, 20}</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="c1"># Est-ce que tous les carrés sont pairs ?</span>
+</span><span id="__span-9-25"><a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="nb">print</span><span class="p">(</span><span class="n">carres</span><span class="o">.</span><span class="n">issubset</span><span class="p">(</span><span class="n">pairs</span><span class="p">))</span>
+</span><span id="__span-9-26"><a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="c1"># Affiche False</span>
+</span><span id="__span-9-27"><a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="nb">print</span><span class="p">(</span><span class="n">pairs</span><span class="o">.</span><span class="n">issuperset</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-28"><a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="c1"># Affiche False</span>
+</span><span id="__span-9-29"><a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>
+</span><span id="__span-9-30"><a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a><span class="c1"># Est-ce qu'il existe des nombres carrés et pairs ?</span>
+</span><span id="__span-9-31"><a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a><span class="nb">print</span><span class="p">(</span><span class="ow">not</span> <span class="n">pairs</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">carres</span><span class="p">))</span>
+</span><span id="__span-9-32"><a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a><span class="c1"># Affiche True (on utilise l'opéerateur not pour répondre à la question)</span>
+</span></code></pre></div>
+<h4 id="exemple-de-probleme-sur-les-ensembles">Exemple de problème sur les ensembles</h4>
+<p>On a listé des animaux selon certaines caractéristiques physiologiques. On s'intéresse maintenant aux animaux qui partagent des traits ou non.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Étude très très TRÈS scientifiques sur les animaux communs</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span>
+<span class="normal"><a href="#__codelineno-10-13">13</a></span>
+<span class="normal"><a href="#__codelineno-10-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">animaux_volant</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Poule"</span><span class="p">,</span> <span class="s2">"Chauve-souris"</span><span class="p">,</span> <span class="s2">"Papillon"</span><span class="p">,</span> <span class="s2">"Aigle"</span><span class="p">}</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">animaux_nageant</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Truite"</span><span class="p">,</span> <span class="s2">"Dauphin"</span><span class="p">,</span> <span class="s2">"Baleine"</span><span class="p">}</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">mammiferes</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Chauve-souris"</span><span class="p">,</span> <span class="s2">"Chat"</span><span class="p">,</span> <span class="s2">"Dauphin"</span><span class="p">}</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">insectes</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"Fourmi"</span><span class="p">,</span> <span class="s2">"Papillon"</span><span class="p">,</span> <span class="s2">"Scarabée"</span><span class="p">}</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="n">tous</span> <span class="o">=</span> <span class="n">animaux_volant</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">animaux_nageant</span><span class="p">,</span> <span class="n">mammiferes</span><span class="p">,</span> <span class="n">insectes</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="c1"># Insectes qui volent</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Insectes qui volent </span><span class="si">{</span><span class="n">animaux_volant</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">insectes</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9"></a>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="c1"># Les animaux qui ne volent pas parmis les répertoriés</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Animaux qui ne volent pas </span><span class="si">{</span><span class="n">tous</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">animaux_volant</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="c1"># Est-ce que tous les animaux qui nagent sont des mammifères</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Est-ce que tous les animaux qui nagent sont des mammifères ? </span><span class="si">{</span><span class="n">animaux_nageant</span><span class="o">.</span><span class="n">isdisjoint</span><span class="p">(</span><span class="n">mammiferes</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<div class="admonition extra">
+<p class="admonition-title">Arguments multiples</p>
+<p>La ligne 5 de l'exemple précédent montre un union entre plusieurs ensemble de façon simultanée. Pour certaines fonctions, dont l'<code>union</code> et l'<code>intersection</code> il est possible de les faire sur plusieurs ensemble simultanément.</p>
+</div>
+<h2 id="exercices">Exercices</h2>
+<p>Voir document d'exercice sur Teams.</p></div>
 
 
 
@@ -941,7 +1300,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-13</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-17</span>
   </span>
 
     

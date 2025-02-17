@@ -898,6 +898,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#operateurs-daddition-et-de-multiplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Opérateurs d'addition et de multiplication
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extraire-des-caracteristiques-des-listes-des-tuples-et-des-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extraire des caractéristiques des listes, des tuples et des ensembles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lecriture-en-comprenhension" class="md-nav__link">
     <span class="md-ellipsis">
       L'écriture en comprenhension
@@ -916,8 +934,35 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pour-les-ensembles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour les ensembles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pour-les-dictionnaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour les dictionnaires
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercices
+    </span>
+  </a>
   
 </li>
       
@@ -986,6 +1031,7 @@
 </div>
 <p>Cette page présente des fonctionnalités plus avancées sur la manipulation des collections de données. Il est important de consolider les bases des <a href="../listes/">listes</a>, des <a href="#tuples-ensembles">tuples</a>, des <a href="#tuples-ensembles">ensembles</a> et des <a href="#dictionnaires">dictionnaires</a> avant de se lancer dans ces instructions.</p>
 <h2 id="extraction-partielle-de-donnees-dune-collection-indexee-slicing">Extraction partielle de données d'une collection indexée (<em>slicing</em>)</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Sections 9.4</p>
 <p>Pour les collections avec un système d'indices, soit les listes et les tuples, il est possible d'extraire des morceaux de la collection avec le découpage (<em>sclicing</em>). Les tableaux de données (<em>dataframe</em>) de <em>Pandas</em> supportent aussi une syntaxe similaire. </p>
 <div class="admonition warning">
 <p class="admonition-title">Copie de collection</p>
@@ -1071,7 +1117,17 @@
 <p class="admonition-title">Les tuples</p>
 <p>N'oubliez pas que la syntaxe de <em>slicing</em> fonctionne également avec les tuples. </p>
 </div>
+<h2 id="operateurs-daddition-et-de-multiplication">Opérateurs d'addition et de multiplication</h2>
+<h2 id="extraire-des-caracteristiques-des-listes-des-tuples-et-des-ensembles">Extraire des caractéristiques des listes, des tuples et des ensembles</h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Sections 9.2</p>
+<p>|Maximum|
+|Minimum|
+|Somme|
+|Moyenne|
+|Écart-type|</p>
+<p>Autres fonctions statistiques : https://numpy.org/doc/2.1/reference/routines.statistics.html</p>
 <h2 id="lecriture-en-comprenhension">L'écriture en <em>comprenhension</em></h2>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Sections 8.4</p>
 <div class="admonition extra">
 <p class="admonition-title">Contenus extra</p>
 <p>Cette section présente des écritures intéressantes et efficaces d'opérations sur les collections. Il existe toujours une façon de faire plus longue avec d'autres constructions du langage. L'écriture en <em>comprehension</em> n'est pas exigée dans la cadre du cours <em>Programmation en sciences</em>.</p>
@@ -1137,7 +1193,19 @@
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="c1"># Avec un comprehension</span>
 </span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="n">communs</span> <span class="o">=</span> <span class="p">[</span><span class="n">n</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nombres_triangulaires</span> <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">nombres_fibonacci</span><span class="p">]</span>
-</span></code></pre></div></td></tr></table></div></div>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="pour-les-ensembles">Pour les ensembles</h3>
+<h3 id="pour-les-dictionnaires">Pour les dictionnaires</h3>
+<h2 id="exercices">Exercices</h2>
+<p><strong>Découpage de listes</strong></p>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 173 et suivantes</p>
+<p>Recommandés : 9.22, 9.23</p>
+<p><strong>Opérateurs mathématiques sur les collections</strong></p>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 147 et suivantes</p>
+<p>Recommandés : 8.21</p>
+<p><strong>Compréhension</strong></p>
+<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Page 147 et suivantes</p>
+<p>Recommandés : 8.19, 8.20</p></div>
 
 
 
@@ -1158,7 +1226,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-02-17</span>
   </span>
 
     
