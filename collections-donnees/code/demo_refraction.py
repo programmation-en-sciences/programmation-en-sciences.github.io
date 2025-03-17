@@ -1,7 +1,7 @@
 # Solution pour la démonstration des dictionnaires
 
 # Indice angle observé
-#'Glace : 49.76', 'Eau : 48.75', 'Pyrex : 42.51', 'Verre crown : 41.14', 'Diamant : 24.41'
+#'Glace : 32.67', 'Eau : 32.12', 'Pyrex : 28.54', 'Verre crown : 27.72', 'Diamant : 16.99'
 
 from numpy import sin, pi, deg2rad, abs
 
@@ -19,7 +19,7 @@ def identifier_substance(angle_observe, indices_refraction):
     Le nom de la substance correspondant à l'indice de réfraction du milieu observé ou une chaîne vide si
     aucune substance n'a été trouvée.
     """
-    indice_milieu = sin(0.5 * pi) / sin(deg2rad(angle_observe))
+    indice_milieu = sin(0.25 * pi) / sin(deg2rad(angle_observe))
     trouvee = False
 
     for substance, indice in indices_refraction.items():
