@@ -15,10 +15,10 @@ def gagnant(joueur, ordinateur):
     """
     if joueur == ordinateur:
         return "Égalité"
-    elif (joueur + 1 % 3) == ordinateur:
-        return "Joueur"
-    else:
+    elif ((joueur + 1) % 3) == ordinateur:
         return "Ordinateur"
+    else:
+        return "Joueur"
     
 
 def presenter_choix_ordinateur(probabilite_choix, nom_symbole):
