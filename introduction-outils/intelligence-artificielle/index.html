@@ -522,11 +522,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#exercice-avec-lia" class="md-nav__link">
+  <a href="#exercicedemonstration-avec-lia" class="md-nav__link">
     <span class="md-ellipsis">
-      Exercice avec l'IA
+      Exercice/Démonstration avec l'IA
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Exercice/Démonstration avec l'IA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moyenne-des-evaluations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Moyenne des évaluations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1061,7 +1076,7 @@
 <p><strong>Donner un contexte</strong> Les réponses des intelligences artificielles sont meilleures avec une situation où l'information est utilisée. Pourquoi ? Parce que les données qui servent à l'entraîner ont été prises dans un contexte donné. Les mots de la question permettent à l'IA de « faire des liens ».</p>
 </li>
 <li>
-<p><strong>Relancer pour des précisions</strong> Rarement la réponse que l'on recherche est correctement générée. Il faut souvent envoyer des questions complémentaires pour que l'IA « comprennent » ce que l'on essaie de lui faire générer. Les pages d'informations font états que les 30 dernières entrées (<em>prompts</em>) sont gardées en mémoire. C'est vrai, mais plus ils sont loin, moins ils ont de l'importance. D'expérience (source très crédible <em>hugh</em> <em>hugh</em> <em>hugh</em>), les 3 ou 4 entrées précédentes sont vraiment utilisées. Si l'on veut retourner plus loin en arrière il faut le préciser.</p>
+<p><strong>Relancer pour des précisions</strong> Rarement la réponse que l'on recherche est correctement générée. Il faut souvent envoyer des questions complémentaires afin que l'IA « comprennent » ce que l'on essaie de lui faire générer. Les pages d'informations des intelligences artificielles annoncent que les 30 dernières entrées (<em>prompts</em>) sont gardées en mémoire. C'est vrai, mais plus ils sont loin, moins ils ont de l'importance. D'expérience (source très crédible <em>hugh</em> <em>hugh</em> <em>hugh</em>), les 3 ou 4 entrées précédentes sont vraiment utilisées. Si l'on veut retourner plus loin en arrière, il faut le préciser.</p>
 </li>
 <li>
 <p><strong>Être poli</strong> Celui-là donne un syndrome d'anthropomorphisme important. Par contre, l'IA a appris des humains que les réponses sont plus longues et complètes quand on le demande poliment.</p>
@@ -1085,8 +1100,27 @@
 <p><strong>L'information est sujette aux biais d'entraînement</strong> Bien que l'impact soit moins frappant dans les sciences naturelles qu’humain, l'intelligence apprend aussi les biais sur le genre, les biais raciaux et autres biais discriminatoires contenus dans ses données. Un exemple de biais très connus et pour lesquels un effort de correction a lieu est les biais en médecine sur les signes et symptômes de différentes maladies. Dans le cadre de l'informatique, à part dans la conception d'interfaces utilisateurs, ces biais n'apparaissent pas.</p>
 </li>
 </ol>
-<h2 id="exercice-avec-lia">Exercice avec l'IA</h2>
-<p>Un type de collection de données est le tableau <strong>numpy</strong> appelé en anglais <em>numpy array</em>. C'est une structure similaire aux listes que nous allons explorer avec ChatGPT. Voici le prompt d'introduction :</p></div>
+<h2 id="exercicedemonstration-avec-lia">Exercice/Démonstration avec l'IA</h2>
+<p>Un type de collection de données est le tableau <strong>numpy</strong> appelé en anglais <em>numpy array</em>. C'est une structure similaire aux listes que nous allons explorer avec ChatGPT. Voici le prompt d'introduction :</p>
+<blockquote>
+<p>Salut ChatGPT, j'étudie en Sciences de la nature et j'apprends le langage de programmation Python depuis 8 semaines. Nous sommes dans le module des collections de données. Mon enseignant m'a montré les listes et il nous parle maintenant des numpy array. Quelles sont les ressemblances et les différences entre ces deux collections de données ?</p>
+</blockquote>
+<p>Vous devriez obtenir une réponse qui vous explique les bases des tableaux <em>numpy</em>. Certains termes peuvent vous semblez flous dans les explications, dont probablement le terme <strong>opération vectorisé</strong>. Demandons ce qu'est-ce terme.</p>
+<blockquote>
+<p>Je n'ai jamais entendu le terme opération vectorisée. Que signifie-t-il ?</p>
+</blockquote>
+<p>Relancez ChatGPT jusqu'à ce que vous soyez satisfait de la réponse. Maintenant, exploitons les tableaux <em>numpy</em> pour résoudre un problème. </p>
+<h3 id="moyenne-des-evaluations">Moyenne des évaluations</h3>
+<p>Voici les notes des élèves à deux travaux :</p>
+<ul>
+<li>Travail 1 : 82,5; 73; 54,3; 92,5; 79</li>
+<li>Travail 2 : 74,7; 76,4; 62, 84,4; 91,6</li>
+</ul>
+<p>Chacun des travaux avait une pondération égale. Trouvez la moyenne de chacun des élèves en utilisant les opérations vectorielles des tableaux <em>numpy</em>.</p>
+<div class="admonition failure">
+<p class="admonition-title">Ce qu'il ne faut pas faire avec l'IA</p>
+<p>Il pourrait être tentant de copier-coller la question. Vous obtiendrez la bonne réponse, mais aurez rien appris !</p>
+</div></div>
 
 
 
@@ -1107,7 +1141,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-14</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-17</span>
   </span>
 
     

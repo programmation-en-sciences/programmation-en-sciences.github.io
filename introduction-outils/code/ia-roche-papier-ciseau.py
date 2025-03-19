@@ -15,7 +15,7 @@ def gagnant(joueur, ordinateur):
     """
     if joueur == ordinateur:
         return "Égalité"
-    elif (joueur + 1 % 3) == ordinateur:
+    elif ((joueur + 1) % 3) == ordinateur:
         return "Ordinateur"
     else:
         return "Joueur"
