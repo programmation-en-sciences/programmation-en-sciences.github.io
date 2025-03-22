@@ -1321,7 +1321,7 @@
 </div>
 </div>
 <hr>
-<p><code>Pandas</code> est une bibliothèque qui permet la manipulation d'ensemble de données. Il définit des <strong>objets</strong> Python appelés <code>Series</code> et <code>DataFrame</code> pour contenir des données dans un forme à deux dimensions (comme un tableau Excel). Bien qu'on puisse créer de toute pièce des <code>Series</code> et <code>DataFrame</code> il est plus fréquent de les importer d'un fichier Excel ou CSV (<em>comma separated value</em>).</p>
+<p><code>Pandas</code> est une bibliothèque qui permet la manipulation d'ensembles de données. Il définit des <strong>objets</strong> Python appelés <code>Series</code> et <code>DataFrame</code> pour contenir des données dans un format à deux dimensions (semblable à un tableau Excel). Bien qu'on puisse créer de toute pièce des <code>Series</code> et des <code>DataFrame</code> il est plus fréquent de les importer d'un fichier Excel ou CSV (<em>comma separated value</em>).</p>
 <p>Avant de se lancer dans <code>Pandas</code>, il est fortement suggéré de lire les deux pages suivantes :</p>
 <ul>
 <li><a href="../../bases-de-programmation/chemins-acces/">Les chemins d'accès aux fichiers</a></li>
@@ -1334,11 +1334,11 @@
 <li>Afficher la structure et le contenu d'un <code>DataFrame</code>;</li>
 <li>Manipuler les données.</li>
 </ul>
-<p><code>Pandas</code> propose beaucoup plus de fonctions que ce qui est décrit ici. N'hésitez pas à consulter la <a href="https://pandas.pydata.org/docs/reference/index.html#api">documentation officielle</a>. Bien qu'elle ne soit que disponible en anglais, les intelligences artificielles peuvent vous aider à traduire. </p>
+<p><code>Pandas</code> propose beaucoup plus de fonctions que ce qui est décrit ici. N'hésitez pas à consulter la <a href="https://pandas.pydata.org/docs/reference/index.html#api">documentation officielle</a>. Bien qu'elle ne soit disponible qu'en anglais, les intelligences artificielles peuvent vous aider à traduire. </p>
 <h2 id="importer-un-fichier">Importer un fichier</h2>
 <p>Les <code>DataFrame</code> sont importés d'un fichier. On peut importer un fichier dans plusieurs formats. Nous verrons comment traiter les deux les plus communs : les fichiers Excel et les fichiers CSV.</p>
 <h3 id="excel">Excel</h3>
-<p>Pour importer un fichier Excel, il est nécessaire d'installer le paquet <code>openpyxl</code>. Il n'est toutefois pas nécessaire de l'importer, <code>Pandas</code> l'importe automatiquement lors de son utilisation. La fonction à utiliser est <code>read_excel</code> qui, dans la documentation, a la signature suivante. La fonction retourne un <code>DataFrame</code> avec le contenu du fichier Excel. En dessous sont présentés les principaux paramètres de la fonction.</p>
+<p>Pour importer un fichier Excel, il est nécessaire d'installer le paquet <code>openpyxl</code>. Mais si vous utilisez <code>Pandas</code>, celui-ci l'importe automatiquement lors de son utilisation. La fonction à utiliser est <code>read_excel</code> qui, dans la documentation, a la signature suivante. La fonction retourne un <code>DataFrame</code> avec le contenu du fichier Excel. En dessous sont présentés les principaux paramètres de la fonction.</p>
 <div class="language-py highlight"><span class="filename">Fonction read_excel</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pandas</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">sheet_name</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">engine</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">converters</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">true_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">false_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> 
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">na_values</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">keep_default_na</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">na_filter</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
@@ -1401,11 +1401,11 @@
 <p>Un chemin relatif est utilisé dans l'exemple. Votre fichier Excel doit être enregistré au même endroit sur votre disque que le fichier de code Python. </p>
 </div>
 <h3 id="csv">CSV</h3>
-<p>Un fichier CSV est un fichier texte (donc lisible par un humain sans application particulière) régulièrement utilisé pour le partage de données sur internet. Il présente les données sous forme de grille avec un caractère particulier (souvent la virgule ou le point-virgule) pour séparer les colonnes. </p>
+<p>Un fichier CSV est de format texte, donc lisible par un humain sans application particulière. Ce format est souvent utilisé pour le partage de données sur internet et par les équipments de laboratoire scientifiques. Il présente les données sous forme de grille avec un caractère particulier (souvent la virgule ou le point-virgule) pour séparer les colonnes. </p>
 <p>On charge un fichier CSV avec la fonction <code>read_csv</code> qui se comporte comme <code>read_excel</code> à la différence d'un paramètre très important.</p>
-<p>Le paramètre <code>sep</code> permet de définir le caractère qui sépare les colonnes. Le format CSV standard (anglais) utilise la virgule et le point pour séparer les décimales. Dans le format français que l'on rencontre à quelques occasions, la virgule sert à délimiter les nombres décimaux et le point-virgule à délimiter les colonnes. Il peut être nécessaire d'ouvrir le fichier avec bloc-notes pour regarder sa structure avant de pouvoir l'importer.</p>
+<p>Le paramètre <code>sep</code> permet de définir le caractère qui sépare les colonnes. Le format CSV standard (anglais) utilise la virgule pour séparer les colonnes et le point pour séparer les décimales. Dans le format français que l'on rencontre parfois, c'est le point-virgule qui sert à séparer les colonnes, la virgule servant à délimiter les nombres décimaux. Il peut être nécessaire d'ouvrir le fichier avec bloc-notes pour observer sa structure avant de l'importer en Python.</p>
 <h2 id="obtenir-des-informations-sur-la-structure-dun-dataframe">Obtenir des informations sur la structure d'un <code>DataFrame</code></h2>
-<p>Plusieurs éléments de la structure d'un <code>DataFrame</code> peuvent être affichés avec des propriétés de celui-ci (on suppose ici que le <code>DataFrame</code> est dans une variable appelée <code>donnees</code>). Ces données peuvent être utiles pour valider la bonne lecture des données ou pour permettre d'écrire des codes génériques.</p>
+<p>Plusieurs informations de la structure d'un <code>DataFrame</code> peuvent être affichés avec des propriétés de celui-ci (on suppose ici que le <code>DataFrame</code> est dans une variable appelée <code>donnees</code>). Ces informations peuvent être utiles pour valider la bonne lecture des données ou pour permettre d'écrire des codes génériques.</p>
 <dl>
 <dt><code>Le nombre de colonnes</code></dt>
 <dd><code class="language-py highlight"><span class="nb">len</span><span class="p">(</span><span class="n">donnees</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span></code>. Retourne le nombre de colonnes.</dd>
@@ -1417,7 +1417,7 @@
 <dd><code class="language-py highlight"><span class="n">donnees</span><span class="o">.</span><span class="n">size</span></code>. Retourne le nombre d'éléments dans le tableau. S'il n'y a pas d'élément manquant, cela correspond au nombre de lignes multiplé par le nombre de colonnes.</dd>
 </dl>
 <h2 id="afficher-des-donnees-du-dataframe">Afficher des données du <code>DataFrame</code></h2>
-<p>Il y a deux façons d'accéder aux données d'un <code>DataFrame</code>, soit par le nom des colonnes pour retourner une <code>Series</code> ou par le système d'indices.</p>
+<p>Il y a deux façons d'accéder aux données d'un <code>DataFrame</code>, soit par le nom des colonnes pour retourner une <code>Series</code>, ou par le système d'indices.</p>
 <h3 id="par-le-nom-des-colonnes">Par le nom des colonnes</h3>
 <p>Pour sélectionner une colonne, on utilise l'opérateur <code>[</code> <code>]</code> avec le nom de la colonne comme chaîne de caractères. Par exemple, pour sélectionner que la colonne d'estimation de production de GES la ligne à utiliser est la suivante : </p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Sélectionner une colonne par son nom</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">production_ges</span> <span class="o">=</span> <span class="n">donnees</span><span class="p">[</span><span class="s2">"quebec_estimation_consommation_ges_total"</span><span class="p">]</span>
@@ -1464,7 +1464,7 @@
 </span></code></pre></div>
 <div class="admonition tips">
 <p class="admonition-title">Le parametre inplace</p>
-<p>La plupart des méthodes qui modifient la structure d'un <code>DataFrame</code> ou qui en retourne un nouveau accepte un paramètre nommé <code>inplace</code> par défaut sa valeur est <code>False</code>, mais lorsqu'on le met à <code>True</code>, la méthode modifie le <code>DataFrame</code> plutôt que d'en retourner une copie avec la modification.</p>
+<p>La plupart des méthodes qui modifient la structure d'un <code>DataFrame</code> ou qui en retourne un nouveau accepte un paramètre nommé <code>inplace</code>. Par défaut sa valeur est <code>False</code>, mais lorsqu'on le met à <code>True</code>, la méthode modifie le <code>DataFrame</code> plutôt que d'en retourner une copie avec la modification.</p>
 <div class="language-py highlight"><span class="filename">Retirer les valeurs vides</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Crée une copie et les valeurs vides sont toujours dans donnees</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">donnees_filtrees</span> <span class="o">=</span> <span class="n">donnees</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>  
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
@@ -1520,10 +1520,10 @@
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">donnees</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"quebec_consommation_sources_total"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 <h4 id="renumeroter-les-lignes">Renuméroter les lignes</h4>
-<p>Le tri des données conserve les numéros de lignes (indices des lignes) initiaux. Les numéros d'identification ne sont donc plus séquentiels. Dans certains cas, on pourrait souhaiter les réinitialiser afin que l'utilise de <code>iloc</code> correspondent aux numéros des lignes. Pour ce faire, on utilise la méthode <code>reset_index</code> avec le paramètre <code>inplace</code>à <code>True</code>.</p>
+<p>Le tri des données conserve les numéros de lignes (indices des lignes) initiaux. Les numéros d'identification ne sont donc plus séquentiels. Dans certains cas, on pourrait souhaiter les réinitialiser afin que l'utilisation de <code>iloc</code> corresponde aux numéros des lignes. Pour ce faire, on utilise la méthode <code>reset_index</code> avec le paramètre <code>inplace</code>à <code>True</code>.</p>
 <h3 id="operations-mathematiques">Opérations mathématiques</h3>
 <p>On peut utiliser les opérations mathématiques entre les <code>Series</code>, comme pour les tableaux <em>numpy</em>. Si on souhaite par exemple avoir le pourcentage de production de source hydraulique par rapport à la consommation totale, on peut simplement diviser les deux <code>Series</code> entre elles.</p>
-<p>Le résultat de l'opération sera une <code>Series</code> avec le résultat de l'opération appliquée entre chaque paire d'éléments correspondants. Évidement, la présence de N/A dans le jeu de donnée empêche de calculer un résultat pour cette ligne.</p>
+<p>Le résultat de l'opération sera une <code>Series</code> avec le résultat de l'opération appliquée entre chaque paire d'éléments correspondants. Évidement, en cas de présence de N/A sur une ligne, cela empêche de calculer un résultat pour cette ligne.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Opérations mathématiques entre Series</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1631,7 +1631,7 @@
 </tbody>
 </table>
 <p>Toutes ces fonctions acceptent un paramètre qui leur permet d'ignorer les valeurs N/A, donc on peut les utiliser sans provoquer constamment d'erreur à cause des N/A. Également, elles ont un paramètre <code>numeric_only</code> qui permet d'éviter les colonnes qui contiennent autre chose que des nombres.</p>
-<p>Lorsqu'on les appelle sur des <code>DataFrame</code> elles font le calcul pour chaque <code>Series</code> et retourne un <code>DataFrame</code> d'une ligne avec le résultat (sauf pour <code>cumsum</code> et <code>abs</code>, car ces méthodes retournes des <code>Series</code>).</p>
+<p>Lorsqu'on les appelle sur des <code>DataFrame</code>, elles font le calcul pour chaque <code>Series</code> et retourne un <code>DataFrame</code> d'une ligne avec le résultat (sauf pour <code>cumsum</code> et <code>abs</code>, car ces méthodes retournes des <code>Series</code>).</p>
 <div class="admonition extra">
 <p class="admonition-title">Les tests logiques et la méthode apply</p>
 <p>Des méthodes existent aussi pour faire des tests logiques sur chaque élément (&gt;, &lt;, == ...). La méthode <code>apply</code> permet aussi d'appliquer n'importe quelle fonction sur les éléments d'une <code>Series</code>, y compris des fonctions que vous définissez vous-même.</p>
@@ -1639,7 +1639,7 @@
 <h2 id="demonstration">Démonstration</h2>
 <ul>
 <li>Sélectionner uniquement les données du 17 mars.</li>
-<li>Trouver le moment avec la plus grande consommation éolienne ?</li>
+<li>Trouver le moment avec la plus grande consommation éolienne.</li>
 <li>Quel est le taux de production d'hydroélectricité (par rapport à la production électrique totale) au moment de la plus petite émission de GES ?</li>
 <li>Créer un dictionnaire avec le pourcentage moyen de consommation horaire pour chaque source de consommation électrique.</li>
 </ul>
@@ -1666,7 +1666,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-22</span>
   </span>
 
     

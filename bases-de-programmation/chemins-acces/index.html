@@ -1197,26 +1197,26 @@
 </span></code></pre></div>
 <div class="admonition important">
 <p class="admonition-title">Attention au symbole de la barre oblique inverse</p>
-<p>Pour Windows vous verrez parfois la barre oblique inverse être utilisée. Cette syntaxe est valide (seulement pour Windows), mais la barre oblique inverse a une signification particulière en programmation donc lorsqu'on l'utilise dans une chaîne de caractères, elle doit être doublée.</p>
+<p>Dans Windows, vous verrez parfois la barre oblique inverse être utilisée. Cette syntaxe est valide (seulement pour Windows), mais la barre oblique inverse a une signification particulière en programmation. Donc, lorsqu'on l'utilise dans une chaîne de caractères, elle doit être doublée.</p>
 </div>
 <p>Pour indiquer un fichier précis, on ajoute son nom à la fin. Il faut <strong>toujours</strong> inscrire l'extension. Pour pour accéder au fichier "exercice2-5.py" dans le répertoire mentionné ci-dessous, on y fait référence de la façon suivante.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Mes documents/Programmation/exercice2-5.py
 </span></code></pre></div>
 <h2 id="chemins-relatifs-et-absolus">Chemins relatifs et absolus</h2>
-<p>Par défaut, un chemin est relatif : il exprime des déplacements entre les dossiers à partir du point où le script se situe. Donc le dossier dans lequel vous enregistrez vos fichiers à de l'importance lorsque vous exprimez le chemin  d'un autre fichier.</p>
+<p>Par défaut, un chemin est relatif : il exprime des déplacements entre les dossiers à partir du point où le script se situe. Ainsi, le dossier dans lequel vous enregistrez vos fichiers a de l'importance lorsque vous exprimez le chemin d'un autre fichier.</p>
 <p>Pour trouver où votre fichier est enregistré, vous pouvez utiliser le code suivant :</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Trouver le dossier d'enregistrement dans le code</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
 </span></code></pre></div></td></tr></table></div>
-<p>On peut utiliser un chemin absolu, soit un chemin à partir de la racine du disque. Si vous travaillez sur le disque dur de votre ordinateur (le disque C), vous commencerez votre chemin absolu avec <code>C:/</code>. Les chemins absolus sont utilent pour accéder à une ressource située sur un autre disque que celui sur lequel on exécute le code.</p>
+<p>On peut aussi utiliser un chemin absolu (un chemin à partir de la racine du disque). Si vous travaillez sur le disque dur de votre ordinateur (le disque C), vous commencerez votre chemin absolu avec <code>C:/</code>. Les chemins absolus sont utilent pour accéder à une ressource située sur un autre disque que celui sur lequel on exécute le code.</p>
 <h2 id="symboles-speciaux">Symboles spéciaux</h2>
 <p>Deux symboles spéciaux peuvent être utilisés dans les chemins. </p>
 <ul>
 <li><strong>Remonter dans un dossier parent avec ..</strong> : si vous indiquez <code>..</code> comme nom d'un dossier, vous vous déplacerez vers le dossier parent. On peut l'utiliser plusieurs fois au début d'un chemin relatif pour remonter plusieurs dossiers parents.  </li>
 </ul>
 <p>Par exemple on veut le fichier donnees.xlsx situé dans le dossier parent. Le chemin à utiliser est le suivant.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>./donnees.xlsx
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>../donnees.xlsx
 </span></code></pre></div>
 <ul>
 <li><strong>Commencer sont chemin par .</strong> : indique un chemin relatif à partir de l'endroit où le fichier est situé. C'est la façon de spécifier explicitement un chemin relatif.</li>
@@ -1247,7 +1247,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-21</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-22</span>
   </span>
 
     
