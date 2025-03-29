@@ -1214,18 +1214,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#couleurs" class="md-nav__link">
+  <a href="#graduation-des-axes" class="md-nav__link">
     <span class="md-ellipsis">
-      Couleurs
+      Graduation des axes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#utilisation-de-la-virgule-et-de-la-notation-scientifique" class="md-nav__link">
+  <a href="#couleurs" class="md-nav__link">
     <span class="md-ellipsis">
-      Utilisation de la virgule et de la notation scientifique
+      Couleurs
     </span>
   </a>
   
@@ -1533,13 +1533,144 @@
 </div>
 </div>
 </div>
-<p>Graduation des axes
-Graduation secondaire des axes
-Grille</p>
+<h3 id="graduation-des-axes">Graduation des axes</h3>
+<p>Les axes sont gradués avec deux systèmes : les marques principales (<em>major tick</em>) et les marques secondaires (<em>minor tick</em>). Pour chacune des marques, il y a aussi un formatteur pour déterminer comment les étiquettes de graduation sont affichés. Pour manipuler les graduations, il faut acéder aux informations de l'axe avec les propriétés <code>xaxis</code> ou <code>yaxis</code> de l'<code>Axe</code> du graphique.</p>
+<p></p><center>
+<strong>Fonctions pou rmanipuler les graduations et l'affichage</strong>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Élément graphique</th>
+<th style="text-align: left;">Fonction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Graduation principale de l'axe des x</td>
+<td style="text-align: left;">ax.xaxis.set_major_locator</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graduation secondaire de l'axe des x</td>
+<td style="text-align: left;">ax.xaxis.set_minor_locator</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graduation principale de l'axe des y</td>
+<td style="text-align: left;">ax.yaxis.set_major_locator</td>
+</tr>
+<tr>
+<td style="text-align: left;">Graduation secondaire de l'axe des y</td>
+<td style="text-align: left;">ax.yaxis.set_minor_locator</td>
+</tr>
+<tr>
+<td style="text-align: left;">Formatteur de la graduation principale de l'axe des x</td>
+<td style="text-align: left;">ax.xaxis.set_major_formatter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Formatteur de la graduation secondaire de l'axe des x</td>
+<td style="text-align: left;">ax.xaxis.set_minor_formatter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Formatteur de la graduation principale de l'axe des y</td>
+<td style="text-align: left;">ax.yaxis.set_major_formatter</td>
+</tr>
+<tr>
+<td style="text-align: left;">Formatteur de la graduation secondaire de l'axe des y</td>
+<td style="text-align: left;">ax.yaxis.set_minor_formatter</td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<h4 id="changer-les-marques-de-graduations">Changer les marques de graduations</h4>
+<p>Chaque fonction accepte un paramèter, un <code>MultipleLocator</code> avec le multiple de la graduation à utiliser.</p>
+<div class="admonition warning">
+<p class="admonition-title">Importer MultipleLocator</p>
+<p>Pour utiliser <code>MultipleLocator</code> il faut ajouter l'instruction d'importation <code class="language-py highlight"><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultipleLocator</span></code></p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked id="__tabbed_6_1" name="__tabbed_6" type="radio"><input id="__tabbed_6_2" name="__tabbed_6" type="radio"><input id="__tabbed_6_3" name="__tabbed_6" type="radio"><input id="__tabbed_6_4" name="__tabbed_6" type="radio"><div class="tabbed-labels"><label for="__tabbed_6_1">Code - Exemple 1</label><label for="__tabbed_6_2">Affichage - Exemple 1</label><label for="__tabbed_6_3">Code - Exemple 2</label><label for="__tabbed_6_4">Affichage - Exemple 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Modification de la graduation des axes</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Ajouter cette directive d'importation </span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultipleLocator</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="c1"># Graduation de l'axe des abscisses par bond de 5, avec des marques secondaire</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="c1"># par bond de 1</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="c1"># Graduation de l'axe des ordonnées par bond de 0.5 avec des marques secondaires</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="c1"># par bond de 0.25</span>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.5</span><span class="p">))</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">0.25</span><span class="p">))</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/graduation_axes_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/graduation_axes_1.png"></a>
+    <figcaption markdown>Affichage des graduation des axes</figcaption>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Modification de la graduation des axes</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1"># Ajouter cette directive d'importation </span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultipleLocator</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="c1"># Graduation de l'axe des abscisses par bond de pi, avec des marques secondaire</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="c1"># par bond de pi/4</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span><span class="p">))</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/graduation_axes_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/graduation_axes_2.png"></a>
+    <figcaption markdown>Affichage des graduation des axes</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<p>Pour modifier le formattage des champs, trois options sont disponibles :</p>
+<ul>
+<li>Remplacer le séparateur de décimal point par la virgule (uniquement pour l'affichage);</li>
+<li>Formatter pour un affichage en pourcentage;</li>
+<li>Changer le nombre de décimales affichées.</li>
+</ul>
+<h5 id="utiliser-la-virgule-comme-separateur-de-decimale">Utiliser la virgule comme séparateur de décimale</h5>
+<p>Pour modifier le séparateur de décimale, il faut modifier la langue locale que Python utilise. Contrairement aux autres paramètres, cette modification s'applique pour tous les graphiques faits après l'exécution de la ligne de code.</p>
+<div class="language-py highlight"><span class="filename">Utiliser la virgule comme séparateur de décimal</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Ajouter cette instruction d'importation</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">locale</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1"># À placer n'importe où AVANT d'afficher le graphique</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_NUMERIC</span><span class="p">,</span> <span class="s2">"fr_CA"</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">'axes.formatter.use_locale'</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+</span></code></pre></div>
+<h5 id="formatter-des-donnees-en-pourcentage">Formatter des données en pourcentage</h5>
+<p>Pour mettre des données en pourcentage</p>
+<h5 id="changer-le-nombre-de-decimales-affichees">Changer le nombre de décimales affichées</h5>
+<p>Grille</p>
 <p>Marqueurs
 Lignes </p>
 <h3 id="couleurs">Couleurs</h3>
-<h3 id="utilisation-de-la-virgule-et-de-la-notation-scientifique">Utilisation de la virgule et de la notation scientifique</h3>
 <h2 id="travailler-avec-plusieurs-series-de-donnees">Travailler avec plusieurs séries de données</h2>
 <p>Ajouter les séries
 Ajouter une légende</p>
