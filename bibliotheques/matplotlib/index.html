@@ -1294,6 +1294,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Diagrammes statistiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#histrogrammes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histrogrammes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diagrammes-circulaires" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrammes circulaires
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2108,12 +2132,74 @@
 </div>
 </div>
 <h2 id="travailler-avec-plusieurs-series-de-donnees">Travailler avec plusieurs séries de données</h2>
-<p>Ajouter les séries
-Ajouter une légende</p>
+<p>Ajouter les séries (à venir)
+Ajouter une légende (à venir)</p>
 <h2 id="diagrammes-statistiques">Diagrammes statistiques</h2>
-<p>Histrogramme
-Diagrammes circulaires
-Scatter avec tailles variables </p>
+<h3 id="histrogrammes">Histrogrammes</h3>
+<p>La fonction <code>bar</code> permet de créer un histogramme (aussi appelé <em>diagramme à barres</em>). Les deux premiers paramètres sont respectivement :</p>
+<ul>
+<li>Les catégories sur l'axe des x (sous forme de liste ou de tableau).</li>
+<li>Les valeurs associées à chaque catégorie (liste des hauteurs des barres).</li>
+</ul>
+<p>Il est possible encore une fois de personnaliser le diagramme en modifiant la couleur, l'épaisseur des bordures, les étiquettes et bien d'autres éléments.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked id="__tabbed_13_1" name="__tabbed_13" type="radio"><input id="__tabbed_13_2" name="__tabbed_13" type="radio"><div class="tabbed-labels"><label for="__tabbed_13_1">Code</label><label for="__tabbed_13_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Production d'un histogramme</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">pays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Canada"</span><span class="p">,</span> <span class="s2">"France"</span><span class="p">,</span> <span class="s2">"Japon"</span><span class="p">,</span> <span class="s2">"Brésil"</span><span class="p">,</span> <span class="s2">"Australie"</span><span class="p">]</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">population</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>  <span class="c1"># Population en millions</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">pays</span><span class="p">,</span> <span class="n">population</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"skyblue"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Population de quelques pays (en millions)"</span><span class="p">)</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Pays"</span><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Population (millions)"</span><span class="p">)</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/histogramme.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/histogramme.png" width="600"></a>
+    <figcaption markdown>Histogramme</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="diagrammes-circulaires">Diagrammes circulaires</h3>
+<p>La fonction <code>pie</code> permet de créer un diagramme circulaire (aussi appelé <em>pointe de tarte</em> au Québec ou <em>gruyère</em> chez nos cousins français). Les deux premiers paramètres sont respectivement :</p>
+<ul>
+<li>Les catégories, exprimées sous forme de liste.</li>
+<li>Les valeurs associées à chaque catégorie.</li>
+</ul>
+<p>Il est possible encore une fois de personnaliser le diagramme. Notez dans l'exemple ci-bas comment on peut faire afficher les valeurs sous forme de <em>pourcentages</em> automatiques.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked id="__tabbed_14_1" name="__tabbed_14" type="radio"><input id="__tabbed_14_2" name="__tabbed_14" type="radio"><div class="tabbed-labels"><label for="__tabbed_14_1">Code</label><label for="__tabbed_14_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Production d'un diagramme circulaire</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># Répartition des préférences de boisson</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">boissons</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Café"</span><span class="p">,</span> <span class="s2">"Thé"</span><span class="p">,</span> <span class="s2">"Jus"</span><span class="p">,</span> <span class="s2">"Soda"</span><span class="p">,</span> <span class="s2">"Eau"</span><span class="p">]</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">reponses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">75</span><span class="p">]</span>  <span class="c1"># Réponses des répondants</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">reponses</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">boissons</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">"brown"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">],</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Préférences de boisson dans un sondage"</span><span class="p">)</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/circulaire.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/circulaire.png" width="600"></a>
+    <figcaption markdown>Diagramme circulaire</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<p>Scatter avec tailles variables (à venir)</p>
 <h2 id="travailler-avec-les-sous-graphiques">Travailler avec les sous-graphiques</h2>
 <h2 id="ajouter-les-incertitudes">Ajouter les incertitudes</h2>
 <h2 id="enregistrer-un-fichier">Enregistrer un fichier</h2>
