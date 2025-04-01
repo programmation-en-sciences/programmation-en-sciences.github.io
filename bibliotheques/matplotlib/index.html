@@ -1298,9 +1298,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#histrogrammes" class="md-nav__link">
+  <a href="#diagrammes-a-barres" class="md-nav__link">
     <span class="md-ellipsis">
-      Histrogrammes
+      Diagrammes à barres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#histogramme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histogramme
     </span>
   </a>
   
@@ -1399,7 +1408,7 @@
 </div>
 </div>
 <hr>
-<p><code>Matplotlib</code> est une bibliothèque Python qui permet la génération de graphique. Travailler directement avec <code>Matplotlib</code>peut s'avérer complexe, c'est pourquoi nous allons nous utiliser le module <code>pyplot</code> qui facilite plusieurs manipulations lorsque c'est opportun.</p>
+<p><code>Matplotlib</code> est une bibliothèque Python qui permet la génération de graphiques. Travailler directement avec <code>Matplotlib</code>peut s'avérer complexe, c'est pourquoi nous allons utiliser le module <code>pyplot</code> qui facilite plusieurs manipulations lorsque c'est opportun.</p>
 <h2 id="creer-un-graphique-simple">Créer un graphique simple</h2>
 <p>Commençons par créer un graphique qui affiche la fonction cosinus sur l'intervalle <span class="arithmatex">\([0, 4\pi]\)</span>.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Code</label><label for="__tabbed_1_2">Affichage</label></div>
@@ -1440,7 +1449,7 @@
 </div>
 </div>
 </div>
-<p>La fonction <code>plot</code> trace un graphique en liant tous les points par des lignes. La fonction <code>scatter</code> permet de tracer des nuages de points, donc mettre un marqueur plutôt à chaque coordonnée plutôt que de tracer des lignes entre les coordonnées.</p>
+<p>La fonction <code>plot</code> trace un graphique en liant tous les points par des lignes. Quant à la fonction <code>scatter</code>, elle permet de tracer des nuages de points, donc mettre un marqueur à chaque coordonnée plutôt que de tracer des lignes entre les coordonnées.</p>
 <p><a href="https://matplotlib.org/stable/api/pyplot_summary.html"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M16.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L20.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M3.25 4a.25.25 0 0 0-.25.25v12.5c0 .138.112.25.25.25h2.5a.75.75 0 0 1 .75.75v3.19l3.72-3.72a.75.75 0 0 1 .53-.22h10a.25.25 0 0 0 .25-.25v-6a.75.75 0 0 1 1.5 0v6a1.75 1.75 0 0 1-1.75 1.75h-9.69l-3.573 3.573A1.457 1.457 0 0 1 5 21.043V18.5H3.25a1.75 1.75 0 0 1-1.75-1.75V4.25c0-.966.784-1.75 1.75-1.75h11a.75.75 0 0 1 0 1.5h-11Z"></path></svg></span> Documentation officielle de pyplot</a></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Code</label><label for="__tabbed_2_2">Affichage</label></div>
 <div class="tabbed-content">
@@ -1475,12 +1484,12 @@
 <div class="tabbed-block">
 <p><figure markdown="span">
     <a class="glightbox" href="../images/figure_simple_scatter.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/figure_simple_scatter.png" width="500"></a>
-    <figcaption markdown>Tracer de la fonction cosinus</figcaption>
+    <figcaption markdown>Tracé de la fonction cosinus</figcaption>
 </figure></p>
 </div>
 </div>
 </div>
-<p>Les fonctions <code>plot</code> et <code>scatter</code> retourne un tuple composé d'un objet <code>Figure</code> (que nous n'aurons pas à manipuler) et une collection d'objets <code>Axis</code>. Un objet <code>Axis</code> correspond aux données d'un graphique que l'on trace. On peut manipuler le <code>Axis</code> directement lorsqu'on ne travaille que sur un seul graphique. </p>
+<p>Les fonctions <code>plot</code> et <code>scatter</code> retournent un tuple composé d'un objet <code>Figure</code> (que nous n'aurons pas à manipuler) et une collection d'objets <code>Axis</code>. Un objet <code>Axis</code> correspond aux données d'un graphique que l'on trace. On peut manipuler <code>Axis</code> directement lorsqu'on ne travaille que sur un seul graphique. </p>
 <h2 id="mettre-en-forme-un-graphique">Mettre en forme un graphique</h2>
 <p>Il est possible de mettre en forme tous les éléments du graphique. La figure ci-dessous illustre les différents éléments sur le graphique.</p>
 <figure>
@@ -1683,7 +1692,7 @@
 <div class="tabbed-block">
 <p><figure markdown="span">
     <a class="glightbox" href="../images/graduation_axes_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/graduation_axes_1.png"></a>
-    <figcaption markdown>Affichage des graduation des axes</figcaption>
+    <figcaption markdown>Affichage des graduations des axes</figcaption>
 </figure></p>
 </div>
 <div class="tabbed-block">
@@ -1710,7 +1719,7 @@
 <div class="tabbed-block">
 <p><figure markdown="span">
     <a class="glightbox" href="../images/graduation_axes_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/graduation_axes_2.png"></a>
-    <figcaption markdown>Affichage des graduation des axes</figcaption>
+    <figcaption markdown>Affichage des graduations des axes</figcaption>
 </figure></p>
 </div>
 </div>
@@ -1857,7 +1866,7 @@
 <th style="text-align: left;">Paramètre</th>
 <th style="text-align: left;">Type de valeur</th>
 <th style="text-align: left;">Valeur par défaut</th>
-<th style="text-align: left;">Effet</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
@@ -1963,11 +1972,11 @@
 <h2 id="styler-les-graphiques">Styler les graphiques 😎</h2>
 <p>Plusieurs options de personnalisation des graphiques existent afin de les rendre visuellement plus intéressant ou d'y ajouter des détails. </p>
 <h3 id="marqueurs">Marqueurs</h3>
-<p>Comme vu au début utilisé <code>scatter</code> plutôt que <code>plot</code> ce qui permet de tracer un nuage de point. On peut changer les marqueurs utilisés. La <a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/marker_reference.html">page de la documentation</a> présente toutes les options de personnalisation des marqueurs. Voici deux images tirées de la documentation qui présente les principaux marqueurs. On modifie les marqueurs avec le paramètre <code>marker</code> qui existe pour les fonctions <code>scatter</code> et <code>plot</code>. Dans le cas de la fonction <code>plot</code>, les marqueurs sont affichés en plus de lignes.</p>
+<p>Tel que vu au début, utiliser <code>scatter</code> plutôt que <code>plot</code> permet de tracer un nuage de point. On peut changer les marqueurs utilisés. La <a href="https://matplotlib.org/stable/gallery/lines_bars_and_markers/marker_reference.html">page de la documentation</a> présente toutes les options de personnalisation des marqueurs. Voici deux images tirées de la documentation qui présente les principaux marqueurs. On modifie les marqueurs avec le paramètre <code>marker</code> qui existe pour les fonctions <code>scatter</code> et <code>plot</code>. Dans le cas de la fonction <code>plot</code>, les marqueurs sont affichés en plus de lignes.</p>
 <p></p><center>
 <p><a class="glightbox" href="../images/filled_marker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/filled_marker.png" width="300"></a> <a class="glightbox" href="../images/unfilled_marker.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/unfilled_marker.png" width="300"></a></p>
 <p></p></center>
-<p>Pour contrôler la taille des marqueurs, on utilise le paramètre <code>s</code> dans la fonction <code>scatter</code> et le paramètre <code>markersize</code> dans la fonction <code>plot</code>. Attention, les deux paramètres, même s'ils ont le même effet, ils ne travaillent pas avec la même échelle. Les valeurs utilisées avec <code>scatter</code> doivent être beaucoup plus élevées.</p>
+<p>Pour contrôler la taille des marqueurs, on utilise le paramètre <code>s</code> dans la fonction <code>scatter</code> et le paramètre <code>markersize</code> dans la fonction <code>plot</code>. Attention, les deux paramètres, même s'ils ont le même effet, ne travaillent pas avec la même échelle. Les valeurs utilisées avec <code>scatter</code> doivent être beaucoup plus élevées.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="10:4"><input checked id="__tabbed_10_1" name="__tabbed_10" type="radio"><input id="__tabbed_10_2" name="__tabbed_10" type="radio"><input id="__tabbed_10_3" name="__tabbed_10" type="radio"><input id="__tabbed_10_4" name="__tabbed_10" type="radio"><div class="tabbed-labels"><label for="__tabbed_10_1">Code - scatter</label><label for="__tabbed_10_2">Affichage - scatter</label><label for="__tabbed_10_3">Code - plot</label><label for="__tabbed_10_4">Affichage - plot</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2104,7 +2113,7 @@
 <p>La fonction <code>grid</code> accepte aussi des paramètres <code>linestyle</code>et <code>linewidth</code> pour modifier son affichage. </p>
 </div>
 <h3 id="couleurs">Couleurs</h3>
-<p>Pour modifier la couleur d'un élément, il faut utiliser le paramètre <code>color</code> qui existe pour les fonctions <code>scatter</code>, <code>plot</code> et <code>grid</code>. La liste de toutes les couleurs supportées est la suivante. Pour la référence de l'image ou plus de couleur, vous pouvez consulter la <a href="https://matplotlib.org/stable/gallery/color/named_colors.html">documentation officielle</a>.</p>
+<p>Pour modifier la couleur d'un élément, il faut utiliser le paramètre <code>color</code> qui existe pour les fonctions <code>scatter</code>, <code>plot</code> et <code>grid</code>. La liste de toutes les couleurs supportées est la suivante. Pour la référence de l'image ou plus de couleur, consulter la <a href="https://matplotlib.org/stable/gallery/color/named_colors.html">documentation officielle</a>.</p>
 <figure>
     <a class="glightbox" href="../images/sphx_glr_named_colors_003_2_00x.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/sphx_glr_named_colors_003_2_00x.png" width="600"></a>
     <figcaption>Liste des couleurs disponibles par leur nom</figcaption>
@@ -2135,8 +2144,8 @@
 <p>Ajouter les séries (à venir)
 Ajouter une légende (à venir)</p>
 <h2 id="diagrammes-statistiques">Diagrammes statistiques</h2>
-<h3 id="histrogrammes">Histrogrammes</h3>
-<p>La fonction <code>bar</code> permet de créer un histogramme (aussi appelé <em>diagramme à barres</em>). Les deux premiers paramètres sont respectivement :</p>
+<h3 id="diagrammes-a-barres">Diagrammes à barres</h3>
+<p>La fonction <code>bar</code> permet de créer un  <em>diagramme à barres</em>. Les deux premiers paramètres sont respectivement :</p>
 <ul>
 <li>Les catégories sur l'axe des x (sous forme de liste ou de tableau).</li>
 <li>Les valeurs associées à chaque catégorie (liste des hauteurs des barres).</li>
@@ -2145,25 +2154,119 @@ Ajouter une légende (à venir)</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="13:2"><input checked id="__tabbed_13_1" name="__tabbed_13" type="radio"><input id="__tabbed_13_2" name="__tabbed_13" type="radio"><div class="tabbed-labels"><label for="__tabbed_13_1">Code</label><label for="__tabbed_13_2">Affichage</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-py highlight"><span class="filename">Production d'un histogramme</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="language-py highlight"><span class="filename">Production d'un diagramme à barres</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
-</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">pays</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Canada"</span><span class="p">,</span> <span class="s2">"France"</span><span class="p">,</span> <span class="s2">"Japon"</span><span class="p">,</span> <span class="s2">"Brésil"</span><span class="p">,</span> <span class="s2">"Australie"</span><span class="p">]</span>
-</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="n">population</span> <span class="o">=</span> <span class="p">[</span><span class="mi">38</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">125</span><span class="p">,</span> <span class="mi">213</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span>  <span class="c1"># Population en millions</span>
-</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
-</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">pays</span><span class="p">,</span> <span class="n">population</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"skyblue"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
-</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
-</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Population de quelques pays (en millions)"</span><span class="p">)</span>
-</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Pays"</span><span class="p">)</span>
-</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Population (millions)"</span><span class="p">)</span>
-</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>
-</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">pays</span><span class="p">,</span> <span class="n">population</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"skyblue"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Population de quelques pays (en millions)"</span><span class="p">)</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Pays"</span><span class="p">)</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Population (millions)"</span><span class="p">)</span>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
 <p><figure markdown="span">
-    <a class="glightbox" href="../images/histogramme.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/histogramme.png" width="600"></a>
-    <figcaption markdown>Histogramme</figcaption>
+    <a class="glightbox" href="../images/diagramme-a-barre.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/diagramme-a-barre.png" width="600"></a>
+    <figcaption markdown>Diagramme à barres</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="histogramme">Histogramme</h3>
+<p>Pour créer un histogramme, il faut utiliser la fonction <code>hist</code>. La fonction trace un histogramme automatiquement à partir des valeurs d'une série. </p>
+<p></p><center>
+<p><strong>Paramètres de la fonction <code>hist</code></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Type de valeur</th>
+<th style="text-align: left;">Valeur par défaut</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">Series</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">La série pour laquelle tracer un histogramme</td>
+</tr>
+<tr>
+<td style="text-align: left;">bins</td>
+<td style="text-align: left;">nombre ou liste</td>
+<td style="text-align: left;">aucune</td>
+<td style="text-align: left;">Si un nombre est indiquée, alors l'histrogramme formera ce nombre de catégories. Si une liste est indiquée, alors l'histogramme formera des catégories en utilisant les valeurs de la liste comme limite. Les intervalles ainsi formés sont fermés à gauche et ouvert à droite. La première et dernière valeur doivent être indiquées.</td>
+</tr>
+<tr>
+<td style="text-align: left;">density</td>
+<td style="text-align: left;">booléen</td>
+<td style="text-align: left;">False</td>
+<td style="text-align: left;">Affiche la fonction de densité empirique.</td>
+</tr>
+<tr>
+<td style="text-align: left;">histtype</td>
+<td style="text-align: left;">chaîne de caractères</td>
+<td style="text-align: left;">"bar"</td>
+<td style="text-align: left;">Change le type d'histrogramme : barres (<em>bar</em>), barres empilés (<em>barstacked</em>), escalier (<em>step</em>), escalier rempli (<em>stepfilled</em>).</td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:4"><input checked id="__tabbed_14_1" name="__tabbed_14" type="radio"><input id="__tabbed_14_2" name="__tabbed_14" type="radio"><input id="__tabbed_14_3" name="__tabbed_14" type="radio"><input id="__tabbed_14_4" name="__tabbed_14" type="radio"><div class="tabbed-labels"><label for="__tabbed_14_1">Code - Nombre de classes</label><label for="__tabbed_14_2">Affichage - Nombre de classes</label><label for="__tabbed_14_3">Code - Définition des classes</label><label for="__tabbed_14_4">Affichage - Définition des classes</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Production d'un histogramme</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">PercentFormatter</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="c1"># 30 notes</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">89.0</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">71.0</span><span class="p">,</span> <span class="mf">82.0</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">,</span> <span class="mf">78.0</span><span class="p">,</span> <span class="mf">55.0</span><span class="p">,</span> <span class="mf">91.0</span><span class="p">,</span> <span class="mf">59.0</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">,</span> <span class="mf">81.0</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">66.0</span><span class="p">,</span> <span class="mf">55.0</span><span class="p">,</span> 
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    <span class="mf">99.0</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">,</span> <span class="mf">69.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">88.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">63.0</span><span class="p">,</span> <span class="mf">97.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">48.0</span><span class="p">,</span> <span class="mf">69.0</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">95.0</span><span class="p">,</span> <span class="mf">44.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">]</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="c1"># En utilisant la règle de la racine, on devrait former 5 classes</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"goldenrod"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"darkgoldenrod"</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Notes d'élève à une évaluation"</span><span class="p">)</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Note (%)"</span><span class="p">)</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Fréquence"</span><span class="p">)</span>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/histogramme_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/histogramme_1.png" width="600"></a>
+</figure></p>
+</div>
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Production d'un histogramme</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.ticker</span><span class="w"> </span><span class="kn">import</span> <span class="n">PercentFormatter</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># 30 notes</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">[</span><span class="mf">89.0</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">71.0</span><span class="p">,</span> <span class="mf">82.0</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">,</span> <span class="mf">78.0</span><span class="p">,</span> <span class="mf">55.0</span><span class="p">,</span> <span class="mf">91.0</span><span class="p">,</span> <span class="mf">59.0</span><span class="p">,</span> <span class="mf">75.0</span><span class="p">,</span> <span class="mf">81.0</span><span class="p">,</span> <span class="mf">54.0</span><span class="p">,</span> <span class="mf">66.0</span><span class="p">,</span> <span class="mf">55.0</span><span class="p">,</span> 
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="mf">99.0</span><span class="p">,</span> <span class="mf">85.0</span><span class="p">,</span> <span class="mf">69.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">88.0</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">63.0</span><span class="p">,</span> <span class="mf">97.0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mf">48.0</span><span class="p">,</span> <span class="mf">69.0</span><span class="p">,</span> <span class="mf">42.0</span><span class="p">,</span> <span class="mf">95.0</span><span class="p">,</span> <span class="mf">44.0</span><span class="p">,</span> <span class="mf">70.0</span><span class="p">]</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="c1"># On forme, de façon arbitraire, des classes aux multiples de 10% entre 40 et 100%</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">notes</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">101</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"goldenrod"</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">"darkgoldenrod"</span><span class="p">)</span>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Note d'élèves à une évaluation"</span><span class="p">)</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Note (%)"</span><span class="p">)</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">PercentFormatter</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Fréquence"</span><span class="p">)</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/histogramme_2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/histogramme_2.png" width="600"></a>
 </figure></p>
 </div>
 </div>
@@ -2175,20 +2278,20 @@ Ajouter une légende (à venir)</p>
 <li>Les valeurs associées à chaque catégorie.</li>
 </ul>
 <p>Il est possible encore une fois de personnaliser le diagramme. Notez dans l'exemple ci-bas comment on peut faire afficher les valeurs sous forme de <em>pourcentages</em> automatiques.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="14:2"><input checked id="__tabbed_14_1" name="__tabbed_14" type="radio"><input id="__tabbed_14_2" name="__tabbed_14" type="radio"><div class="tabbed-labels"><label for="__tabbed_14_1">Code</label><label for="__tabbed_14_2">Affichage</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="15:2"><input checked id="__tabbed_15_1" name="__tabbed_15" type="radio"><input id="__tabbed_15_2" name="__tabbed_15" type="radio"><div class="tabbed-labels"><label for="__tabbed_15_1">Code</label><label for="__tabbed_15_2">Affichage</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-py highlight"><span class="filename">Production d'un diagramme circulaire</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="c1"># Répartition des préférences de boisson</span>
-</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="n">boissons</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Café"</span><span class="p">,</span> <span class="s2">"Thé"</span><span class="p">,</span> <span class="s2">"Jus"</span><span class="p">,</span> <span class="s2">"Soda"</span><span class="p">,</span> <span class="s2">"Eau"</span><span class="p">]</span>
-</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="n">reponses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">75</span><span class="p">]</span>  <span class="c1"># Réponses des répondants</span>
-</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
-</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">reponses</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">boissons</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">"brown"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">],</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
-</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>
-</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Préférences de boisson dans un sondage"</span><span class="p">)</span>
-</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="language-py highlight"><span class="filename">Production d'un diagramme circulaire</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="c1"># Répartition des préférences de boisson</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="n">boissons</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"Café"</span><span class="p">,</span> <span class="s2">"Thé"</span><span class="p">,</span> <span class="s2">"Jus"</span><span class="p">,</span> <span class="s2">"Soda"</span><span class="p">,</span> <span class="s2">"Eau"</span><span class="p">]</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="n">reponses</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">75</span><span class="p">]</span>  <span class="c1"># Réponses des répondants</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">reponses</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">boissons</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">"brown"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">,</span> <span class="s2">"orange"</span><span class="p">,</span> <span class="s2">"red"</span><span class="p">,</span> <span class="s2">"blue"</span><span class="p">],</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Préférences de boisson dans un sondage"</span><span class="p">)</span>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></code></pre></div>
 </div>
 <div class="tabbed-block">
@@ -2224,7 +2327,7 @@ Ajouter une légende (à venir)</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-01</span>
   </span>
 
     
