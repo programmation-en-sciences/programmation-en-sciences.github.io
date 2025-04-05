@@ -1279,15 +1279,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#travailler-avec-plusieurs-series-de-donnees" class="md-nav__link">
-    <span class="md-ellipsis">
-      Travailler avec plusieurs séries de données
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#diagrammes-statistiques" class="md-nav__link">
     <span class="md-ellipsis">
       Diagrammes statistiques
@@ -1330,6 +1321,30 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#travailler-avec-plusieurs-series-de-donnees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Travailler avec plusieurs séries de données
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Travailler avec plusieurs séries de données">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ajouter-une-legende" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ajouter une légende
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#travailler-avec-les-sous-graphiques" class="md-nav__link">
     <span class="md-ellipsis">
       Travailler avec les sous-graphiques
@@ -1345,21 +1360,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Ajouter les incertitudes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erreur-constante" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erreur constante
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreur-par-point-symetrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erreur par point - symétrique
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erreur-par-point-non-symetrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erreur par point - non symétrique
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#enregistrer-un-fichier" class="md-nav__link">
     <span class="md-ellipsis">
       Enregistrer un fichier
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Exercices
     </span>
   </a>
   
@@ -2140,9 +2179,6 @@
 </div>
 </div>
 </div>
-<h2 id="travailler-avec-plusieurs-series-de-donnees">Travailler avec plusieurs séries de données</h2>
-<p>Ajouter les séries (à venir)
-Ajouter une légende (à venir)</p>
 <h2 id="diagrammes-statistiques">Diagrammes statistiques</h2>
 <h3 id="diagrammes-a-barres">Diagrammes à barres</h3>
 <p>La fonction <code>bar</code> permet de créer un  <em>diagramme à barres</em>. Les deux premiers paramètres sont respectivement :</p>
@@ -2200,7 +2236,7 @@ Ajouter une légende (à venir)</p>
 <td style="text-align: left;">bins</td>
 <td style="text-align: left;">nombre ou liste</td>
 <td style="text-align: left;">aucune</td>
-<td style="text-align: left;">Si un nombre est indiquée, alors l'histrogramme formera ce nombre de catégories. Si une liste est indiquée, alors l'histogramme formera des catégories en utilisant les valeurs de la liste comme limite. Les intervalles ainsi formés sont fermés à gauche et ouvert à droite. La première et dernière valeur doivent être indiquées.</td>
+<td style="text-align: left;">Si un nombre est indiqué, alors l'histogramme formera ce nombre de catégories. Si une liste est indiquée, alors l'histogramme formera des catégories en utilisant les valeurs de la liste comme limite. Les intervalles ainsi formés sont fermés à gauche et ouverts à droite. La première et la dernière valeur doivent être indiquées.</td>
 </tr>
 <tr>
 <td style="text-align: left;">density</td>
@@ -2212,7 +2248,7 @@ Ajouter une légende (à venir)</p>
 <td style="text-align: left;">histtype</td>
 <td style="text-align: left;">chaîne de caractères</td>
 <td style="text-align: left;">"bar"</td>
-<td style="text-align: left;">Change le type d'histrogramme : barres (<em>bar</em>), barres empilés (<em>barstacked</em>), escalier (<em>step</em>), escalier rempli (<em>stepfilled</em>).</td>
+<td style="text-align: left;">Change le type d'histogramme : barres (<em>bar</em>), barres empilées (<em>barstacked</em>), escalier (<em>step</em>), escalier rempli (<em>stepfilled</em>).</td>
 </tr>
 </tbody>
 </table>
@@ -2303,10 +2339,227 @@ Ajouter une légende (à venir)</p>
 </div>
 </div>
 <p>Scatter avec tailles variables (à venir)</p>
+<h2 id="travailler-avec-plusieurs-series-de-donnees">Travailler avec plusieurs séries de données</h2>
+<p>Lorsqu'on veut afficher plusieurs séries de données, on rappelle la fonction d'affichage sur le même objet d'<code>Axe</code>. Les séries vont alors se superposer.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="16:2"><input checked id="__tabbed_16_1" name="__tabbed_16" type="radio"><input id="__tabbed_16_2" name="__tabbed_16" type="radio"><div class="tabbed-labels"><label for="__tabbed_16_1">Code</label><label for="__tabbed_16_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Superposer deux séries de données</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="n">serie_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="n">serie_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">serie_1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"darkblue"</span><span class="p">)</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">serie_2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"darkred"</span><span class="p">)</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/series-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/series-1.png" width="600"></a>
+    <figcaption markdown>Empilage de deux séries de donnée (cos et sin)</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Nuages de points et courbes</p>
+<p>Il est possible de superposer un nuage de points (<code>scatter</code>) et une courbe (<code>plot</code>) dans un même graphique.</p>
+</div>
+<h3 id="ajouter-une-legende">Ajouter une légende</h3>
+<p>Pour ajouter une légende, on précise l'étiquette de la légende pour chaque série de données avec le paramètre <code>label</code>. Ensuite, il suffit d'appeler la fonction <code>legend</code> sur l'objet <code>Axis</code> pour que celle-ci s'affiche. La fonction legend accepte un paramètre <code>loc</code> pour indiquer sa localisation dans le graphique. Les valeurs possibles sont : <em>best</em> (par défaut), <em>upper right</em>, <em>upper left</em>, <em>lower left</em>, <em>lower right</em>, <em>right</em>, <em>center left</em>, <em>center right</em>, <em>lower center</em>, <em>upper center</em> et <em>center</em>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="17:2"><input checked id="__tabbed_17_1" name="__tabbed_17" type="radio"><input id="__tabbed_17_2" name="__tabbed_17" type="radio"><div class="tabbed-labels"><label for="__tabbed_17_1">Code</label><label for="__tabbed_17_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><span class="filename">Superposer deux séries de données</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="n">serie_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="n">serie_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">serie_1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"darkblue"</span><span class="p">,</span> <span class="n">legend</span><span class="o">=</span><span class="s2">"cos(x)"</span><span class="p">)</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">serie_2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"darkred"</span><span class="p">,</span> <span class="n">legende</span><span class="o">=</span><span class="s2">"sin(x)"</span><span class="p">)</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"upper right"</span><span class="p">)</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/series-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/series-2.png" width="600"></a>
+    <figcaption markdown>Empilage de deux séries de donnée (cos et sin)</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<div class="admonition tips">
+<p class="admonition-title">Plus de personnalisation</p>
+<p>La <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html#examples-using-matplotlib-pyplot-legend">page de la documentation</a> vous offre une foule de paramètres pour personnaliser l'affichage des légendes.</p>
+</div>
 <h2 id="travailler-avec-les-sous-graphiques">Travailler avec les sous-graphiques</h2>
+<p>La fonction <code>subplots</code> permet de générer un espace dans lequel on peut tracer un graphique. Il est aussi possible de l'utiliser pour créer plusieurs espaces dans une même fenêtre. Pour ce faire, on doit lui indiquer deux paramètres <code>nrows</code>, le nombre de lignes et <code>ncols</code>, le nombre de colonnes. Lorsque la figure générée comporte plus qu'un espace, le contenu de <code>ax</code> est un tableau. S'il n'y a qu'une ligne ou qu'une colonne, alors c'est un tableau unidimensionnel. S'il y a plusieurs lignes et colonnes, alors c'est un tableau multidimensionnel.</p>
+<figure>
+    <a class="glightbox" href="../images/subplots-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/subplots-1.png" width="400"></a>
+    <figcaption markdown>Deux grahpiques cote à cote</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="../images/subplots-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/subplots-2.png" width="400"></a>
+    <figcaption markdown>Deux grahpiques empilés</figcaption>
+</figure>
+<figure>
+    <a class="glightbox" href="../images/subplots-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/subplots-3.png" width="400"></a>
+    <figcaption markdown>Grille de quatre grahpiques</figcaption>
+</figure>
+<p>Chaque élément du tableau <code>ax</code> est un objet <code>Axis</code> et peut être utilisé comme tel. </p>
 <h2 id="ajouter-les-incertitudes">Ajouter les incertitudes</h2>
+<p>La fonction <code>errorbar</code> permet de tracer les barres d'erreur sur un graphique. Il existe différentes façons de tracer les barres d'erreurs. Pour préciser l'erreur sur l'axe des abscisses, on utilise le paramètre <code>xerr</code> et pour l'axe des ordonnées <code>yerr</code>. Les deux paramètres fonctionnent de la même façon, c'est simplement l'endroit où est tracée la barre d'erreur qui diffère.</p>
+<p>Il faut toujours utiliser les paramètres suivants pour avoir l'affichage souhaité : <code>fmt = "none"</code> et <code>capsize=5</code>.</p>
+<h3 id="erreur-constante">Erreur constante</h3>
+<p>Si tous les points ont une erreur constante et symétrique, on peut indiquer ce nombre comme valeur d'erreur.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="18:2"><input checked id="__tabbed_18_1" name="__tabbed_18" type="radio"><input id="__tabbed_18_2" name="__tabbed_18" type="radio"><div class="tabbed-labels"><label for="__tabbed_18_1">Code</label><label for="__tabbed_18_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.32</span><span class="p">,</span> <span class="mf">5.41</span><span class="p">,</span> <span class="mf">0.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.39</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.29</span><span class="p">,</span> <span class="o">-</span><span class="mf">14.20</span><span class="p">,</span> <span class="o">-</span><span class="mf">19.10</span><span class="p">]</span>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6"></a>
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">xerr</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">"none"</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10"></a>
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/barres-erreur-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/barres-erreur-1.png" width="600"></a>
+    <figcaption markdown>Affichage de barres d'erreur constante pour les abscisses</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="erreur-par-point-symetrique">Erreur par point - symétrique</h3>
+<p>Si l'erreur est symétrique, mais diffère pour chaque point, on passe une liste de valeurs à <code>xerr</code> ou <code>yerr</code>. </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="19:2"><input checked id="__tabbed_19_1" name="__tabbed_19" type="radio"><input id="__tabbed_19_2" name="__tabbed_19" type="radio"><div class="tabbed-labels"><label for="__tabbed_19_1">Code</label><label for="__tabbed_19_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span>
+<span class="normal"><a href="#__codelineno-22-11">11</a></span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span>
+<span class="normal"><a href="#__codelineno-22-13">13</a></span>
+<span class="normal"><a href="#__codelineno-22-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.32</span><span class="p">,</span> <span class="mf">5.41</span><span class="p">,</span> <span class="mf">0.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.39</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.29</span><span class="p">,</span> <span class="o">-</span><span class="mf">14.20</span><span class="p">,</span> <span class="o">-</span><span class="mf">19.10</span><span class="p">]</span>
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6"></a>
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-22-8"><a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-22-9"><a id="__codelineno-22-9" name="__codelineno-22-9"></a>
+</span><span id="__span-22-10"><a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="c1"># Calcul 20% de chaque valeur de y</span>
+</span><span id="__span-22-11"><a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="n">erreurs_relatives</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.2</span><span class="p">)</span>
+</span><span id="__span-22-12"><a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">erreurs_relatives</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">"none"</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-22-13"><a id="__codelineno-22-13" name="__codelineno-22-13"></a>
+</span><span id="__span-22-14"><a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/barres-erreur-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/barres-erreur-2.png" width="600"></a>
+    <figcaption markdown>Affichage de barres d'erreur relatives de 20% pour les ordonnées</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
+<h3 id="erreur-par-point-non-symetrique">Erreur par point - non symétrique</h3>
+<p>Si l'erreur n'est pas symétrique, on doit passer une liste qui contient elle-même deux listes : une pour les erreurs négatives et une pour les erreurs positives. Il est important que toutes les valeurs soient positives. Autrement dit, un point 3 qui aurait une incertitude le faisant varier entre 4 et 1 aurait comme valeur d'erreur 1 et 2 (le 2 est automatiquement enlevé du 3).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="20:2"><input checked id="__tabbed_20_1" name="__tabbed_20" type="radio"><input id="__tabbed_20_2" name="__tabbed_20" type="radio"><div class="tabbed-labels"><label for="__tabbed_20_1">Code</label><label for="__tabbed_20_2">Affichage</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-py highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3"></a>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mf">10.32</span><span class="p">,</span> <span class="mf">5.41</span><span class="p">,</span> <span class="mf">0.51</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.39</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.29</span><span class="p">,</span> <span class="o">-</span><span class="mf">14.20</span><span class="p">,</span> <span class="o">-</span><span class="mf">19.10</span><span class="p">]</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6"></a>
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-23-9"><a id="__codelineno-23-9" name="__codelineno-23-9"></a>
+</span><span id="__span-23-10"><a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="n">erreurs_y_pos</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+</span><span id="__span-23-11"><a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">erreurs_y_neg</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+</span><span id="__span-23-12"><a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="n">erreurs_y</span> <span class="o">=</span> <span class="p">[</span><span class="n">erreurs_y_neg</span><span class="p">,</span> <span class="n">erreurs_y_pos</span><span class="p">]</span>
+</span><span id="__span-23-13"><a id="__codelineno-23-13" name="__codelineno-23-13"></a>
+</span><span id="__span-23-14"><a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="n">ax</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">erreurs_y</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s2">"none"</span><span class="p">,</span> <span class="n">capsize</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<p><figure markdown="span">
+    <a class="glightbox" href="../images/barres-erreur-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../images/barres-erreur-3.png" width="600"></a>
+    <figcaption markdown>Affichage de barres d'erreur asymétriques ordonnées</figcaption>
+</figure></p>
+</div>
+</div>
+</div>
 <h2 id="enregistrer-un-fichier">Enregistrer un fichier</h2>
-<h2 id="exercices">Exercices</h2></div>
+<p>Pour enregistrer un fichier, il faut appeler <code>savefig</code> sur la variable <code>graphe</code> (le premier élément retourné par subplots). Cette fonction accepte un paramètre : le chemin où enregistre le graphique.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enregistrement d'un graphique sous forme d'image</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span>
+<span class="normal"><a href="#__codelineno-24-7">7</a></span>
+<span class="normal"><a href="#__codelineno-24-8">8</a></span>
+<span class="normal"><a href="#__codelineno-24-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="n">graphe</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="n">graphe</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">"images/cosinus.png"</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div></div>
 
 
 
@@ -2327,7 +2580,7 @@ Ajouter une légende (à venir)</p>
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-05</span>
   </span>
 
     
