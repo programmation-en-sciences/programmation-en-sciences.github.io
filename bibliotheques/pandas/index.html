@@ -1284,6 +1284,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#enregistrer-un-fichier-excel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enregistrer un fichier Excel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#demonstration" class="md-nav__link">
     <span class="md-ellipsis">
       Démonstration
@@ -1322,6 +1331,27 @@
   
   <span class="md-ellipsis">
     Matplotlib
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scipy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SciPy
   </span>
   
 
@@ -1676,6 +1706,24 @@
 <p class="admonition-title">Les tests logiques et la méthode apply</p>
 <p>Des méthodes existent aussi pour faire des tests logiques sur chaque élément (&gt;, &lt;, == ...). La méthode <code>apply</code> permet aussi d'appliquer n'importe quelle fonction sur les éléments d'une <code>Series</code>, y compris des fonctions que vous définissez vous-même.</p>
 </div>
+<h2 id="enregistrer-un-fichier-excel">Enregistrer un fichier Excel</h2>
+<p>Après avoir modifié un dataframe ou d'avoir calculer des informations sur le fichier, il peut être intéressant de le sauvegarder. Pour ce faire, on utilise la méthode <code>to_excel</code> de l'objet <code>DataFrame</code>. Cette méthode accepte un paramètre : le chemin du fichier dans lequel enregistrer le <code>DataFrame</code>. Il faut que le nom de fichier contienne l'extension <em>xlsx</em> pour s'assurer que le fichier soit reconnu par Excel.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Enregistrement d'un fichier</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span>
+<span class="normal"><a href="#__codelineno-10-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="n">donnees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"mon_fichier.csv"</span><span class="p">)</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="c1"># On calcule les moyennes</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="n">moyennes</span> <span class="o">=</span> <span class="n">donnees</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">moyennes</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">"analyse/moyennes.xlsx"</span><span class="p">)</span>      <span class="c1"># Enregistre les moyennes dans un fichier</span>
+</span></code></pre></div></td></tr></table></div>
 <h2 id="demonstration">Démonstration</h2>
 <ul>
 <li>Sélectionner uniquement les données du 17 mars.</li>
@@ -1706,7 +1754,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-03-28</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-07</span>
   </span>
 
     
