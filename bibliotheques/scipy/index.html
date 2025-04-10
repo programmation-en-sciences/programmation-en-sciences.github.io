@@ -1189,16 +1189,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#utilisation-de-la-librairie-en-statistiques" class="md-nav__link">
-    <span class="md-ellipsis">
-      Utilisation de la librairie en statistiques
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Utilisation de la librairie en statistiques">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#importer-scipy" class="md-nav__link">
     <span class="md-ellipsis">
       Importer SciPy
@@ -1206,38 +1196,48 @@
   </a>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#fonctions-de-statistiques-descriptives-de-scipystats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fonctions de statistiques descriptives de scipy.stats
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests-dhypotheses" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests d'hypothèses
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tests d'hypothèses">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fonctions-statistiques-courantes-de-scipystats" class="md-nav__link">
+  <a href="#test-dhypothese-dune-moyenne-et-intervalle-de-confiance" class="md-nav__link">
     <span class="md-ellipsis">
-      Fonctions statistiques courantes de scipy.stats
+      Test d'hypothèse d'une moyenne et intervalle de confiance
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-1-analyse-descriptive" class="md-nav__link">
+  <a href="#test-dhypothese-pour-deux-moyennes" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple 1 — Analyse descriptive
+      Test d'hypothèse pour deux moyennes
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exemple-2-correlation-et-regression-lineaire" class="md-nav__link">
+  <a href="#autres-tests-dhypotheses" class="md-nav__link">
     <span class="md-ellipsis">
-      Exemple 2 — Corrélation et régression linéaire
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#pour-aller-plus-loin" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pour aller plus loin
+      Autres tests d'hypothèses
     </span>
   </a>
   
@@ -1245,6 +1245,57 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mesures-et-tests-dassociation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mesures et tests d'association
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mesures et tests d'association">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#coefficient-de-correlation-lineaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Coefficient de corrélation linéaire
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-dassociation-du-chi2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Test d'association du \(\chi^2\)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression-lineaire" class="md-nav__link">
+    <span class="md-ellipsis">
+      Régression linéaire
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pour-aller-plus-loin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pour aller plus loin
+    </span>
+  </a>
   
 </li>
       
@@ -1283,7 +1334,7 @@
 <div class="competences">
 <div style="flex: 0 0 70%">
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.172 6.75h-1.861l-4.566 4.564a1.874 1.874 0 1 1-1.06-1.06l4.565-4.565V3.828a.94.94 0 0 1 .275-.664l1.73-1.73a.249.249 0 0 1 .25-.063c.089.026.155.1.173.191l.46 2.301 2.3.46c.09.018.164.084.19.173a.25.25 0 0 1-.062.249l-1.731 1.73a.937.937 0 0 1-.663.275Z"></path><path d="M2.625 12A9.375 9.375 0 0 0 12 21.375 9.375 9.375 0 0 0 21.375 12c0-.898-.126-1.766-.361-2.587A.75.75 0 0 1 22.455 9c.274.954.42 1.96.42 3 0 6.006-4.869 10.875-10.875 10.875S1.125 18.006 1.125 12 5.994 1.125 12 1.125c1.015-.001 2.024.14 3 .419a.75.75 0 1 1-.413 1.442A9.39 9.39 0 0 0 12 2.625 9.375 9.375 0 0 0 2.625 12Z"></path><path d="M7.125 12a4.874 4.874 0 1 0 9.717-.569.748.748 0 0 1 1.047-.798c.251.112.42.351.442.625a6.373 6.373 0 0 1-10.836 5.253 6.376 6.376 0 0 1 5.236-10.844.75.75 0 1 1-.17 1.49A4.876 4.876 0 0 0 7.125 12Z"></path></svg></span> <span class="subtitle-content">Objectifs de la section</span></p>
-<p>2-2 Bibliothèque du langage qui permet de manipuler, entre autres, des fonctions statistiques.</p>
+<p>2-2 Bibliothèques du langage qui permet de manipuler des fonctions statistiques.</p>
 </div>
 <div>
 <p class="subtitle"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 384 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M0 24C0 10.7 10.7 0 24 0h336c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8v19c0 40.3-16 79-44.5 107.5L225.9 256l81.5 81.5C336 366 352 404.7 352 445v19h8c13.3 0 24 10.7 24 24s-10.7 24-24 24H24c-13.3 0-24-10.7-24-24s10.7-24 24-24h8v-19c0-40.3 16-79 44.5-107.5l81.6-81.5-81.6-81.5C48 146 32 107.3 32 67V48h-8C10.7 48 0 37.3 0 24zm110.5 347.5c-3.9 3.9-7.5 8.1-10.7 12.5h184.4c-3.2-4.4-6.8-8.6-10.7-12.5L192 289.9l-81.5 81.5zM284.2 128C297 110.4 304 89 304 67V48H80v19c0 22.1 7 43.4 19.8 61h184.4z"></path></svg></span> <span class="subtitle-content">Temps requis</span></p>
@@ -1291,107 +1342,428 @@
 </div>
 </div>
 <hr>
-<h2 id="utilisation-de-la-librairie-en-statistiques">Utilisation de la librairie en statistiques</h2>
 <p>La librairie <strong>SciPy</strong> (pour <em>Scientific Python</em>) est une boîte à outils scientifique très puissante construite sur NumPy. Elle offre des fonctions avancées pour les statistiques, l’optimisation, l’algèbre linéaire, les intégrales, la transformation de Fourier, etc.</p>
-<p>Dans le cadre d’une analyse statistique en sciences, SciPy est surtout utile pour ses fonctions liées aux statistiques descriptives, aux tests d’hypothèses, à la corrélation, et à l’analyse de distribution.</p>
-<h3 id="importer-scipy">Importer SciPy</h3>
+<p><strong>SciPy</strong> comporte plusieurs modules, dont un dédié aux statistiques qui présente des fonctions liées aux statistiques descriptives, aux tests d’hypothèses, à la corrélation, et à l’analyse de distribution.</p>
+<h2 id="importer-scipy">Importer SciPy</h2>
 <div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
 </span></code></pre></div>
-<hr>
-<h3 id="fonctions-statistiques-courantes-de-scipystats">Fonctions statistiques courantes de <code>scipy.stats</code></h3>
-<p>Voici un aperçu des méthodes fréquemment utilisées pour l’analyse statistique :</p>
+<h2 id="fonctions-de-statistiques-descriptives-de-scipystats">Fonctions de statistiques descriptives de <code>scipy.stats</code></h2>
+<p>Voici un aperçu des fonctions fréquemment utilisées pour l’analyse statistique.</p>
+<p></p><center>
 <table>
 <thead>
 <tr>
 <th style="text-align: left;">Fonction</th>
-<th style="text-align: left;">Utilité</th>
+<th style="text-align: left;">Description</th>
 <th style="text-align: left;">Exemple</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>describe</code></td>
-<td style="text-align: left;">Résumé statistique complet d’un ensemble de données</td>
-<td style="text-align: left;"><code>stats.describe(data)</code></td>
-</tr>
-<tr>
 <td style="text-align: left;"><code>mode</code></td>
 <td style="text-align: left;">Mode (valeur la plus fréquente)</td>
-<td style="text-align: left;"><code>stats.mode(data)</code></td>
+<td style="text-align: left;"><code>stats.mode(donnees)</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>variation</code></td>
+<td style="text-align: left;">Coefficient de variation (rapport entre l'écart-type et la moyenne)</td>
+<td style="text-align: left;">`stats.variation(donnees)</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>median</code></td>
 <td style="text-align: left;">Médiane</td>
-<td style="text-align: left;"><code>stats.median(data)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>trim_mean</code></td>
-<td style="text-align: left;">Moyenne tronquée</td>
-<td style="text-align: left;"><code>stats.trim_mean(data, proportiontocut=0.1)</code></td>
+<td style="text-align: left;"><code>stats.median(donnees)</code></td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>iqr</code></td>
 <td style="text-align: left;">Écart interquartile (Q3 - Q1)</td>
-<td style="text-align: left;"><code>stats.iqr(data)</code></td>
+<td style="text-align: left;"><code>stats.iqr(donnees)</code></td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>zscore</code></td>
-<td style="text-align: left;">Score Z pour chaque valeur</td>
-<td style="text-align: left;"><code>stats.zscore(data)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>pearsonr</code></td>
-<td style="text-align: left;">Corrélation de Pearson (r, p-value)</td>
-<td style="text-align: left;"><code>stats.pearsonr(x, y)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>ttest_ind</code></td>
-<td style="text-align: left;">Test t de Student (2 échantillons indépendants)</td>
-<td style="text-align: left;"><code>stats.ttest_ind(a, b)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>normaltest</code></td>
-<td style="text-align: left;">Test de normalité (D’Agostino et Pearson)</td>
-<td style="text-align: left;"><code>stats.normaltest(data)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>linregress</code></td>
-<td style="text-align: left;">Régression linéaire (slope, intercept, etc.)</td>
-<td style="text-align: left;"><code>stats.linregress(x, y)</code></td>
+<td style="text-align: left;"><code>describe</code></td>
+<td style="text-align: left;">Résumé statistique complet d’un ensemble de données</td>
+<td style="text-align: left;"><code>stats.describe(donnees)</code></td>
 </tr>
 </tbody>
 </table>
-<hr>
-<h3 id="exemple-1-analyse-descriptive">Exemple 1 — Analyse descriptive</h3>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">donnees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"exemple.csv"</span><span class="p">)</span>  <span class="c1"># imaginons une colonne "temps_attente"</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">resume</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="s2">"temps_attente"</span><span class="p">])</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">resume</span><span class="p">)</span>
-</span></code></pre></div>
-<hr>
-<h3 id="exemple-2-correlation-et-regression-lineaire">Exemple 2 — Corrélation et régression linéaire</h3>
-<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Corrélation entre le nombre de civières et le temps d’attente</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">r</span><span class="p">,</span> <span class="n">p</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="s2">"nb_civieres"</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="s2">"temps_attente"</span><span class="p">])</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Corrélation de Pearson: r = </span><span class="si">{</span><span class="n">r</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, p-value = </span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1"># Régression linéaire</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r_value</span><span class="p">,</span> <span class="n">p_value</span><span class="p">,</span> <span class="n">std_err</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="n">donnees</span><span class="p">[</span><span class="s2">"nb_civieres"</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="s2">"temps_attente"</span><span class="p">]</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"y = </span><span class="si">{</span><span class="n">slope</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">x + </span><span class="si">{</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-</span></code></pre></div>
-<hr>
+<p></p></center>
+<div class="admonition tips">
+<p class="admonition-title">Philosophie de SciPy</p>
+<p>Les développeurs de <strong>SciPy</strong> évitent de refaire des fonctions qui sont disponibles dans d'autres paquet dont <strong>Pandas</strong> et <strong>NumPy</strong>. Par exemple, il n'y a pas de fonction pour calculer la moyenne dans <strong>SciPy</strong>, car <strong>Pandas</strong> et <strong>NumPy</strong> en définissent déjà une. Donc si vous ne trouvez pas une fonction dans <strong>SciPy</strong> pensez à regarder dans d'autres paquets.</p>
+</div>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple — Analyse descriptive</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">donnees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"exemple.csv"</span><span class="p">)</span>  <span class="c1"># imaginons une colonne "temps_attente"</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">resume</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="s2">"temps_attente"</span><span class="p">])</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nb">print</span><span class="p">(</span><span class="n">resume</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="tests-dhypotheses">Tests d'hypothèses</h2>
+<p>On trouve souvent dans une étude de statistiques des tests d'hypothèses servant à mesurer la significativité statistique d'une phénomène : autrement dit la probabilité que les conclusions observées sur l'échantillon soient dues à un échantillonnage particulier et qu'il soit peu vraissemblable d'inférer les conclusions à la population. On appelle cette probabilité (celle que la l'observation ait été obtenue en raison d'un échantillonnage particulier) <em>p-value</em>. La plupart des fonctions de tests d'yhypothèse présente la <em>p-value</em> comme outil de décision. </p>
+<h3 id="test-dhypothese-dune-moyenne-et-intervalle-de-confiance">Test d'hypothèse d'une moyenne et intervalle de confiance</h3>
+<p>La fonction pour effectuer un test sur une moyenne est <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html#scipy.stats.ttest_1samp"><code>ttest_1samp</code></a>. Ce test utilise toujours la loi de Student (jamais l'approximation par la loi normale), donc il est valide pour n'importe quelle d'échantillon.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Test d'une moyenne échantillon</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a>    <span class="n">echantillon</span> <span class="o">=</span> <span class="p">[</span><span class="mf">4.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="n">resultat_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">echantillon</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La statistique T est : </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">statistic</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>     <span class="c1"># Affiche 2.04</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La p-value est : </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">pvalue</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>              <span class="c1"># Affiche 0.06</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Mesure avec </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">df</span><span class="si">}</span><span class="s2"> degrés de libertés."</span><span class="p">)</span>    <span class="c1"># Affiche 14</span>
+</span></code></pre></div></td></tr></table></div>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Valeur par défaut</th>
+<th style="text-align: left;">Symbole statistique</th>
+<th style="text-align: left;">Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de l'échantillon</td>
+</tr>
+<tr>
+<td style="text-align: left;">popmean</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;"><span class="arithmatex">\(\mu_0\)</span></td>
+<td style="text-align: left;">La moyenne de la population (<span class="arithmatex">\(H_0 : \mu = \mu_0\)</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">alternative</td>
+<td style="text-align: left;">two-sided</td>
+<td style="text-align: left;">L'hypothèse alternative (<span class="arithmatex">\(H_1\)</span>)</td>
+<td style="text-align: left;"><code>two-sided</code> pour <span class="arithmatex">\(H_1 : \mu \neq \mu_0\)</span>, <code>less</code> pour <span class="arithmatex">\(H_1 : \mu &lt; \mu_0\)</span> et <code>greater</code> pour <span class="arithmatex">\(H_1 : \mu &gt; \mu_0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<h4 id="intervalle-de-confiance-pour-une-moyenne">Intervalle de confiance pour une moyenne</h4>
+<p>Pour générer l'intervalle de confiance pour la moyenne, il faut appeler la méthode <code>confidence_interval</code> sur le résultat du T-test. Cette méthode accepte un paramètre : le niveau de confiance auquel calculer l'interval qui est de 0.95 par défaut (équivalent à 95%)</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Intervalle de confiance</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a>    <span class="n">echantillon</span> <span class="o">=</span> <span class="p">[</span><span class="mf">4.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">]</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a>    <span class="n">resultat_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_1samp</span><span class="p">(</span><span class="n">echantillon</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L'intervalle de confiance au niveau de confiance de 95% est </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">confidence_interval</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="c1"># Affiche ... de 95% est ConfidenceInterval(low=2.6915761256081714, high=5.628423874391829)</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L'intervalle de confiance au niveau de confiance de 90% est </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">confidence_interval</span><span class="p">(</span><span class="mf">0.90</span><span class="p">)</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9"></a>    <span class="c1"># Affiche ... de 90% est ConfidenceInterval(low=2.9541225725845757, high=5.365877427415424)</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="c1">#On peut extraire la borne inférieure ou supérieure de l'intervalle de confiance avec les attributs low et high</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="test-dhypothese-pour-deux-moyennes">Test d'hypothèse pour deux moyennes</h3>
+<p>Pour le test de deux moyennes, il existe deux fonctions dans <strong>SciPy</strong> :</p>
+<ul>
+<li><code>ttest_ind</code> pour tester deux échantillons indépendants;</li>
+<li><code>ttest_rel</code> pour tester deux échantillons dépendants.</li>
+</ul>
+<p>Les deux fonctions ont les même paramètres, c'est simplement la façon dont le calcul est fait qui diffère.</p>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Valeur par défaut</th>
+<th style="text-align: left;">Symbole statistique</th>
+<th style="text-align: left;">Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">a</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_1}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de l'échantillon 1</td>
+</tr>
+<tr>
+<td style="text-align: left;">b</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_2}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de l'échantillon 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">alternative</td>
+<td style="text-align: left;">two-sided</td>
+<td style="text-align: left;">L'hypothèse alternative (<span class="arithmatex">\(H_1\)</span>)</td>
+<td style="text-align: left;"><code>two-sided</code> pour <span class="arithmatex">\(H_1 : \mu_1 \neq \mu_2\)</span>, <code>less</code> pour <span class="arithmatex">\(H_1 : \mu_1 &lt; \mu_2\)</span> et <code>greater</code> pour <span class="arithmatex">\(H_1 : \mu_1 &gt; \mu_2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<p>Tout comme pour un échantillon, on peut calculer un intervalle de confidance sur le résultat des fonctions. Cet intervalle est calculer pour la différence entre les échantillons.</p>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Intervalle de confiance</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a>    <span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a>    <span class="n">echantillon_1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">4.3</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">7.9</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">7.6</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">5.7</span><span class="p">]</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a>    <span class="n">echantillon_2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">3.1</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">8.9</span><span class="p">,</span> <span class="mf">3.1</span><span class="p">,</span> <span class="mf">11.3</span><span class="p">,</span> <span class="mf">8.2</span><span class="p">,</span> <span class="mf">5.4</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">11.2</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">8.4</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a>    <span class="c1"># On test que les résultats de l'échantillon 1 sont moins élevés, en moyenne, que ceux de l'échantillon 2</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="n">resultat_test</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">ttest_ind</span><span class="p">(</span><span class="n">echantillon_1</span><span class="p">,</span> <span class="n">echantillon_2</span><span class="p">,</span> <span class="n">alternative</span><span class="o">=</span><span class="s2">"less"</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La statistique T est : </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">statistic</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>     <span class="c1"># Affiche -2.68</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La p-value est : </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">pvalue</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>              <span class="c1"># Affiche 0.006</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Mesure avec </span><span class="si">{</span><span class="n">resultat_test</span><span class="o">.</span><span class="n">df</span><span class="si">}</span><span class="s2"> degrés de libertés."</span><span class="p">)</span>    <span class="c1"># Affiche 28</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="autres-tests-dhypotheses">Autres tests d'hypothèses</h3>
+<p>Plusieurs autres tests (comme ceux pour les variances) sont définis dans <strong>SciPy</strong> Référez-vous à la <a href="https://docs.scipy.org/doc/scipy/reference/stats.html#hypothesis-tests-and-related-functions">documentation</a> pour les utiliser. Ils ont tous un mode de fonctionnement similaire.</p>
+<h2 id="mesures-et-tests-dassociation">Mesures et tests d'association</h2>
+<p>On peut quantifier l'association entre deux variables de plusieurs façons. On en présente deux ici :</p>
+<ul>
+<li>Coefficient de corrélation linéaire (Pearson) : utiliser pour quantifier un lien linéaire entre deux variables continues</li>
+<li>Test du <span class="arithmatex">\(\chi^2\)</span> : utiliser pour tester la dépendances entre deux variables discrètes</li>
+</ul>
+<h3 id="coefficient-de-correlation-lineaire">Coefficient de corrélation linéaire</h3>
+<p>La corrélation entre deux variables varie de -1 à 1. Une corrélation près -1 ou de 1 indique une association linéaire forte entre les variables, alors qu'une corrélation près de 0 indique une absence d'association (ou une association faible) entre les variables. Une valeur positive indique que les deux échantillons varient proportionnellement (si l'une des valeurs augmentent pour un échantillon, elle augmentera proportionnellement dans l'autre), tandis qu'une valeur négative de corréaltion indique que les échantillons varient inversement (si l'une des valeurs augmentent pour un échantillon, elle diminuera proportionnellement dans l'autre), La fonction pour faire un test de corrélation est <code>stats.pearsonr</code>.</p>
+<p></p><center>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Valeur par défaut</th>
+<th style="text-align: left;">Symbole statistique</th>
+<th style="text-align: left;">Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_1}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de l'échantillon 1</td>
+</tr>
+<tr>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_2}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de l'échantillon 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">alternative</td>
+<td style="text-align: left;">two-sided</td>
+<td style="text-align: left;">L'hypothèse alternative (<span class="arithmatex">\(H_1\)</span>)</td>
+<td style="text-align: left;"><code>two-sided</code> pour <span class="arithmatex">\(H_1 : \rho \neq 0\)</span>, <code>less</code> pour $H_1 : \rho &lt; 0 et <code>greater</code> pour <span class="arithmatex">\(H_1 : \rho &gt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p></p></center>
+<p>L'objet retourné par cette fonction contient deux attributs :</p>
+<ul>
+<li><code>statistic</code> : le coefficient de corrélation entre les échantillons </li>
+<li><code>pvalue</code> : la <em>p-value</em> du test de corrélation </li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple de calcul de corrélation</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">echantillon_1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">4.9</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">7.3</span><span class="p">,</span> <span class="mf">3.9</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">7.8</span><span class="p">,</span> <span class="mf">2.9</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">1.9</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">]</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="n">echantillon_2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.2</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">6.1</span><span class="p">,</span> <span class="mf">9.7</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mf">9.2</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mf">5.8</span><span class="p">]</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="n">resultat_correlation</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">pearsonr</span><span class="p">(</span><span class="n">echantillon_1</span><span class="p">,</span> <span class="n">echantillon_2</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Corrélation de Pearson: r = </span><span class="si">{</span><span class="n">resultat_correlation</span><span class="o">.</span><span class="n">statistic</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">, p-value = </span><span class="si">{</span><span class="n">resultat_correlation</span><span class="o">.</span><span class="n">pvalue</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="c1"># Affiche Corrélation de Pearson: r = 0.93, p-value = 0.0000</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="test-dassociation-du-chi2">Test d'association du <span class="arithmatex">\(\chi^2\)</span></h3>
+<p>Il s'agit d'un test qui permet de calculer l'association entre deux variables discrètes en comparant leur distribution observée à l'hypothèse de distribution indépendante. Pour réaliser ce test, il faut d'abord former un <a href="https://fr.wikipedia.org/wiki/Tableau_de_contingence">tableau de contingence</a> (appelé <em>crosstable</em>) avec les données. Pour ce faire, la fonction <code>crosstab</code> de <strong>Pandas</strong> peut être utilisée.</p>
+<div class="admonition error">
+<p class="admonition-title">La fonction crosstab</p>
+<p>Il existe aussi une fonction nommée crosstab dans <strong>SciPy</strong>, mais son fonctionnement est différent de celui présenté ici. Nous choisissons d'utiliser celle de <strong>Pandas</strong>, car sa forme est plus simple à partir d'un <code>DataFrame</code>.</p>
+<p>Attention, selon la façon dont l'importation se fait, vous pouvez causer des collisions de noms (deux fonctions qui portent le même nom existent dans le même espace de code... Python ne trippe pas...)</p>
+</div>
+<p>La fonction <code>crosstab</code> forme un tableau de contigence à partir de deux séries (soit deux colonnes d'un <code>DataFrame</code>). Ensuite la fonction <code>chi2_contingency</code> de <strong>SciPy</strong> accepte un seul paramètre : le tableau de contingence et retourn un objet qui comporte les attributs suivants :</p>
+<ul>
+<li><code>statistic</code> : la statistique du <span class="arithmatex">\(\chi^2\)</span> du test;</li>
+<li><code>pvalue</code> : la <em>p-value</em> obtenue pour le test;</li>
+<li><code>dof</code> : le nombre de degrés de liberté avec lequel la statistique est évaluée. Correspond à <span class="arithmatex">\((\text{nombre de lignes} - 1) \times (\text{nombre de colonnes} - 1)\)</span>;</li>
+<li><code>expected_freq</code>: un tableau de contigence avec les fréquences théoriques (sous l'hypothèse d'indépendance). </li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple de test du khi-deux</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span>
+<span class="normal"><a href="#__codelineno-6-24">24</a></span>
+<span class="normal"><a href="#__codelineno-6-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="c1"># À partir des données de l'exercice sur le Titanic</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">donnees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"titanic.xlsx"</span><span class="p">)</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="c1"># Formation du tableau de contingence entre si une personne a survécu</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="c1"># et la classe de son billet</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="n">tableau_contigence</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">donnees</span><span class="p">[</span><span class="s2">"Survived"</span><span class="p">],</span> <span class="n">donnees</span><span class="p">[</span><span class="s2">"Pclass"</span><span class="p">])</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nb">print</span><span class="p">(</span><span class="n">tableau_contigence</span><span class="p">)</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="c1"># Analyse de la relation avec le test du chi deux</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="n">resultat</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">chi2_contingency</span><span class="p">(</span><span class="n">tableau_contigence</span><span class="p">)</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"p-value du test : </span><span class="si">{</span><span class="n">resultat</span><span class="o">.</span><span class="n">pvalue</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15"></a>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="c1"># Affiche p-value du test : 0.0000 (significatif - donc les deux variables sont liées)</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17"></a>
+</span><span id="__span-6-18"><a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="c1"># Si la classe et les chances de survie sont indépendantes, voici ce à quoi</span>
+</span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1"># aurait du ressembler le tableau de contingence</span>
+</span><span id="__span-6-20"><a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="nb">print</span><span class="p">(</span><span class="s2">"Tableau de contigence théorique"</span><span class="p">)</span>
+</span><span id="__span-6-21"><a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="nb">print</span><span class="p">(</span><span class="n">resultat</span><span class="o">.</span><span class="n">expected_freq</span><span class="p">)</span>
+</span><span id="__span-6-22"><a id="__codelineno-6-22" name="__codelineno-6-22"></a>
+</span><span id="__span-6-23"><a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="c1"># Affiche   Tableau de contigence théorique</span>
+</span><span id="__span-6-24"><a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="c1">#           [[133.09090909 113.37373737 302.53535354]</span>
+</span><span id="__span-6-25"><a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="c1">#            [ 82.90909091  70.62626263 188.46464646]]</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="regression-lineaire">Régression linéaire</h2>
+<p>La régression linéaire permet d'exprimer, sous forme d'une équation affine ($y = b_1x + b_0), le lien entre deux variables. La régression fournit également une équation pour prédire, à partir d'une variable, une autre variable. Pour déterminer la qualité de la regression, il existe deux indicateurs pour évaluer la qualité de la régression :</p>
+<ul>
+<li>Le coefficient de détermination <span class="arithmatex">\(r^2\)</span>;</li>
+<li>Le test d'hypothèse sur la significativité de la pente ($H_0 : \beta_1 = 0).</li>
+</ul>
+<p>La fonction <code>linregress</code> calcule la régression à partir de deux séries de données</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Paramètre</th>
+<th style="text-align: left;">Valeur par défaut</th>
+<th style="text-align: left;">Symbole statistique</th>
+<th style="text-align: left;">Fonctionnement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">x</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_1}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de la variable indépendante</td>
+</tr>
+<tr>
+<td style="text-align: left;">y</td>
+<td style="text-align: left;">Aucune</td>
+<td style="text-align: left;">Permet de calculer <span class="arithmatex">\(\bar{x_2}\)</span></td>
+<td style="text-align: left;">Une liste ou une série qui contient les observations de la variable dépendante</td>
+</tr>
+<tr>
+<td style="text-align: left;">alternative</td>
+<td style="text-align: left;">two-sided</td>
+<td style="text-align: left;">L'hypothèse alternative (<span class="arithmatex">\(H_1\)</span>)</td>
+<td style="text-align: left;"><code>two-sided</code> pour <span class="arithmatex">\(H_1 : \bata_1 \neq 0\)</span>, <code>less</code> pour $H_1 : \beta_1 &lt; 0 et <code>greater</code> pour <span class="arithmatex">\(H_1 : \beta_1 &gt; 0\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>L'objet retourné par la fonction comporte les attributs suivants :</p>
+<ul>
+<li><code>slope</code> : la pente (<span class="arithmatex">\(b_1\)</span>) de l'équation de régression.</li>
+<li><code>intercept</code> : l'ordonnée à l'origine (<span class="arithmatex">\(b_0\)</span>) de l'équation de régression.</li>
+<li><code>rvalue</code> : le coefficient de corrélation de Pearson entre les deux variables. L'élevé au carré pour avoir le coefficient de détermination. </li>
+<li><code>pvalue</code> : la <em>p-value</em> du test de significativité de la pente. Une pente non significative mène à une régression éronné et qui ne devrait pas être utilisée.</li>
+</ul>
+<div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple de régression linéaire</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">stats</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="c1"># À partir des données sur les urgences pour les hôpitaux au MCQ en 2024-2025</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">donnees</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">"urgences-mcq-2425.xlsx"</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="c1"># Régression linéaire entre le nombre de visites (var indépendante) et le</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="c1"># temps d'attente plus de 24 h</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">resultat_regression</span> <span class="o">=</span> <span class="n">stats</span><span class="o">.</span><span class="n">linregress</span><span class="p">(</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="n">donnees</span><span class="p">[</span><span class="s2">"nb_visites_total"</span><span class="p">],</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="n">donnees</span><span class="p">[</span><span class="s2">"nb_usagers_sur_civiere_plus_24h"</span><span class="p">])</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="n">coefficient_determination</span> <span class="o">=</span> <span class="n">resultat_regression</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="c1"># Affichage des résultats</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"L'équation de régression est : </span><span class="si">{</span><span class="n">resultat_regression</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">x +"</span> <span class="o">+</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16"></a>    <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">resultat_regression</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La corrélation lineaire est </span><span class="si">{</span><span class="n">resultat_regression</span><span class="o">.</span><span class="n">rvalue</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> et le "</span> <span class="o">+</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18"></a>    <span class="sa">f</span><span class="s2">"coefficient de détermination est </span><span class="si">{</span><span class="n">coefficient_determination</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"La p-value du test de la régression est </span><span class="si">{</span><span class="n">resultat_regression</span><span class="o">.</span><span class="n">pvalue</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="c1"># Affiche le contenu suivant</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="c1"># L'équation de régression est : 0.10x +-1804.76</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="c1"># La corrélation lineaire est 0.88 et le coefficient de détermination est 0.77.</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="c1"># La p-value du test de la régression est 0.0041</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
 <blockquote>
-<h3 id="pour-aller-plus-loin">Pour aller plus loin</h3>
 <p>La documentation complète de SciPy est disponible en ligne :<br>
 <a href="https://docs.scipy.org/doc/scipy/">https://docs.scipy.org/doc/scipy/</a></p>
-<p>Vous pouvez aussi consulter les sections spécifiques à <code>scipy.stats</code> pour découvrir d'autres tests utiles tel que <code>ttest_rel</code> pour des échantillons appariés.</p>
 </blockquote></div>
 
 
@@ -1413,7 +1785,7 @@
     <span class="md-icon" title="Dernière mise à jour">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2025-04-10</span>
   </span>
 
     
