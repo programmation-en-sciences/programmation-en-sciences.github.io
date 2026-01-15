@@ -1376,7 +1376,6 @@
 </div>
 <hr>
 <h2 id="les-variables">Les variables</h2>
-<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 1.1</p>
 <p>L'objet de la programmation est la manipulation des données. Pour les manipuler, il faut entre en mesure de les <strong>stocker</strong> et de leur <strong>accéder</strong> dans un programme. Pour ce faire, on utilise la construction de <code>variable</code> du langage Python. Pour déclarer une variable, on doit lui donner un identificateur puis lui affecter une valeur.</p>
 <div class="language-py highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Déclarer de variable</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1412,7 +1411,6 @@
 <p>Python est sensible à la casse des lettres, donc "Variable" et "variable" sont deux identificateurs différents.</p>
 </div>
 <h2 id="les-types-de-donnees-numeriques">Les types de données numériques</h2>
-<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 1.3</p>
 <p>Les données numériques dans un système informatique doivent être représentées, ultimement, en langage binaire. Le binaire, est simplement l'utilisation de la base 2 plutôt que la base 10 pour représenter les positions dans un nombre. Par exemple, en base 10 (système décimal), le nombre 423 signifie <span class="arithmatex">\(2 \times 10^2 + 2 \times 10^1 + 3 \times 10^0\)</span>. On remarque l'utilisation de la base 10 pour représenter les positions. En binaire, il faut parvenir à écrire ce nombre sous la forme <span class="arithmatex">\(x_n \times 2^n + x_{n-1} \times 2^{n-1} + ... + x_1 \times 2^1 + x_0 \times 2^0\)</span>. </p>
 <p>Tout comme le système décimal permet les valeurs de 0 à 9, le système binaire permet les valeurs 0 et 1. Dans l'exemple précédent, 423 en binaire est 1 1010 0111 (on groupe les bits en paquet de quatre pour faciliter la lecture).</p>
 <p>En programmant, nous pouvons (fort heureusement) écrire nos nombres dans le système décimal et Python s'occupe de la conversion en binaire pour interagir avec la machine. De plus, nos représentations <strong>pour les nombres entiers</strong> seront toujours exactes.</p>
@@ -1421,7 +1419,6 @@
 <p>Contrairement à d'autres langages qui ont une limite sur la taille des nombres entiers qu'ils peuvent traiter, Python supporte les nombres entiers arbitrairement grands.</p>
 </div>
 <h3 id="le-cas-des-nombres-a-virgule">Le cas des nombres à virgule</h3>
-<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 1.5</p>
 <p>La représentation des nombres à virgule pose problème, entre autres, car les nombres avec un nombre infini de décimales ne sont plus les mêmes ! Prenons l'exemple de 0.1, soit en base décimale <span class="arithmatex">\(1 \times 10^{-1}\)</span>. Il faut maintenant l'écrire sous la forme <span class="arithmatex">\(x_1 \times 2^{-1} + x_2 \times 2^{-2} + ... + x_n \times 2^{-n}\)</span>. On obtient le nombre sous la forme 0.0001 1001 1001 1001 ... Évidemment, l'ordinateur arrête sa représentation quelque part, ce qui mène à un arrondi et une perte de précision. Donc les nombres à virgule <strong>ne peuvent pas être représentés de façon exacte, sous forme numérique</strong> dans un programme. </p>
 <p>On trouve des conséquences de cette erreur d'arrondie dans le calcul suivant par exemple : 0.1 + 0.1 + 0.1, ce qui en base décimale vaut 0.3, mais affichera 0.30000000000000004 dans le langage Python. Nous verrons comment gérer ces erreurs arithmétiques plus loin.</p>
 <div class="admonition info">
@@ -1429,7 +1426,6 @@
 <p>En français, on utilise la virgule pour séparer la partie décimale de la partie entière dans l'écriture d'un nombre. Cependant, les langages de programmation sont (presque tous) créés en anglais, où le symbole du point sépare la partie entière de la partie décimale. C'est cette convention (l'anglaise) qu'il faut utiliser en écrivant du code.  </p>
 </div>
 <h2 id="operations-mathematiques">Opérations mathématiques</h2>
-<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> Section 1.4</p>
 <p>Le langage Python définit 7 opérations arithmétiques. On peut aussi utiliser les parenthèses <code>(</code>, <code>)</code> pour assurer la priorité des opérations. Automatiquement, Python applique la priorité des opérations dans l'ordre usuel, puis de gauche à droite.</p>
 <table>
 <thead>
@@ -1518,7 +1514,8 @@
 </span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="hll"><span class="nb">print</span><span class="p">(</span><span class="n">aire_disque</span><span class="p">)</span>
 </span></span></code></pre></div></td></tr></table></div>
 <h2 id="exercices">Exercices</h2>
-<p class="book"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M0 3.75A.75.75 0 0 1 .75 3h7.497c1.566 0 2.945.8 3.751 2.014A4.495 4.495 0 0 1 15.75 3h7.5a.75.75 0 0 1 .75.75v15.063a.752.752 0 0 1-.755.75l-7.682-.052a3 3 0 0 0-2.142.878l-.89.891a.75.75 0 0 1-1.061 0l-.902-.901a2.996 2.996 0 0 0-2.121-.879H.75a.75.75 0 0 1-.75-.75Zm12.75 15.232a4.503 4.503 0 0 1 2.823-.971l6.927.047V4.5h-6.75a3 3 0 0 0-3 3ZM11.247 7.497a3 3 0 0 0-3-2.997H1.5V18h6.947c1.018 0 2.006.346 2.803.98Z"></path></svg></span> À venir</p>
+<p>À venir</p>
+
 <h2 id="concepts-cles-de-la-section"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2m5.6-4c-.8-2.3-3-4-5.6-4-3.3 0-6 2.7-6 6s2.7 6 6 6c2.6 0 4.8-1.7 5.6-4H16v4h4v-4h3v-4H12.6Z"></path></svg></span> Concepts clés de la section</h2>
 <dl>
 <dt><code>Déclaration</code></dt>
