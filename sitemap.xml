@@ -111,6 +111,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://programmation-en-sciences.github.io/introduction-outils/erreurs-python/</loc>
+         <lastmod>2026-02-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://programmation-en-sciences.github.io/introduction-outils/installation-paquet/</loc>
          <lastmod>2026-02-16</lastmod>
          <changefreq>daily</changefreq>
